@@ -8,74 +8,79 @@
 /* Container for bright, experimental look */
 body, html {
   font-family: 'Courier New', monospace;
-  background: #1a1a1a; /* Dark background for contrast */
-  color: #f0f0f0;
+  background: #0d0d0d; /* Dark background for contrast */
+  color: #fffbf5;
   overflow-x: hidden;
 }
 
 /* Header */
 header {
   text-align: center;
-  padding: 20px;
-  background: radial-gradient(circle, #ff0050, #00ff8f, #0078ff);
+  padding: 30px;
+  background: linear-gradient(135deg, #ff007f, #ff8c00, #f0f);
   color: #1a1a1a;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  border-radius: 25px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  transform: skew(-5deg);
 }
 
 /* Navigation menu */
 .menu {
   display: flex;
   justify-content: space-around;
-  background: linear-gradient(to right, #ff3d00, #9c27b0);
-  padding: 10px;
+  background: radial-gradient(circle, #00ffea, #ff00ff);
+  padding: 15px;
+  border-radius: 15px;
 }
 
 .menu a {
   color: #1a1a1a;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   transition: all 0.3s ease;
+  transform: rotate(15deg);
 }
 
 .menu a:hover {
-  transform: rotate(5deg) scale(1.2);
+  transform: rotate(-15deg) scale(1.3);
   color: #fff;
-  text-shadow: 0 0 5px #ffea00;
+  text-shadow: 0 0 5px #ffea00, 0 0 10px #ff00ff;
 }
 
 /* Sections */
 .section {
   padding: 20px;
   text-align: center;
-  margin: 10px;
-  border-radius: 10px;
-  animation: pulse 3s infinite ease-in-out;
+  margin: 15px;
+  border-radius: 30px;
+  animation: shake 0.5s infinite alternate;
 }
 
 /* Section styles with vibrant colors */
-#swamp {
-  background: #4caf50; /* Dark green */
-  color: #ffffff;
-  transform: skew(-5deg);
+.swamp {
+  background: #005500; /* Dark swamp green */
+  color: #fffbf5;
+  transform: skew(10deg) rotate(-5deg);
 }
 
-#tree {
-  background: #3f51b5; /* Deep blue */
-  color: #ffeb3b; /* Yellow */
-  transform: rotate(3deg);
+.tree {
+  background: #330066; /* Dark purple */
+  color: #ffcc00; /* Gold */
+  transform: rotate(5deg) translateY(10px);
 }
 
-#secret {
-  background: #ff4081; /* Pink */
-  color: #fff;
-  transform: skew(5deg);
+.secret {
+  background: #660000; /* Dark red */
+  color: #00ff66; /* Neon green */
+  transform: skew(-10deg) translateY(-10px);
 }
 
-#about {
-  background: #ffeb3b; /* Bright yellow */
-  color: #1a1a1a;
-  transform: rotate(-3deg);
+.about {
+  background: #003366; /* Dark blue */
+  color: #ff9999; /* Light pink */
+  transform: rotate(-5deg) translateY(5px);
 }
 
 /* Responsive for mobile */
@@ -87,25 +92,19 @@ header {
 }
 
 /* Animations */
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-  }
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 0 50px rgba(255, 255, 0, 0.5);
-  }
+@keyframes shake {
+  0% { transform: translate(0); }
+  100% { transform: translate(5px); }
 }
 
 @keyframes colorshift {
-  0% { background-color: #ff3d00; }
-  25% { background-color: #3f51b5; }
-  50% { background-color: #00ff8f; }
-  75% { background-color: #ffea00; }
-  100% { background-color: #ff3d00; }
+  0% { background-color: #ff007f; }
+  25% { background-color: #ff8c00; }
+  50% { background-color: #ffea00; }
+  75% { background-color: #00ffea; }
+  100% { background-color: #ff00ff; }
 }
 
 header {
-  animation: colorshift 5s infinite;
+  animation: colorshift 8s infinite;
 }
