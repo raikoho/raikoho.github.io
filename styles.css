@@ -8,7 +8,7 @@
 /* Container for bright, experimental look */
 body, html {
   font-family: 'Courier New', monospace;
-  background: #0e0a19;
+  background: #1a1a1a; /* Dark background for contrast */
   color: #f0f0f0;
   overflow-x: hidden;
 }
@@ -17,8 +17,8 @@ body, html {
 header {
   text-align: center;
   padding: 20px;
-  background: radial-gradient(circle, #ff9c0d, #ff0050, #004cff);
-  color: #0e0a19;
+  background: radial-gradient(circle, #ff0050, #00ff8f, #0078ff);
+  color: #1a1a1a;
   font-size: 2rem;
 }
 
@@ -26,12 +26,12 @@ header {
 .menu {
   display: flex;
   justify-content: space-around;
-  background: linear-gradient(to right, #ffeb3b, #2196f3);
+  background: linear-gradient(to right, #ff3d00, #9c27b0);
   padding: 10px;
 }
 
 .menu a {
-  color: #0e0a19;
+  color: #1a1a1a;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2rem;
@@ -40,8 +40,8 @@ header {
 
 .menu a:hover {
   transform: rotate(5deg) scale(1.2);
-  color: #f0f0f0;
-  text-shadow: 0 0 5px #ff0050;
+  color: #fff;
+  text-shadow: 0 0 5px #ffea00;
 }
 
 /* Sections */
@@ -55,26 +55,26 @@ header {
 
 /* Section styles with vibrant colors */
 #swamp {
-  background: #76ff03;
-  color: #0e0a19;
+  background: #4caf50; /* Dark green */
+  color: #ffffff;
   transform: skew(-5deg);
 }
 
 #tree {
-  background: #f50057;
-  color: #ffeb3b;
+  background: #3f51b5; /* Deep blue */
+  color: #ffeb3b; /* Yellow */
   transform: rotate(3deg);
 }
 
 #secret {
-  background: #ff3d00;
-  color: #03a9f4;
+  background: #ff4081; /* Pink */
+  color: #fff;
   transform: skew(5deg);
 }
 
 #about {
-  background: #ff9100;
-  color: #0e0a19;
+  background: #ffeb3b; /* Bright yellow */
+  color: #1a1a1a;
   transform: rotate(-3deg);
 }
 
@@ -90,18 +90,20 @@ header {
 @keyframes pulse {
   0%, 100% {
     transform: scale(1);
-    box-shadow: 0 0 20px #fff3;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
   }
   50% {
     transform: scale(1.05);
-    box-shadow: 0 0 50px #ff0f;
+    box-shadow: 0 0 50px rgba(255, 255, 0, 0.5);
   }
 }
 
 @keyframes colorshift {
-  0% { background-color: #ff0; }
-  50% { background-color: #f0f; }
-  100% { background-color: #0ff; }
+  0% { background-color: #ff3d00; }
+  25% { background-color: #3f51b5; }
+  50% { background-color: #00ff8f; }
+  75% { background-color: #ffea00; }
+  100% { background-color: #ff3d00; }
 }
 
 header {
