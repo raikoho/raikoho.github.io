@@ -1,0 +1,81 @@
+/* styles.css */
+
+/* Base Styles for Joy Theme */
+body.joy {
+    background-color: #fff6e8;
+    font-family: 'Comic Sans MS', sans-serif;
+    color: #ff7f50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Container for Joy Elements */
+.joy-container {
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Glowing, Happy Header Text */
+.shine {
+    font-size: 3em;
+    color: #ff6f91;
+    animation: shine 3s ease-in-out infinite alternate;
+    text-shadow: 0 0 10px #ff6f91, 0 0 20px #ff6f91, 0 0 30px #ff6f91;
+}
+
+/* Joyful Paragraph Text */
+.joy-text {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #ff7f50;
+    margin: 20px 0;
+    animation: rainbow-glow 4s infinite;
+}
+
+/* Glowing Highlight Text */
+.highlight {
+    color: #ff00ff;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4;
+}
+
+/* Button Styling */
+.button-container {
+    margin-top: 30px;
+}
+
+.return-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #ff1493;
+    border: 2px solid #ff6f91;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.return-button:hover {
+    background-color: #ff69b4;
+    color: #ffebcd;
+}
+
+/* Animations */
+@keyframes shine {
+    0% { color: #ff6f91; }
+    50% { color: #ff1493; text-shadow: 0 0 20px #ff1493; }
+    100% { color: #ff6f91; }
+}
+
+@keyframes rainbow-glow {
+    0% { color: #ff7f50; }
+    25% { color: #ff1493; }
+    50% { color: #ff69b4; }
+    75% { color: #f0e68c; }
+    100% { color: #7fffd4; }
+}
