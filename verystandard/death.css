@@ -1,0 +1,116 @@
+/* styles.css */
+
+/* Base Styles for Suffering Theme */
+body.suffering {
+    background-color: #0d0d0d;
+    color: #8b0000;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Container for Despair Elements */
+.suffering-container {
+    max-width: 800px;
+    padding: 30px;
+    text-align: center;
+    color: #8b0000;
+    filter: blur(0.2px);
+    opacity: 0.95;
+}
+
+/* Glitch Effect Header */
+.glitch {
+    font-size: 3em;
+    color: #ff0000;
+    animation: glitch 1.5s infinite;
+    text-shadow: 0 0 10px #8b0000, 0 0 20px #8b0000, 0 0 30px #ff0000;
+}
+
+/* Whispering Subtitle */
+.whisper {
+    font-size: 1.5em;
+    color: #6b0000;
+    font-style: italic;
+    animation: whisper 4s infinite alternate;
+}
+
+/* Despairing Text with Curse Highlights */
+.despair-text {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #a30000;
+    margin: 20px 0;
+    animation: flicker 3s infinite;
+}
+
+.curse {
+    color: #9c0000;
+    font-weight: bold;
+    text-shadow: 0 0 10px #8b0000;
+    animation: curse-flicker 4s infinite alternate;
+}
+
+.secret {
+    color: #ff4500;
+    text-shadow: 0 0 8px #ff6347;
+    font-style: italic;
+    animation: pulse 3s infinite alternate;
+}
+
+/* Return Button Styling */
+.button-container {
+    margin-top: 30px;
+}
+
+.return-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    color: #1c0000;
+    background-color: #ff4500;
+    border: 2px solid #8b0000;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.return-button:hover {
+    background-color: #b22222;
+    color: #000;
+}
+
+/* Animations */
+@keyframes glitch {
+    0% { transform: translate(0); opacity: 1; }
+    20% { transform: translate(-2px, -2px); }
+    40% { transform: translate(2px, 2px); opacity: 0.8; }
+    60% { transform: translate(-2px, 2px); opacity: 0.5; }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); opacity: 1; }
+}
+
+@keyframes whisper {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+@keyframes curse-flicker {
+    0%, 100% { color: #9c0000; text-shadow: 0 0 5px #8b0000; }
+    50% { color: #ff0000; text-shadow: 0 0 10px #ff6347; }
+}
+
+@keyframes pulse {
+    0% { text-shadow: 0 0 8px #ff4500, 0 0 15px #b22222; }
+    100% { text-shadow: 0 0 20px #ff0000, 0 0 25px #ff4500; }
+}
