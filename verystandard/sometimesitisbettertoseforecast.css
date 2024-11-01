@@ -1,0 +1,123 @@
+/* Background Styling for Random Page */
+.random-background {
+    background: linear-gradient(45deg, #ff0066, #00ff99, #00ffff, #ffcc00, #cc00ff);
+    background-size: 400% 400%;
+    animation: background-slide 8s infinite alternate ease-in-out;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Header */
+.random-header h1 {
+    color: #ffcc00;
+    font-size: 3em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #ff00ff;
+    animation: rotate-color 5s infinite alternate;
+}
+
+/* Content Styling */
+.random-content {
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+}
+
+/* Paragraph Text */
+.random-text, .random-code, .random-fact {
+    font-size: 1.2em;
+    margin: 15px auto;
+    max-width: 80%;
+    color: #00ffcc;
+    text-shadow: 0 0 5px #333;
+    animation: text-jump 3s infinite alternate ease-in-out;
+}
+
+/* Random Fact Box */
+.random-box {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ff00ff;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 60%;
+    animation: pulse-box 4s infinite alternate;
+}
+
+/* Rotating Shape */
+.rotating-shape {
+    font-size: 4em;
+    color: #00ccff;
+    animation: rotate 4s linear infinite;
+}
+
+/* Flashing Link Text */
+.flashing-text a {
+    color: #ff66ff;
+    text-decoration: none;
+    animation: flashing 0.5s infinite alternate;
+}
+
+/* Floating Text */
+.floating-text {
+    font-size: 2em;
+    color: #ccff00;
+    position: relative;
+    animation: float 3s ease-in-out infinite alternate;
+}
+
+/* Random Emoji */
+.random-emoji {
+    font-size: 2em;
+    animation: spin-emoji 6s infinite linear;
+}
+
+/* Background Slide Animation */
+@keyframes background-slide {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Color Change Animation */
+@keyframes rotate-color {
+    0% { color: #ffcc00; }
+    50% { color: #00ff99; }
+    100% { color: #cc00ff; }
+}
+
+/* Text Jump Animation */
+@keyframes text-jump {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Pulse Animation */
+@keyframes pulse-box {
+    0% { box-shadow: 0 0 10px #ff00ff; }
+    100% { box-shadow: 0 0 20px #00ffcc; }
+}
+
+/* Rotate Animation */
+@keyframes rotate {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Flashing Animation */
+@keyframes flashing {
+    0% { color: #ff0000; }
+    100% { color: #00ff00; }
+}
+
+/* Float Animation */
+@keyframes float {
+    0% { top: 0; }
+    100% { top: -10px; }
+}
+
+/* Spin Emoji Animation */
+@keyframes spin-emoji {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
