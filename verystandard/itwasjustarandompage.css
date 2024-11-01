@@ -1,0 +1,109 @@
+/* Основний фон - флуоресцентна градація */
+.full-madness {
+    background: linear-gradient(45deg, #ff00cc, #00ff99, #ff3399, #0000ff, #33ff00);
+    background-size: 500% 500%;
+    animation: bgShift 8s infinite;
+    color: #00ffcc;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+}
+
+/* Меню */
+.menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: black;
+    border-bottom: 2px solid #ff00ff;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu-item {
+    color: #ffcc00;
+    font-size: 1.5em;
+    text-decoration: none;
+    text-shadow: 2px 2px #00ff99;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.menu-item:hover {
+    color: #00ffcc;
+    transform: rotate(15deg) scale(1.3);
+}
+
+/* Заголовок сторінки */
+.page-title h1 {
+    color: #ff0033;
+    font-size: 4em;
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: 5px 5px #00ffcc, -5px -5px #ff00ff;
+    animation: shake 0.5s infinite alternate ease-in-out;
+}
+
+/* Контейнер для тексту */
+.madness-container {
+    padding: 50px;
+    text-align: center;
+    margin-top: 150px;
+}
+
+/* Текст із шифруванням та беззмістовністю */
+.madness-text {
+    font-size: 2.5em;
+    color: #00ff99;
+    animation: colorFlash 2s infinite alternate;
+    text-shadow: 4px 4px #ff0033;
+}
+
+/* Шифрований текст */
+.coded-text {
+    color: #ff00ff;
+    font-size: 1.8em;
+    animation: codedFlicker 3s infinite;
+}
+
+.coded-text p {
+    margin: 10px 0;
+}
+
+/* Спіральний наклад */
+.spiral-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Fibonacci_spiral_34.svg/200px-Fibonacci_spiral_34.svg.png') center no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+    animation: spin 12s infinite linear;
+}
+
+/* Анімації */
+@keyframes bgShift {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+@keyframes shake {
+    0% { transform: rotate(-5deg); }
+    100% { transform: rotate(5deg); }
+}
+
+@keyframes colorFlash {
+    0% { color: #ff33cc; }
+    100% { color: #ff00ff; }
+}
+
+@keyframes codedFlicker {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
