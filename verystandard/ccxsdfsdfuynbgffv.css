@@ -1,0 +1,119 @@
+/* Загальний темний фон із синім підсвіченням */
+.dark-mystery {
+    background: radial-gradient(circle at 50% 50%, #0d1b2a, #1b263b, #0d1b2a 75%);
+    color: #b0c7d8;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Меню */
+.menu {
+    width: 100%;
+    background: #1b263b;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-item {
+    color: #4cc9f0;
+    font-size: 1.5em;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.menu-item:hover {
+    color: #b5179e;
+    transform: scale(1.1);
+}
+
+/* Заголовок і вступ */
+.intro {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.intro-title {
+    color: #4cc9f0;
+    font-size: 3em;
+    text-shadow: 0 0 10px #4cc9f0;
+    animation: textFlicker 3s infinite;
+}
+
+.intro-text {
+    color: #b0c7d8;
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+/* Контент і текст загадковий */
+.content {
+    max-width: 800px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #b5179e;
+    box-shadow: 0 0 15px #4cc9f0;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.mystery-text {
+    font-size: 1.5em;
+    color: #b0c7d8;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.highlight {
+    color: #ff4d6d;
+    text-shadow: 0 0 5px #ff4d6d;
+    animation: pulse 1.5s infinite;
+}
+
+/* Шифрований текст */
+.coded-text {
+    font-size: 1.1em;
+    color: #4cc9f0;
+    text-align: center;
+}
+
+.coded-text p {
+    margin: 15px 0;
+    animation: codeFlicker 2s infinite alternate;
+}
+
+.fade-text {
+    color: #00bbf9;
+    opacity: 0.6;
+    animation: fadeInOut 4s infinite;
+}
+
+/* Анімації */
+@keyframes textFlicker {
+    0%, 100% { text-shadow: 0 0 15px #4cc9f0, 0 0 30px #4cc9f0; }
+    50% { text-shadow: 0 0 5px #4cc9f0; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes codeFlicker {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+}
