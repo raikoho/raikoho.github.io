@@ -1,0 +1,88 @@
+/* styles.css */
+
+/* Base Styles for Cyberpunk Theme */
+body.cyberpunk {
+    background-color: #0a0a0a;
+    color: #00ffcc;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+}
+
+/* Glitch Text Styles */
+.glitch-container {
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.glitch {
+    position: relative;
+    font-size: 2.5em;
+    color: #ff00ff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: neon-flicker 1.5s infinite alternate;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #00ffff;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: glitch 3s infinite ease-in-out;
+}
+
+.glitch::after {
+    color: #ff0000;
+    clip: rect(0, 900px, 0, 0);
+    animation: glitch 2s infinite ease-in-out;
+}
+
+@keyframes glitch {
+    0%, 100% { clip: rect(0, 900px, 0, 0); }
+    20% { clip: rect(0, 900px, 0, 0); }
+    40% { clip: rect(0, 900px, 0, 0); }
+    60% { clip: rect(0, 900px, 0, 0); }
+    80% { clip: rect(0, 900px, 0, 0); }
+}
+
+@keyframes neon-flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* Cyberpunk Text and Neon Styles */
+.cyber-text {
+    padding: 10px 20px;
+    line-height: 1.6;
+    color: #00ffcc;
+    background: rgba(0, 0, 0, 0.8);
+    border-left: 5px solid #ff00ff;
+    margin: 10px;
+    animation: text-glow 2s infinite alternate;
+}
+
+@keyframes text-glow {
+    from {
+        text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    }
+    to {
+        text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+    }
+}
+
+/* Neon Highlight for Emphasis */
+.neon {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #ff00ff, 0 0 30px #00ff00;
+    font-weight: bold;
+    animation: neon-pulse 1s infinite alternate;
+}
+
+@keyframes neon-pulse {
+    0% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
