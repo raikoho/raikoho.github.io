@@ -1,0 +1,67 @@
+/* Background styling for Cipher page */
+.cipher-background {
+    background-color: #0d0d0d; /* Deep black background */
+    color: #00ff6a; /* Neon green for text */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Title Styling */
+.cipher-title {
+    font-size: 2.5em;
+    text-align: center;
+    color: #ff00ff; /* Neon purple */
+    text-shadow: 0 0 8px #ff00ff, 0 0 15px #00ff6a; /* Multi-layer glow effect */
+    margin-top: 20px;
+    animation: neon-flicker 2s infinite;
+}
+
+/* Text Styling */
+.cipher-text {
+    font-size: 1.2em;
+    color: #00ff6a;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+    max-width: 80%;
+    line-height: 1.5;
+    border-left: 3px dashed #ff00ff;
+    border-right: 3px dashed #ff00ff;
+}
+
+/* Encoded Text Styling */
+.encoded-text {
+    font-family: 'Courier', monospace;
+    color: #00e6ff; /* Light cyan */
+    text-align: center;
+    margin: 5px 0;
+    animation: blink 2s infinite alternate; /* Blinking effect */
+}
+
+/* Neon Flicker Animation */
+@keyframes neon-flicker {
+    0% { text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ff6a; }
+    50% { text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ff6a; }
+    100% { text-shadow: 0 0 15px #ff00ff, 0 0 30px #00ff6a; }
+}
+
+/* Blink Animation for Encoded Text */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+/* Hidden Message Styling */
+.hidden-message {
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    color: #ff9900; /* Bright orange */
+    margin-top: 20px;
+    animation: pulse 1.5s infinite;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
