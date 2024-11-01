@@ -1,0 +1,135 @@
+/* ultimate_xss_chaos.css */
+
+.xss-chaos-container {
+    display: flex;
+    flex-wrap: wrap;
+    background: repeating-linear-gradient(45deg, #660066, #ff0000, #0099cc, #ffcc00);
+    padding: 50px;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+}
+
+.chaos-title {
+    font-size: 3em;
+    color: #cc00cc;
+    animation: title-flicker 0.1s infinite alternate;
+    transform: rotate(-5deg);
+    padding: 20px;
+    background: #000;
+    border: 5px dashed #00ffcc;
+}
+
+.chaos-text {
+    font-size: 1.2em;
+    color: #66ff66;
+    animation: chaos-rotate 8s infinite linear;
+    background: #330033;
+    padding: 20px;
+    border: 3px dotted #ff0066;
+    max-width: 70%;
+    margin: 20px;
+    transform: rotate(15deg);
+}
+
+.xss-payloads {
+    font-size: 1em;
+    color: #ff3333;
+    list-style: none;
+    padding: 20px;
+    animation: list-bounce 4s infinite linear;
+}
+
+.xss-payloads li {
+    margin: 10px 0;
+    color: #00ffcc;
+    background: #330066;
+    padding: 10px;
+    border-radius: 15px;
+    transform: skew(15deg);
+    animation: payload-flicker 1s infinite alternate;
+}
+
+.chaos-button {
+    font-size: 1.2em;
+    background: linear-gradient(90deg, #ff00cc, #0066ff, #ff6600);
+    padding: 15px 25px;
+    border-radius: 15px;
+    margin: 20px;
+    color: #fff;
+    border: 2px solid #ff0066;
+    cursor: pointer;
+    animation: button-shake 1s infinite;
+}
+
+.marquee-text {
+    font-size: 1.5em;
+    color: #ccff00;
+    animation: marquee-blur 0.3s infinite alternate;
+    margin: 20px;
+    background: #660033;
+}
+
+.spinning-square {
+    width: 120px;
+    height: 120px;
+    background: #ff33cc;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    animation: spin 3s infinite linear;
+}
+
+.flipping-text {
+    font-size: 1.8em;
+    color: #00ff66;
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    animation: flip 2s infinite linear;
+}
+
+/* Анімації для максимальної анархії */
+@keyframes title-flicker {
+    0%, 100% { color: #ff3333; }
+    50% { color: #ffcc00; }
+}
+
+@keyframes chaos-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes list-bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes payload-flicker {
+    0%, 100% { background: #6600cc; }
+    50% { background: #ffcc66; }
+}
+
+@keyframes button-shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(5px); }
+    50% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes marquee-blur {
+    0%, 100% { text-shadow: 0 0 5px #fff; }
+    50% { text-shadow: 0 0 20px #00ff99; }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes flip {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
