@@ -1,144 +1,123 @@
-/* Reset for smooth look on mobile */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Insanity Background */
+.insanity-background {
+    background: radial-gradient(circle, #ff3399, #3300ff, #00ffcc, #ffcc00, #ff0033);
+    animation: backgroundShift 7s infinite alternate;
+    color: #00ff99;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
 }
 
-/* Container for bright, experimental look */
-body, html {
-  font-family: 'Courier New', monospace;
-  background: #0d0d0d; /* Dark background for contrast */
-  color: #fffbf5;
-  overflow-x: hidden;
-}
-
-/* Header */
-header {
-  text-align: center;
-  padding: 30px;
-  background: linear-gradient(135deg, #ff007f, #ff8c00, #f0f);
-  color: #1a1a1a;
-  font-size: 2.5rem;
-  border-radius: 25px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-  transform: skew(-5deg);
-}
-
-/* Navigation menu */
+/* Menu Styling */
 .menu {
-  display: flex;
-  justify-content: space-around;
-  background: radial-gradient(circle, #00ffea, #ff00ff);
-  padding: 15px;
-  border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.menu a {
-  color: #1a1a1a;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.5rem;
-  transition: all 0.3s ease;
-  transform: rotate(15deg);
+.menu-item {
+    color: #ff00cc;
+    font-size: 1.5em;
+    text-decoration: none;
+    text-shadow: 2px 2px #00ff99;
+    transition: color 0.3s;
 }
 
-.menu a:hover {
-  transform: rotate(-15deg) scale(1.3);
-  color: #fff;
-  text-shadow: 0 0 5px #ffea00, 0 0 10px #ff00ff;
+.menu-item:hover {
+    color: #ffcc00;
+    transform: scale(1.2);
 }
 
-/* Sections */
-.section {
-  padding: 20px;
-  text-align: center;
-  margin: 15px;
-  border-radius: 30px;
-  animation: shake 0.5s infinite alternate;
+/* Header Styling */
+.chaos-header h1 {
+    color: #ff3300;
+    font-size: 3.5em;
+    text-align: center;
+    letter-spacing: 8px;
+    animation: shake 1s infinite alternate ease-in-out;
+    text-shadow: 5px 5px 0 #00ffcc, -5px -5px 0 #ff00ff;
 }
 
-/* Section styles with vibrant colors */
-.swamp {
-  background: #005500; /* Dark swamp green */
-  color: #fffbf5;
-  transform: skew(10deg) rotate(-5deg);
-}
-
-.tree {
-  background: #330066; /* Dark purple */
-  color: #ffcc00; /* Gold */
-  transform: rotate(5deg) translateY(10px);
-}
-
-.secret {
-  background: #660000; /* Dark red */
-  color: #00ff66; /* Neon green */
-  transform: skew(-10deg) translateY(-10px);
-}
-
-.about {
-  background: #003366; /* Dark blue */
-  color: #ff9999; /* Light pink */
-  transform: rotate(-5deg) translateY(5px);
-}
-
-/* Responsive for mobile */
-@media (max-width: 600px) {
-  .menu {
-    flex-direction: column;
-    font-size: 1.5rem;
-  }
-}
-
-/* Animations */
-@keyframes shake {
-  0% { transform: translate(0); }
-  100% { transform: translate(5px); }
-}
-
-@keyframes colorshift {
-  0% { background-color: #ff007f; }
-  25% { background-color: #ff8c00; }
-  50% { background-color: #ffea00; }
-  75% { background-color: #00ffea; }
-  100% { background-color: #ff00ff; }
-}
-
-header {
-  animation: colorshift 8s infinite;
-}
-
-/* styles.css */
-body {
-    font-family: 'Courier New', Courier, monospace;
-}
-
-h1, h2 {
-    text-shadow: 2px 2px 5px black; /* Shadow for depth */
-    animation: swing 1.5s infinite alternate;
-}
-
-.section {
+/* Chaos Content */
+.chaos-content {
+    text-align: center;
     padding: 20px;
-    margin: 10px;
-    border: 3px solid red; /* Solid border for emphasis */
-    animation: blink 1s infinite; /* Blinking effect */
+    color: #cc00ff;
 }
 
-.mysterious {
-    color: #ff00ff; /* Bright magenta */
-    font-size: 1.2em;
-    font-weight: bold;
-    text-transform: uppercase;
-    animation: wobble 1.5s infinite alternate; /* Wobble animation */
+/* Swirling Messages */
+.swirling-messages {
+    font-size: 1.8em;
+    animation: fadeInOut 10s infinite alternate;
 }
 
-.insert {
-    background-color: rgba(0, 255, 255, 0.3); /* Semi-transparent cyan */
-    border-radius: 5px;
-    padding: 5px;
-    animation: shake 0.5s infinite; /* Shake animation */
+.swirling-messages p {
+    animation: swirl 5s infinite alternate ease-in-out;
+    color: #00ff66;
 }
 
-/* Add other necessary styles and animations from previous pages here */
+/* Glitch Box */
+.glitch-box {
+    font-size: 2em;
+    background: #ff0000;
+    color: #00ffcc;
+    padding: 10px;
+    animation: glitch 1s infinite alternate;
+    text-shadow: 2px 2px #333333;
+}
+
+/* Flashing Neon */
+.flashing-neon {
+    font-size: 3em;
+    color: #ff3399;
+    animation: neonGlow 2s infinite alternate;
+}
+
+/* Rainbow Text */
+.rainbow-text {
+    font-size: 2em;
+    text-align: center;
+    background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: colorWave 3s infinite alternate;
+}
+
+/* Keyframes */
+@keyframes backgroundShift {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+@keyframes shake {
+    0% { transform: rotate(-5deg); }
+    100% { transform: rotate(5deg); }
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes swirl {
+    0%, 100% { transform: rotate(-15deg) scale(1); }
+    50% { transform: rotate(15deg) scale(1.2); }
+}
+
+@keyframes glitch {
+    0% { transform: skew(5deg, 2deg); }
+    100% { transform: skew(-5deg, -2deg); }
+}
+
+@keyframes neonGlow {
+    0% { color: #ff3399; text-shadow: 0 0 10px #ff3399, 0 0 20px #ff6699, 0 0 30px #ff3399; }
+    100% { color: #00ffcc; text-shadow: 0 0 10px #00ffcc, 0 0 20px #33ffcc, 0 0 30px #00ffcc; }
+}
+
+@keyframes colorWave {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
