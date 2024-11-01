@@ -1,0 +1,140 @@
+/* chaotic_may_beetles.css */
+
+.total-chaos-container {
+    display: flex;
+    flex-wrap: wrap;
+    background: repeating-linear-gradient(135deg, #440000, #ff6666, #00cc00, #6666ff, #ff0066);
+    padding: 40px;
+    overflow: hidden;
+}
+
+.chaos-title {
+    font-size: 4em;
+    color: #ff66ff;
+    animation: title-flicker 0.1s infinite alternate;
+}
+
+.chaos-text {
+    color: #33ff99;
+    font-size: 1.5em;
+    animation: chaos-rotate 5s infinite linear;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 4px dotted #ff0000;
+}
+
+.chaos-button {
+    font-size: 1.5em;
+    background: linear-gradient(90deg, #ffcc00, #660066, #ff3300);
+    padding: 15px;
+    border-radius: 50px;
+    margin: 10px;
+    animation: button-pop 0.5s infinite alternate;
+}
+
+.marquee-text {
+    font-size: 1.5em;
+    color: #ff99cc;
+    animation: marquee-blur 0.3s infinite alternate;
+    margin: 20px;
+}
+
+.spinning-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #00ccff;
+    animation: spin 1s infinite linear;
+    margin: 30px;
+}
+
+.blinking-box {
+    font-size: 2em;
+    color: #ff3333;
+    animation: blink 0.2s infinite alternate;
+    padding: 20px;
+    margin: 10px;
+    background: #000;
+    border: 3px solid #ffcc00;
+}
+
+.jumping-triangle {
+    width: 50px;
+    height: 50px;
+    background: #cc00ff;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: jump 1s infinite alternate;
+}
+
+.text-overlay {
+    font-size: 3em;
+    color: #cc6600;
+    animation: overlay-float 3s infinite linear;
+}
+
+.falling-leaves {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.fall-leaf {
+    position: absolute;
+    top: -100px;
+    width: 30px;
+    height: 30px;
+    background-color: #ff9933;
+    animation: leaf-fall 10s infinite;
+}
+
+.fall-leaf:nth-child(1) { left: 20%; animation-delay: 1s; }
+.fall-leaf:nth-child(2) { left: 50%; animation-delay: 2s; }
+.fall-leaf:nth-child(3) { left: 80%; animation-delay: 3s; }
+
+/* Анімації для повного хаосу */
+@keyframes title-flicker {
+    0%, 100% { color: #ff3300; }
+    50% { color: #3300ff; }
+}
+
+@keyframes chaos-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes button-pop {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes marquee-blur {
+    0%, 100% { text-shadow: 0 0 5px #fff; }
+    50% { text-shadow: 0 0 15px #00ff99; }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes blink {
+    0%, 100% { background: #660033; }
+    50% { background: #ff99cc; }
+}
+
+@keyframes jump {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+@keyframes overlay-float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(20px); }
+}
+
+@keyframes leaf-fall {
+    0% { top: -100px; transform: rotate(0); }
+    100% { top: 100vh; transform: rotate(360deg); }
+}
