@@ -1,0 +1,101 @@
+/* Background Styling for Madness Page */
+.madness-background {
+    background: repeating-conic-gradient(#ff0066 0% 10%, #00ff99 10% 20%);
+    animation: kaleidoscope 5s infinite alternate ease-in-out;
+    font-family: 'Courier New', monospace;
+    color: #ff3300;
+}
+
+/* Header Styling */
+.madness-header h1 {
+    color: #ff66ff;
+    font-size: 4em;
+    text-align: center;
+    letter-spacing: 8px;
+    transform: rotate(10deg);
+    text-shadow: 4px 4px 0 #00ffcc, -4px -4px 0 #ff00ff;
+    animation: shake 0.5s infinite alternate;
+}
+
+/* Paragraph Text */
+.madness-text, .madness-riddle, .hidden-clue {
+    font-size: 1.5em;
+    margin: 20px auto;
+    text-align: center;
+    max-width: 80%;
+    color: #cc00ff;
+    animation: flicker 1.5s infinite alternate;
+}
+
+/* Spiral */
+.spiral {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    background: conic-gradient(#ff3333 0% 25%, #3333ff 25% 50%, #33ff33 50% 75%, #ffff33 75% 100%);
+    border-radius: 50%;
+    animation: spin 3s linear infinite;
+}
+
+/* Scattered Letters */
+.scattered-letters {
+    font-size: 2em;
+    margin: 30px auto;
+    color: #00ff99;
+    text-align: center;
+    text-shadow: 2px 2px 0 #ff3333, -2px -2px 0 #3333ff;
+    animation: float 3s infinite alternate;
+}
+
+/* Floating Bubbles */
+.floating-bubbles p {
+    color: #cc00cc;
+    font-size: 1.5em;
+    margin: 10px;
+    animation: float-bubbles 4s infinite alternate ease-in-out;
+}
+
+/* Hidden Clue */
+.hidden-clue {
+    font-size: 1.3em;
+    margin: 20px;
+    color: #ffffff;
+    opacity: 0.7;
+    animation: appear-disappear 3s infinite alternate;
+}
+
+/* Keyframes */
+@keyframes kaleidoscope {
+    0% { background-size: 100% 100%; }
+    100% { background-size: 400% 400%; }
+}
+
+@keyframes shake {
+    0% { transform: rotate(-10deg); }
+    100% { transform: rotate(10deg); }
+}
+
+@keyframes flicker {
+    0% { color: #ff66ff; opacity: 0.8; }
+    100% { color: #00ccff; opacity: 1; }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes float-bubbles {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-30px); color: #ff3399; }
+}
+
+@keyframes appear-disappear {
+    0% { opacity: 1; }
+    100% { opacity: 0; color: #ffcc00; }
+}
