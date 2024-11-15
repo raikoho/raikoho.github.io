@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biography of Mykola Tkachuk - The Glowing Madness</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            color: #ff00ff;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            animation: blink-background 1s infinite alternate;
+        }
+
+        @keyframes blink-background {
+            0% { background-color: #000; }
+            50% { background-color: #330033; }
+            100% { background-color: #000; }
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            font-size: 4em;
+            color: #ffcc00;
+            text-shadow: 0 0 15px rgba(255, 255, 0, 1), 0 0 30px rgba(255, 0, 255, 1);
+            animation: glow 1s ease-in-out infinite alternate;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 4em;
+            animation: blink-text 0.3s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 20px rgba(255, 0, 255, 0.6), 0 0 30px rgba(255, 255, 0, 0.5); }
+            50% { text-shadow: 0 0 20px rgba(255, 255, 0, 0.6), 0 0 50px rgba(0, 255, 255, 0.5); }
+            100% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 50px rgba(0, 255, 0, 0.7); }
+        }
+
+        @keyframes blink-text {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+
+        .bio-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+            animation: move 3s ease-in-out infinite alternate;
+        }
+
+        .bio-section {
+            width: 45%;
+            background: linear-gradient(45deg, #ff00ff, #ff6600);
+            border: 5px solid #00ff00;
+            margin: 20px;
+            padding: 20px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+            text-align: center;
+            animation: blink-border 1.5s infinite alternate;
+        }
+
+        @keyframes blink-border {
+            0% { border-color: #ff00ff; }
+            50% { border-color: #00ffff; }
+            100% { border-color: #ff00ff; }
+        }
+
+        .bio-section h2 {
+            color: #00ffff;
+            font-size: 3em;
+            text-shadow: 0 0 15px rgba(255, 0, 255, 0.7), 0 0 30px rgba(255, 255, 0, 0.8);
+            animation: blink-text 0.5s infinite alternate;
+        }
+
+        .bio-section p {
+            font-size: 1.5em;
+            color: #00ff00;
+            line-height: 1.6;
+            animation: blink-text 0.5s infinite alternate;
+        }
+
+        .bio-section img {
+            width: 200px;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 50%;
+            box-shadow: 0 0 50px rgba(255, 255, 0, 0.8);
+            animation: rotate-image 4s linear infinite alternate;
+        }
+
+        @keyframes rotate-image {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .button {
+            display: inline-block;
+            margin: 15px;
+            padding: 15px 30px;
+            font-size: 2em;
+            background-color: #ff6600;
+            color: #ffffff;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 0, 1);
+            animation: blink-button 0.3s infinite alternate;
+        }
+
+        @keyframes blink-button {
+            0% { background-color: #ff6600; }
+            50% { background-color: #ff0066; }
+            100% { background-color: #ff6600; }
+        }
+
+        .button:hover {
+            background-color: #ff0066;
+            animation: none;
+        }
+
+        .video-link {
+            display: block;
+            text-align: center;
+            margin: 20px;
+            font-size: 1.5em;
+            color: #ff00ff;
+            text-decoration: none;
+            text-shadow: 0 0 15px rgba(255, 0, 255, 1), 0 0 30px rgba(0, 255, 255, 1);
+            animation: blink-text 0.5s infinite alternate;
+        }
+
+        .video-link:hover {
+            color: #00ffff;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            animation: blink-gallery 2s infinite alternate;
+        }
+
+        .image-gallery img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+            animation: flicker-image 1s infinite alternate;
+        }
+
+        @keyframes flicker-image {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes blink-gallery {
+            0% { filter: hue-rotate(0deg); }
+            50% { filter: hue-rotate(180deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .bio-section {
+                width: 90%;
+                margin: 10px;
+                padding: 15px;
+            }
+
+            header {
+                font-size: 2.5em;
+            }
+
+            .bio-section img {
+                width: 150px;
+                margin-top: 15px;
+            }
+
+            .image-gallery img {
+                width: 200px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MYKOLA Tkachuk - THE GLOWING MADNESS</h1>
+</header>
+
+<div class="bio-container">
+    <div class="bio-section">
+        <h2>Biography</h2>
+        <img src="https://raikoho.github.io/suspicious-creatures/x081CEsd654/media/photo_5253618002811806663_y.jpg" alt="Mykola Tkachuk">
+        <p>
+            Mykola Tkachuk is the essence of chaos. His ideas, as unpredictable as the weather, were often described as 'too far-reaching'. His game, intended to bring forth the secrets of the universe, was perpetually delayed due to his obsessive commitment to reading, gaming, and finding the perfect shade of pink for his room. 
+        </p>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="video-link">Watch The Madness Unfold</a>
+    </div>
+
+    <div class="bio-section">
+        <h2>Endless Repetition</h2>
+        <p>
+            Mykola’s approach to life was like his approach to programming—repetitive, inefficient, and yet oddly captivating. His game, much like his everyday actions, kept going in circles, never quite reaching its destination. But in the end, perhaps it was the repetition that gave him the most joy. Who needs progress when you can repeat everything a thousand times?
+        </p>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="video-link">See More Madness</a>
+    </div>
+</div>
+
+<div class="image-gallery">
+    <img src="https://raikoho.github.io/suspicious-creatures/x081CEsd654/media/photo.jpg" alt="Mykola's work">
+    <img src="https://raikoho.github.io/suspicious-creatures/x081CEsd654/media/second.jpg" alt="Mykola in action">
+</div>
+
+<div style="text-align: center; margin-top: 50px;">
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button">CLICK HERE FOR MORE CHAOS</a>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button">ANOTHER BUTTON</a>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button">A THIRD BUTTON!</a>
+</div>
+
+</body>
+</html>
