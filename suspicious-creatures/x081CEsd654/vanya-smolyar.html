@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biography of Mykola Tkachuk - The Glowing Madness</title>
+    <title>Ваня Смолярчук</title>
     <style>
         * {
             margin: 0;
@@ -12,40 +12,38 @@
         }
 
         body {
-            background-color: #000;
-            color: #ff00ff;
+            background-color: #1a1a1a;
+            color: #d3d3d3;
             font-family: 'Arial', sans-serif;
-            overflow-y: scroll; /* Це дозволяє прокручувати сторінку */
-            animation: blink-background 1s infinite alternate;
+            animation: blink-background 2s infinite alternate;
+            overflow-y: scroll;
             height: 100%;
-            min-height: 100%;
         }
 
         @keyframes blink-background {
-            0% { background-color: #000; }
-            50% { background-color: #330033; }
-            100% { background-color: #000; }
+            0% { background-color: #1a1a1a; }
+            50% { background-color: #333; }
+            100% { background-color: #1a1a1a; }
         }
 
         header {
             text-align: center;
             padding: 20px;
             font-size: 3em;
-            color: #ffcc00;
-            text-shadow: 0 0 15px rgba(255, 255, 0, 1), 0 0 30px rgba(255, 0, 255, 1);
-            animation: glow 1s ease-in-out infinite alternate;
+            color: #ff6600;
+            text-shadow: 0 0 15px rgba(255, 102, 0, 1), 0 0 30px rgba(255, 255, 255, 0.7);
             margin-bottom: 30px;
-        }
-
-        header h1 {
-            font-size: 3em;
-            animation: blink-text 0.3s ease-in-out infinite alternate;
+            animation: glow 1.5s infinite alternate;
         }
 
         @keyframes glow {
-            0% { text-shadow: 0 0 20px rgba(255, 0, 255, 0.6), 0 0 30px rgba(255, 255, 0, 0.5); }
-            50% { text-shadow: 0 0 20px rgba(255, 255, 0, 0.6), 0 0 50px rgba(0, 255, 255, 0.5); }
-            100% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 50px rgba(0, 255, 0, 0.7); }
+            0% { text-shadow: 0 0 20px rgba(255, 102, 0, 1), 0 0 50px rgba(255, 102, 0, 0.7); }
+            100% { text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 50px rgba(255, 255, 255, 0.5); }
+        }
+
+        h1 {
+            font-size: 2.5em;
+            animation: blink-text 0.4s infinite alternate;
         }
 
         @keyframes blink-text {
@@ -55,56 +53,66 @@
         }
 
         .container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin: 20px;
-        }
-
-        .bio-section {
-            width: 45%;
-            background: linear-gradient(45deg, #ff00ff, #ff6600);
-            border: 5px solid #00ff00;
-            margin: 20px;
+            width: 80%;
+            margin: 0 auto;
             padding: 20px;
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
-            text-align: center;
-            animation: blink-border 1.5s infinite alternate;
         }
 
-        @keyframes blink-border {
-            0% { border-color: #ff00ff; }
-            50% { border-color: #00ffff; }
-            100% { border-color: #ff00ff; }
+        .section {
+            margin-bottom: 40px;
         }
 
-        .bio-section h2 {
-            color: #00ffff;
+        .section h2 {
             font-size: 2.5em;
-            text-shadow: 0 0 15px rgba(255, 0, 255, 0.7), 0 0 30px rgba(255, 255, 0, 0.8);
+            color: #ffcc00;
+            text-align: center;
+            margin-bottom: 20px;
             animation: blink-text 0.5s infinite alternate;
         }
 
-        .bio-section p {
+        .section p {
             font-size: 1.2em;
-            color: #00ff00;
             line-height: 1.6;
+            color: #b3b3b3;
+            text-align: justify;
             animation: blink-text 0.5s infinite alternate;
         }
 
-        .bio-section img {
-            width: 200px;
-            height: auto;
-            margin-top: 20px;
-            border-radius: 50%;
-            box-shadow: 0 0 50px rgba(255, 255, 0, 0.8);
-            animation: rotate-image 4s linear infinite alternate;
+        .highlight {
+            color: #ff6600;
+            font-weight: bold;
+            text-decoration: underline;
         }
 
-        @keyframes rotate-image {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 102, 0, 0.7);
+            animation: flicker-image 1.5s infinite alternate;
+        }
+
+        @keyframes flicker-image {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .video-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
         }
 
         .button {
@@ -132,106 +140,77 @@
             animation: none;
         }
 
-        .video-link {
-            display: block;
-            text-align: center;
-            margin: 20px;
-            font-size: 1.5em;
-            color: #ff00ff;
-            text-decoration: none;
-            text-shadow: 0 0 15px rgba(255, 0, 255, 1), 0 0 30px rgba(0, 255, 255, 1);
-            animation: blink-text 0.5s infinite alternate;
-        }
-
-        .video-link:hover {
-            color: #00ffff;
-        }
-
-        .image-gallery {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 50px;
-            animation: blink-gallery 2s infinite alternate;
-        }
-
-        .image-gallery img {
-            width: 250px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
-            animation: flicker-image 1s infinite alternate;
-        }
-
-        @keyframes flicker-image {
-            0% { opacity: 1; }
-            50% { opacity: 0.3; }
-            100% { opacity: 1; }
-        }
-
-        @keyframes blink-gallery {
-            0% { filter: hue-rotate(0deg); }
-            50% { filter: hue-rotate(180deg); }
-            100% { filter: hue-rotate(360deg); }
-        }
-
         @media (max-width: 768px) {
             header {
                 font-size: 2em;
             }
 
-            .bio-section {
-                width: 100%;
-                margin: 10px 0;
-                padding: 15px;
+            .container {
+                width: 90%;
             }
 
-            .bio-section img {
-                width: 150px;
-                margin-top: 15px;
+            .section h2 {
+                font-size: 2em;
             }
 
-            .image-gallery img {
-                width: 200px;
+            .section p {
+                font-size: 1em;
             }
         }
-
     </style>
 </head>
 <body>
 
 <header>
-    <h1>MYKOLA Tkachuk - THE GLOWING MADNESS</h1>
+    <h1>Ваня Смолярчук</h1>
 </header>
 
 <div class="container">
-    <div class="bio-section">
-        <h2>Biography</h2>
-        <img src="https://raikoho.github.io/suspicious-creatures/x081CEsd654/media/photo_5253618002811806663_y.jpg" alt="Mykola Tkachuk">
-        <p>
-            Mykola Tkachuk is the essence of chaos. His ideas, as unpredictable as the weather, were often described as 'too far-reaching'. His game, intended to bring forth the secrets of the universe, was perpetually delayed due to his obsessive commitment to reading, gaming, and finding the perfect shade of pink for his room. 
-        </p>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="video-link">Watch The Madness Unfold</a>
+    <!-- Перша секція: Про Ваню -->
+    <div class="section">
+        <h2>Про Ваню</h2>
+        <p>Ваня Смолярчук, особа, що в своїй біографії поєднує непоєднувані явища, є по суті алгоритмічною аномалією, що перебуває в стійкому стані паралельних існувань, де одночасно існують множинні форми самовираження. Він — це і програміст, і K-pop фанат, і музикант, і хореограф, і викладач китайця, який, здається, розв'язує нескінченні задачі в математичному просторі, що взагалі не стосуються жодної з перерахованих ідентичностей.</p>
+        <div class="image-container">
+            <img src="https://via.placeholder.com/600x400" alt="Ваня Смолярчук">
+        </div>
     </div>
 
-    <div class="bio-section">
-        <h2>Endless Repetition</h2>
-        <p>
-            Mykola’s approach to life was like his approach to programming—repetitive, inefficient, and yet oddly captivating. His game, much like his everyday actions, kept going in circles, never quite reaching its destination. But in the end, perhaps it was the repetition that gave him the most joy. Who needs progress when you can repeat everything a thousand times?
-        </p>
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="video-link">Dive into the Chaos</a>
+    <!-- Друга секція: Творчість Вані -->
+    <div class="section">
+        <h2>Творчість Вані</h2>
+        <p>З початку свого існування Ваня демонструє здатність генерувати будь-які форми активності з мінімальними затратами енергії, аби водночас досягти максимального результату в кількох напрямах. Наприклад, коли він сідає за піаніно, його тонкі, довгі, незначно бліднуваті пальці, які здаються занадто слабкими для такого інтенсивного процесу, починають своєму користувачу процес декодування мелодійної послідовності нот.</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
-</div>
 
-<div class="image-gallery">
-    <img src="https://raikoho.github.io/suspicious-creatures/x081CEsd654/media/photo.jpg" alt="Mykola's work">
-    <img src="https://raikoho.github.io/suspicious-creatures/x081CEsd654/media/second.jpg" alt="Mykola in action">
-</div>
+    <!-- Третя секція: K-pop та реальність -->
+    <div class="section">
+        <h2>K-pop та реальність</h2>
+        <p>Замість того, аби сприймати об'єктивну реальність, він активно конструює її альтернативні версії, зокрема через запаморочливе обожнювання корейської поп-культури, що для нього є абсолютною первинною основою інтерпретації реальності. Кожен фрагмент його рефлексії схожий на шаблон, що фільтрує інформацію через підвищений рівень стереотипів K-pop індустрії.</p>
+    </div>
 
-<div style="text-align: center; margin-top: 50px;">
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button">CLICK HERE FOR MORE CHAOS</a>
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button">ANOTHER BUTTON</a>
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button">A THIRD BUTTON!</a>
+    <!-- Четверта секція: Програмування -->
+    <div class="section">
+        <h2>Програмування</h2>
+        <p>Проте, через низьку проникність для фрагментів класичної реальності, Ваня вирішує, що на нього чекає успіх в області програмування. Він зібрав у своїй свідомості конкретну операційну задачу на кшталт «розробити дата сервіси». В результаті чого відбулося формування симуляції програмного процесу, що включає 72 вкладених рівня коду, при цьому у кожному з них використано вбудовані бібліотеки для обробки запитів, що надходять в рамках специфікацій.</p>
+    </div>
+
+    <!-- П'ята секція: Соціальна взаємодія -->
+    <div class="section">
+        <h2>Соціальна взаємодія</h2>
+        <p>Щодо особливостей соціальної взаємодії, Ваня залишається найбільш активним у виконанні виключно своїх персональних задач. Зокрема, 15 жовтня, у пориві емоційної й технологічної активності, він просив своїх друзів лайкнути відео учня-китайця, який спробував зіграти на трубі, але не зміг. Це відео, ймовірно, мало символічне значення для подальшої мотивації Вані.</p>
+    </div>
+
+    <!-- Шоста секція: Фізіологія та існування -->
+    <div class="section">
+        <h2>Фізіологія та існування</h2>
+        <p>Що стосується фізіологічного компоненту його існування, Ваня періодично відзначає себе як істоту з мінімальними фізичними вимогами. Слабкі руки і ноги, що, здається, в принципі не здатні витримати жодне навантаження, здатні лише віртуозно маніпулювати своїм середовищем, аби вийти на новий рівень у взаємодії з об’єктами технологічного виміру.</p>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="#" class="button">Дізнатись більше</a>
+    </div>
 </div>
 
 </body>
