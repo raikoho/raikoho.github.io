@@ -6,9 +6,9 @@
     <title>Biography of Mykola Tkachuk</title>
     <style>
         body {
-            background-color: #1c1c1c;
-            color: #c6ff00; /* Яскраво зелений текст */
-            font-family: 'Arial', sans-serif;
+            background-color: #ff00ff;
+            color: #00ff00;
+            font-family: 'Comic Sans MS', sans-serif;
             margin: 0;
             padding: 0;
             overflow-x: hidden;
@@ -16,61 +16,101 @@
 
         header {
             text-align: center;
-            padding: 40px;
-            background-color: #333;
+            padding: 50px;
+            background-color: #ff6600;
+            border-bottom: 5px solid #ff00ff;
+            animation: glow 1.5s ease-in-out infinite alternate;
         }
 
         header h1 {
-            font-size: 3em;
-            color: #ff3333; /* Яскраво червоний */
+            font-size: 5em;
+            color: #ffff00;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            text-shadow: 0 0 20px rgba(255, 255, 0, 0.8), 0 0 40px rgba(255, 255, 0, 0.5);
+            animation: rotate 2s linear infinite;
         }
 
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 20px;
+            margin: 10px;
+            position: relative;
+            z-index: 2;
         }
 
         .bio-section {
-            width: 100%;
+            width: 90%;
             max-width: 1200px;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            margin-bottom: 50px;
-            border-bottom: 2px solid #ff3333;
-            padding: 30px;
-            background: #222;
+            justify-content: center;
+            margin-bottom: 30px;
+            border: 10px solid #ff00ff;
+            padding: 40px;
+            background: linear-gradient(45deg, #ff00ff, #00ff00, #ffff00, #ff6600);
+            box-shadow: 0 0 50px rgba(255, 0, 255, 0.8);
+            animation: bounce 2s ease infinite;
         }
 
         .bio-section img {
-            max-width: 40%;
-            border-radius: 10px;
-            margin-right: 20px;
-            box-shadow: 0 0 20px rgba(255, 51, 51, 0.5);
+            width: 250px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 1);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .bio-section img:hover {
+            transform: rotate(360deg);
+            box-shadow: 0 0 80px rgba(255, 255, 0, 1);
         }
 
         .bio-section div {
-            width: 55%;
-            color: #ffcc00; /* Яскраво жовтий текст */
+            width: 60%;
+            color: #ffcc00;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+        }
+
+        h2, h3 {
+            color: #ff00ff;
+            animation: flicker 1s linear infinite alternate;
+            text-shadow: 0 0 15px rgba(255, 0, 255, 1), 0 0 30px rgba(255, 0, 255, 1);
+        }
+
+        h2 {
+            font-size: 3em;
+        }
+
+        h3 {
+            font-size: 2.5em;
+            color: #ffff00;
+            animation: scale 1s linear infinite;
+        }
+
+        p {
+            font-size: 1.5em;
+            line-height: 1.8;
+            text-align: justify;
+            color: #00ffff;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            animation: pulse 2s ease-in-out infinite alternate;
         }
 
         .bio-text {
             text-align: center;
             padding: 30px;
-            background-color: #111;
             margin: 30px 0;
-            color: #00ffcc; /* Яскраво блакитний */
+            background-color: #222;
             border-radius: 10px;
-            font-size: 1.2em;
+            font-size: 1.4em;
+            animation: shake 2s ease infinite alternate;
         }
 
         .bio-text h2 {
-            color: #ff3333;
+            color: #ff3300;
             text-transform: uppercase;
+            animation: bounce 3s ease-in-out infinite alternate;
         }
 
         .image-gallery {
@@ -78,165 +118,32 @@
             justify-content: space-around;
             flex-wrap: wrap;
             margin-top: 50px;
+            animation: colorShift 4s infinite alternate;
         }
 
         .image-gallery img {
-            width: 200px;
+            width: 250px;
             height: auto;
             margin: 10px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 255, 204, 0.6);
-            transition: transform 0.3s;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.6);
+            transition: transform 0.3s, filter 0.3s;
         }
 
         .image-gallery img:hover {
             transform: scale(1.1);
-        }
-
-        @media (max-width: 768px) {
-            .bio-section {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .bio-section img {
-                max-width: 80%;
-                margin-bottom: 20px;
-            }
-
-            .bio-section div {
-                width: 100%;
-                text-align: center;
-            }
-
-            .image-gallery img {
-                width: 100%;
-                max-width: 300px;
-            }
-        }
-
-        footer {
-            background-color: #333;
-            padding: 20px;
-            text-align: center;
-            color: #ffcc00;
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <h1>Mykola Tkachuk: Biography</h1>
-</header>
-
-<div class="container">
-    <!-- First Section: Image + Text -->
-    <div class="bio-section">
-        <img src="https://raikoho.github.io/suspicious-creatures/x081CEsd654/media/photo_5253618002811806663_y.jpg" alt="Mykola Tkachuk">
-         <style>
-        body {
-            background-color: #000000;
-            font-family: 'Arial', sans-serif;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 4em;
-            color: #FF00FF;
-            animation: glow 1.5s ease-in-out infinite alternate;
-            text-shadow: 0 0 20px rgba(255, 0, 255, 0.8), 0 0 30px rgba(255, 0, 255, 0.6);
-        }
-
-        h2 {
-            font-size: 2.5em;
-            color: #00FF00;
-            animation: flicker 3s linear infinite;
-        }
-
-        h3 {
-            font-size: 2em;
-            color: #FF6600;
-            text-shadow: 0 0 10px rgba(255, 102, 0, 0.8), 0 0 20px rgba(255, 102, 0, 0.6);
-        }
-
-        p {
-            font-size: 1.5em;
-            line-height: 1.6;
-            text-align: justify;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-            color: #00FFFF;
-            animation: pulse 3s ease-in-out infinite alternate;
-        }
-
-        .container {
-            margin: 50px;
-            padding: 20px;
-        }
-
-        .bio-section {
-            margin: 30px 0;
-            padding: 30px;
-            background-color: #222222;
-            border-radius: 10px;
-            border: 2px solid #FF00FF;
-            box-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
-            transition: transform 0.5s ease;
-        }
-
-        .bio-section:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(255, 0, 255, 1);
-        }
-
-        .bio-section img {
-            width: 300px;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
-            transition: transform 0.3s ease;
-        }
-
-        .bio-section img:hover {
-            transform: rotate(15deg);
-            box-shadow: 0 0 40px rgba(0, 255, 255, 1);
-        }
-
-        .image-gallery {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 50px;
-        }
-
-        .image-gallery img {
-            width: 200px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 255, 204, 0.6);
-            transition: transform 0.3s;
             filter: hue-rotate(90deg);
         }
 
-        .image-gallery img:hover {
-            transform: scale(1.1);
-            filter: hue-rotate(180deg);
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
-        .animation-text {
-            color: #FF0000;
-            font-size: 2em;
-            font-weight: bold;
-            text-align: center;
-            animation: shake 0.5s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            0% { text-shadow: 0 0 20px rgba(255, 0, 255, 0.8), 0 0 30px rgba(255, 0, 255, 0.6); }
-            100% { text-shadow: 0 0 30px rgba(255, 0, 255, 1), 0 0 40px rgba(255, 0, 255, 0.8); }
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
         }
 
         @keyframes flicker {
@@ -245,25 +152,36 @@
             100% { opacity: 1; }
         }
 
+        @keyframes scale {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.2); }
+        }
+
         @keyframes pulse {
             0% { transform: scale(1); }
-            100% { transform: scale(1.05); }
+            100% { transform: scale(1.1); }
         }
 
         @keyframes shake {
             0% { transform: translateX(0); }
-            50% { transform: translateX(-10px); }
-            100% { transform: translateX(10px); }
+            50% { transform: translateX(-15px); }
+            100% { transform: translateX(15px); }
+        }
+
+        @keyframes colorShift {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
         }
 
         @media (max-width: 768px) {
             .bio-section {
                 flex-direction: column;
                 align-items: center;
+                padding: 20px;
             }
 
             .bio-section img {
-                width: 80%;
+                width: 70%;
                 margin-bottom: 20px;
             }
 
@@ -277,72 +195,40 @@
                 max-width: 300px;
             }
         }
+
     </style>
 </head>
 <body>
 
-<h1>Mykola Tkachuk: aVov</h1>
+<header>
+    <h1>MYKOLA Tkachuk - THE LEGENDARY aVov</h1>
+</header>
 
 <div class="container">
     <div class="bio-section">
-        <img src="https://via.placeholder.com/300" alt="Mykola Tkachuk">
+        <img src="https://raikoho.github.io/suspicious-creatures/x081CEsd654/media/photo_5253618002811806663_y.jpg" alt="Mykola Tkachuk">
         <div>
             <h2>Race: aVov</h2>
             <h3>Type: Samoznushchuvach</h3>
             <h3>Origin: Unknown</h3>
             <p>
                 Mykola Tkachuk, born in a Ukrainian village where fresh hay smelled at every step and there was an unstoppable flow of thoughts about eternal questions, was a man of an incredibly complex and sometimes even tragicomic fate. He lived with the idea that the best life was when you developed a game, wrote about politics and pretty girls, and of course helped your mother with the garden, while all the hustle and bustle of the world continued to spin, oblivious to his struggle with his own reality.
-
-                Mykola always dreamed of creating a huge computer game that would change the industry. He even studied programming at university, but the problem was that he constantly put everything off until tomorrow. Postponed the development of the game because I had to go to the store and buy new jeans at a discount, because the old ones were already so worn that they looked like fragments from some ancient archaeological expedition. I postponed the development of the game because I had to help my mother in the village with tomatoes, and this is more important. I postponed the development of the game, because a new free game was just released, and Mykola definitely had to collect it for his collection.
             </p>
         </div>
     </div>
 
     <div class="bio-text">
-        <h2>Unraveling the Mystery of Mykola Tkachuk</h2>
+        <h2>Unraveling the Mystery</h2>
         <p>
             Mykola's life is a series of unexpected turns. The delay in developing his life-changing game became a metaphor for his existence. A man caught between procrastination and destiny, Mykola’s true legacy remains locked in the labyrinth of his own choices. Perhaps one day, the world will finally unlock the code that is Mykola.
         </p>
     </div>
-    </div>
 
-    <!-- Middle Text Block -->
-    <div class="bio-text">
-        <h2>Unraveling the Mystery</h2>
-        <p>
-            And now, once again sitting at the computer with a mountain of plastic coffee cups and empty packets of chips, Mykola opens a new game. Now this was a game about politics and pretty girls, where every choice you made affected what your career would be and what relationships you would eventually form with the characters. He conducted an interesting dialogue about democratic values ​​with a fictional political figure, completely oblivious to the fact that the clock was already ticking to 2 am.
-
-The most interesting thing is that while thinking, Mykola came to the philosophical idea that politics and pretty girls are actually very similar concepts: they both change so quickly that you just don't have time to understand what is happening. And so, after such deep thinking, he decided that writing texts about these two topics is not only his vocation, but also a way to express his protest power.
-
-Mykola once tried to return to physical form. He decided to go to the horizontal bar and do at least one push-up on the horizontal bar. But here the real comedy began: the first attempt - the hands could not stand again, and Mykola, entangled in his own body, remained hanging on the horizontal bar like a marionette. That is how he remained weak physically, but with unlimited power in the world of ideas and reflections.
-        </p>
-    </div>
-
-    <!-- Biography Section -->
     <div class="bio-section">
         <div>
-            <h2>HisTory</h2>
+            <h2>The Ultimate Story</h2>
             <p>
-                The real problem was that all these ideas, texts and development of the game kept getting postponed. He wanted to create a computer game about his village, but there were constantly new situations, new games, new discounts on discounts in stores, new political scandals, new problems in the garden. And it seems that the development of the game was so far from his hands that it is no longer clear what will come first: his new game or the promised "tomorrow" again?
+                The real problem was that all these ideas, texts, and development of the game kept getting postponed. He wanted to create a computer game about his village, but there were constantly new situations, new games, new discounts on discounts in stores, new political scandals, new problems in the garden. And it seems that the development of the game was so far from his hands that it is no longer clear what will come first: his new game or the promised "tomorrow" again?
             </p>
             <p>
-And, despite all this, Mykola was a philosopher. He lived like that philosopher who knows everything but does nothing. His games, texts, music and politics turned into an endless cycle of delays and postponements. However, in the depths of his soul, Mykola knew that one day he would create everything. Just not today.            </p>
-        </div>
-        <img src="https://raikoho.github.io/suspicious-creatures/x081CEsd654/media/photo_5255979805327876012_y.jpg" alt="Mykola Tkachuk">
-    </div>
-
-    <!-- Image Gallery -->
-    <div class="image-gallery">
-        <img src="https://raikoho.github.io/suspicious-creatures/x081CEsd654/media/photo_1637852419774850999_c.jpg" alt="Image 1">
-        <img src="https://raikoho.github.io/suspicious-creatures/x081CEsd654/media/photo_5271974018725045886_m.jpg" alt="Image 2">
-        <img src="https://via.placeholder.com/200" alt="Image 3">
-        <img src="https://via.placeholder.com/200" alt="Image 4">
-    </div>
-</div>
-
-<footer>
-    <p>raikoho - All rights reserved</p>
-</footer>
-
-</body>
-</html>
+                And, despite all this, Mykola was a philosopher. He lived like that philosopher who knows everything but does nothing. His games, texts, music, and politics turned into an endless cycle of delays and postponements. However, in the depths of his soul, Mykola
