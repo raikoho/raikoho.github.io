@@ -3,6 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Numerology Secrets</title>
+    <title>Numerology: The Secrets of Numbers</title>
     <style>
-        /* General Styles */\n        body {\n            margin: 0;\n            padding: 0;\n            font-family: Arial, sans-serif;\n            background: linear-gradient(135deg, #1b1b1b, #3a3a3a);\n            color: #fff;\n            line-height: 1.6;\n        }\n\n        header {\n            background: #20252f;\n            padding: 20px;\n            text-align: center;\n            color: #f2c94c;\n            font-size: 1.8em;\n            font-weight: bold;\n            border-bottom: 3px solid #e76f51;\n        }\n\n        .content {\n            padding: 20px;\n            display: flex;\n            flex-direction: column;\n            gap: 20px;\n        }\n\n        .quote {\n            font-style: italic;\n            border-left: 5px solid #6c63ff;\n            padding-left: 10px;\n            color: #f2f2f2;\n        }\n\n        .section {\n            background: #2c2f34;\n            padding: 15px;\n            border-radius: 8px;\n            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);\n        }\n\n        .section h2 {\n            color: #f2c94c;\n            margin-top: 0;\n        }\n\n        .section p {\n            margin: 0;\n            font-size: 1em;\n            line-height: 1.8;\n        }\n\n        .numerology-list {\n            list-style: none;\n            padding: 0;\n            margin: 10px 0;\n        }\n\n        .numerology-list li {\n            background: #404552;\n            margin: 5px 0;\n            padding: 10px;\n            border-radius: 4px;\n        }\n\n        .numerology-list li span {\n            font-weight: bold;\n            color: #e76f51;\n        }\n\n        .footer {\n            text-align: center;\n            font-size: 0.8em;\n            color: #aaa;\n            margin-top: 20px;\n            padding: 10px 0;\n            border-top: 1px solid #444;\n        }\n\n        /* Responsive Design */\n        @media (max-width: 768px) {\n            header {\n                font-size: 1.5em;\n            }\n\n            .section {\n                padding: 10px;\n            }\n\n            .quote {\n                font-size: 0.9em;\n            }\n\n            .numerology-list li {\n                padding: 8px;\n            }\n        }\n    </style>\n</head>\n<body>\n    <header>Secrets of Numerology</header>\n\n    <div class=\"content\">\n        <div class=\"quote\">\n            \"The universe is written in the language of numbers, and those who can decipher it can unlock its mysteries.\"\n        </div>\n\n        <div class=\"section\">\n            <h2>The Meaning of Numbers</h2>\n            <p>In numerology, each number holds a vibration that resonates with universal truths. Understanding these meanings can reveal deep insights about life, purpose, and destiny.</p>\n            <ul class=\"numerology-list\">\n                <li><span>1:</span> The Creator. A symbol of independence, strength, and beginnings.</li>\n                <li><span>3:</span> The Connector. Represents communication, creativity, and self-expression.</li>\n                <li><span>7:</span> The Seeker. Known for wisdom, analysis, and spiritual awakening.</li>\n                <li><span>9:</span> The Humanitarian. Symbolizes completion, compassion, and universal love.</li>\n            </ul>\n        </div>\n\n        <div class=\"section\">\n            <h2>How Numerology Guides Us</h2>\n            <p>Every choice we make resonates with certain numbers. Birthdates, names, and even the time of day can carry meanings that reflect our destiny. Dive deep into your numbers to uncover hidden pathways to success and fulfillment.</p>\n        </div>\n\n        <div class=\"section\">\n            <h2>Discover Your Life Path Number</h2>\n            <p>Your life path number is derived from your birthdate. Add the digits together until you reach a single digit, and explore its meaning:</p>\n            <ul class=\"numerology-list\">\n                <li><span>Example:</span> Birthdate 1985-07-14 → 1 + 9 + 8 + 5 + 7 + 1 + 4 = 35 → 3 + 5 = 8.</li>\n                <li><span>8:</span> Power, ambition, and material success.</li>\n            </ul>\n        </div>\n    </div>\n\n    <div class=\"footer\">\n        &copy; 2024 Numerology Insights. All Rights Reserved.\n    </div>\n</body>\n</html>\n```
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #3a3a4d);
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #283747;
+            color: #f4d03f;
+            text-align: center;
+            padding: 20px;
+            font-size: 2em;
+            font-weight: bold;
+            border-bottom: 5px solid #af601a;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .quote {
+            font-style: italic;
+            border-left: 5px solid #e67e22;
+            padding-left: 10px;
+            margin: 20px 0;
+        }
+
+        .section {
+            background: #34495e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .section h2 {
+            color: #f4d03f;
+            margin-top: 0;
+        }
+
+        .numerology-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .numerology-table th,
+        .numerology-table td {
+            border: 1px solid #555;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .numerology-table th {
+            background: #283747;
+            color: #f4d03f;
+        }
+
+        .numerology-table tr:nth-child(even) {
+            background: #3a3a4d;
+        }
+
+        .list-item {
+            margin: 10px 0;
+        }
+
+        .list-item span {
+            font-weight: bold;
+            color: #e67e22;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #283747;
+            color: #aaa;
+            border-top: 2px solid #555;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.5em;
+                padding: 15px;
+            }
+
+            .section {
+                padding: 15px;
+            }
+
+            .numerology-table th,
+            .numerology-table td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>Numerology: The Secrets of Numbers</header>
+
+    <div class="content">
+        <div class="quote">
+            "Numbers are the language of the Universe. Through them, we can unlock the mysteries of existence." 
+            – Pythagoras
+        </div>
+
+        <div class="section">
+            <h2>What Is Numerology?</h2>
+            <p>Numerology is the study of numbers as they relate to our lives, events, and the cosmos. Each number carries unique vibrations and meanings that can reveal hidden truths about ourselves and the universe.</p>
+        </div>
+
+        <div class="section">
+            <h2>The Core Numbers</h2>
+            <p>In numerology, there are five core numbers derived from your name and birthdate:</p>
+            <ul>
+                <li class="list-item"><span>Life Path Number:</span> Your life's journey and purpose.</li>
+                <li class="list-item"><span>Expression Number:</span> Your talents and abilities.</li>
+                <li class="list-item"><span>Soul Urge Number:</span> Your deepest desires.</li>
+                <li class="list-item"><span>Personality Number:</span> How others perceive you.</li>
+                <li class="list-item"><span>Birth Day Number:</span> Unique traits you bring to the world.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Numerology Table</h2>
+            <table class="numerology-table">
+                <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>Meaning</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>New beginnings, leadership, independence</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Balance, harmony, relationships</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Creativity, self-expression, joy</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Stability, structure, practicality</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Spirituality, wisdom, introspection</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Completion, compassion, universal love</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>How to Calculate Your Life Path Number</h2>
+            <p>To calculate your Life Path Number, sum the digits of your full birthdate until you reach a single digit:</p>
+            <p><strong>Example:</strong> If your birthdate is July 14, 1992:</p>
+            <ul>
+                <li>7 (July) + 1 + 4 (Day) + 1 + 9 + 9 + 2 (Year) = 33</li>
+                <li>3 + 3 = <strong>6</strong></li>
+            </ul>
+            <p>Your Life Path Number is <strong>6</strong>, which symbolizes nurturing, responsibility, and harmony.</p>
+        </div>
+
+        <div class="section">
+            <h2>Discover Hidden Patterns</h2>
+            <p>Numerology isn't just about single numbers. Combinations, sequences, and patterns all play a role in understanding the forces shaping your life. Keep an eye out for repeating numbers like 111, 222, or 888—they are signs from the Universe!</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Numerology Insights. All Rights Reserved.
+    </div>
+</body>
+</html>
