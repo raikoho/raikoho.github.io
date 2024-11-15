@@ -28,7 +28,7 @@
         header {
             text-align: center;
             padding: 20px;
-            font-size: 4em;
+            font-size: 3em;
             color: #ffcc00;
             text-shadow: 0 0 15px rgba(255, 255, 0, 1), 0 0 30px rgba(255, 0, 255, 1);
             animation: glow 1s ease-in-out infinite alternate;
@@ -36,7 +36,7 @@
         }
 
         header h1 {
-            font-size: 4em;
+            font-size: 3em;
             animation: blink-text 0.3s ease-in-out infinite alternate;
         }
 
@@ -52,12 +52,12 @@
             100% { opacity: 1; }
         }
 
-        .bio-container {
+        .container {
             display: flex;
+            flex-direction: row;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-between;
             margin: 20px;
-            animation: move 3s ease-in-out infinite alternate;
         }
 
         .bio-section {
@@ -79,13 +79,13 @@
 
         .bio-section h2 {
             color: #00ffff;
-            font-size: 3em;
+            font-size: 2.5em;
             text-shadow: 0 0 15px rgba(255, 0, 255, 0.7), 0 0 30px rgba(255, 255, 0, 0.8);
             animation: blink-text 0.5s infinite alternate;
         }
 
         .bio-section p {
-            font-size: 1.5em;
+            font-size: 1.2em;
             color: #00ff00;
             line-height: 1.6;
             animation: blink-text 0.5s infinite alternate;
@@ -109,7 +109,7 @@
             display: inline-block;
             margin: 15px;
             padding: 15px 30px;
-            font-size: 2em;
+            font-size: 1.5em;
             background-color: #ff6600;
             color: #ffffff;
             text-decoration: none;
@@ -154,7 +154,7 @@
         }
 
         .image-gallery img {
-            width: 300px;
+            width: 250px;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
@@ -174,14 +174,14 @@
         }
 
         @media (max-width: 768px) {
-            .bio-section {
-                width: 90%;
-                margin: 10px;
-                padding: 15px;
+            header {
+                font-size: 2em;
             }
 
-            header {
-                font-size: 2.5em;
+            .bio-section {
+                width: 100%;
+                margin: 10px 0;
+                padding: 15px;
             }
 
             .bio-section img {
@@ -202,7 +202,7 @@
     <h1>MYKOLA Tkachuk - THE GLOWING MADNESS</h1>
 </header>
 
-<div class="bio-container">
+<div class="container">
     <div class="bio-section">
         <h2>Biography</h2>
         <img src="https://raikoho.github.io/suspicious-creatures/x081CEsd654/media/photo_5253618002811806663_y.jpg" alt="Mykola Tkachuk">
