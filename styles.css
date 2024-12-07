@@ -1,15 +1,16 @@
-/* Основні стилі */
+/* Основні стилі */ 
 body {
- margin: 0;
+    margin: 0;
     padding: 0;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     font-family: Arial, sans-serif;
     color: white;
     text-align: center;
- background-image: url('https://raikoho.github.io/kartinimg/b6ff66b636a0409e40dc8cdd912e04ec.gif');
+    background-image: url('https://raikoho.github.io/kartinimg/b6ff66b636a0409e40dc8cdd912e04ec.gif'); /* Перевірте, чи правильно вказано URL */
     background-size: cover; /* Змінює розмір фону так, щоб він покривав весь екран */
     background-position: center; /* Центрує фон */
     background-repeat: no-repeat; /* Запобігає повторенню фону */
