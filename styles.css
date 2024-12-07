@@ -1,10 +1,17 @@
 /* Основні стилі */
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #ffffff;
-    background-color: #000000; /* Резервний фон */
+ margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    background-size: cover; /* Змінює розмір фону так, щоб він покривав весь екран */
+    background-position: center; /* Центрує фон */
+    background-repeat: no-repeat; /* Запобігає повторенню фону */
 }
 
 nav {
