@@ -1,41 +1,38 @@
-/* Загальний стиль */
+/* Основні стилі */
 body {
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
     color: #ffffff;
-    line-height: 1.8;
-    background-color: #000000;
-    overflow-x: hidden;
+    background-color: #000000; /* Резервний фон */
 }
 
-/* Навігація */
 nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #111;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
-    margin: 0;
-    padding: 0;
+    list-style: none;
     display: flex;
     justify-content: center;
-    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     font-size: 18px;
-    padding: 15px 10px;
     transition: color 0.3s ease-in-out;
 }
 
@@ -43,138 +40,57 @@ nav ul li a:hover {
     color: #ff4500;
 }
 
-/* Секції */
-section {
-    min-height: 100vh;
-    padding: 60px 20px;
-    transition: background-color 1s ease-in-out;
+header {
+    text-align: center;
+    padding: 100px 20px 50px;
+    z-index: 1;
 }
 
-section:nth-child(odd) {
-    background-color: #000000;
-    color: #ffffff;
-}
-
-section:nth-child(even) {
-    background-color: #1a1a2e;
-    color: #e0e0e0;
-}
-
-/* Заголовки секцій */
-section h1 {
+header h1 {
     font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-/* Таблиці */
-table {
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background-color: #111;
+header p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+section h2 {
+    font-size: 2rem;
     color: #ff4500;
-    box-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
-}
-
-table th, table td {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #444;
-}
-
-table tr:nth-child(even) {
-    background-color: #222;
-}
-
-/* Дивні таблиці */
-.mystical-table {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 20px auto;
-    width: fit-content;
-    color: #ff4500;
-    text-align: center;
-    font-size: 18px;
-}
-
-.mystical-table .row {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-/* Кнопки */
-button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-size: 18px;
-    color: #fff;
-    background-color: #ff4500;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-button:hover {
-    background-color: #e03e00;
-}
-
-/* Адаптивність */
-img.responsive-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-}
-
-@media screen and (max-width: 768px) {
-    nav ul li a {
-        font-size: 16px;
-    }
-
-    section h1 {
-        font-size: 2rem;
-    }
-
-    button {
-        font-size: 16px;
-        padding: 8px 16px;
-    }
-}
-
-/* Анімація при прокрутці */
-body {
-    background-color: #000000;
-}
-
-section:nth-child(1) {
-    background-color: #000000;
-}
-
-section:nth-child(2) {
-    background-color: #1a1a2e;
-}
-
-section:nth-child(3) {
-    background-color: #262626;
-}
-
-section:nth-child(4) {
-    background-color: #3a3a3a;
-}
-
-section:nth-child(5) {
-    background-color: #4f4f4f;
+    margin-bottom: 10px;
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Адаптивність */
+@media screen and (max-width: 768px) {
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
 }
