@@ -10,7 +10,8 @@ body {
     font-family: Arial, sans-serif;
     color: white;
     text-align: center;
-    background-image: url('/kartinimg/56736e99269e9e1fe8eed4b8b911644e.gif'); /* Перевірте, чи правильно вказано URL */
+    background-color: black;
+    /*background-image: url('/kartinimg/56736e99269e9e1fe8eed4b8b911644e.gif'); */
     background-size: cover; /* Змінює розмір фону так, щоб він покривав весь екран */
     background-position: center; /* Центрує фон */
     background-repeat: no-repeat; /* Запобігає повторенню фону */
