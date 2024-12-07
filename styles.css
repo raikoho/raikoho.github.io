@@ -1,123 +1,115 @@
-/* Insanity Background */
-.insanity-background {
-    background: radial-gradient(circle, #ff3399, #3300ff, #00ffcc, #ffcc00, #ff0033);
-    animation: backgroundShift 7s infinite alternate;
-    color: #00ff99;
-    font-family: 'Courier New', monospace;
-    overflow: hidden;
+/* Загальні стилі */
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.6;
+    color: white;
+    background-color: black;
+    transition: background-color 0.5s ease-in-out;
 }
 
-/* Menu Styling */
-.menu {
+/* Зміна кольору фону при прокручуванні */
+section:nth-child(odd) {
+    background-color: black;
+    color: white;
+}
+
+section:nth-child(even) {
+    background-color: #1a1a1a;
+    color: #e6e6e6;
+}
+
+section {
+    padding: 50px 20px;
+    min-height: 100vh;
     display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    background-color: #000;
+    flex-direction: column;
+    justify-content: center;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Меню */
+nav {
+    background: #111;
     position: sticky;
     top: 0;
     z-index: 1000;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.menu-item {
-    color: #ff00cc;
-    font-size: 1.5em;
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
     text-decoration: none;
-    text-shadow: 2px 2px #00ff99;
+    color: #e6e6e6;
+    font-size: 1.2rem;
     transition: color 0.3s;
 }
 
-.menu-item:hover {
-    color: #ffcc00;
-    transform: scale(1.2);
+nav ul li a:hover {
+    color: #ff6347;
 }
 
-/* Header Styling */
-.chaos-header h1 {
-    color: #ff3300;
-    font-size: 3.5em;
+/* Зображення та GIF */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #e6e6e6;
+    margin: 20px 0;
+}
+
+/* Кнопки */
+button {
+    background: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #e5533c;
+}
+
+/* Адаптивність */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: #e6e6e6;
     text-align: center;
-    letter-spacing: 8px;
-    animation: shake 1s infinite alternate ease-in-out;
-    text-shadow: 5px 5px 0 #00ffcc, -5px -5px 0 #ff00ff;
-}
-
-/* Chaos Content */
-.chaos-content {
-    text-align: center;
-    padding: 20px;
-    color: #cc00ff;
-}
-
-/* Swirling Messages */
-.swirling-messages {
-    font-size: 1.8em;
-    animation: fadeInOut 10s infinite alternate;
-}
-
-.swirling-messages p {
-    animation: swirl 5s infinite alternate ease-in-out;
-    color: #00ff66;
-}
-
-/* Glitch Box */
-.glitch-box {
-    font-size: 2em;
-    background: #ff0000;
-    color: #00ffcc;
     padding: 10px;
-    animation: glitch 1s infinite alternate;
-    text-shadow: 2px 2px #333333;
-}
-
-/* Flashing Neon */
-.flashing-neon {
-    font-size: 3em;
-    color: #ff3399;
-    animation: neonGlow 2s infinite alternate;
-}
-
-/* Rainbow Text */
-.rainbow-text {
-    font-size: 2em;
-    text-align: center;
-    background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet);
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: colorWave 3s infinite alternate;
-}
-
-/* Keyframes */
-@keyframes backgroundShift {
-    0% { background-position: 0 0; }
-    100% { background-position: 100% 100%; }
-}
-
-@keyframes shake {
-    0% { transform: rotate(-5deg); }
-    100% { transform: rotate(5deg); }
-}
-
-@keyframes fadeInOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
-@keyframes swirl {
-    0%, 100% { transform: rotate(-15deg) scale(1); }
-    50% { transform: rotate(15deg) scale(1.2); }
-}
-
-@keyframes glitch {
-    0% { transform: skew(5deg, 2deg); }
-    100% { transform: skew(-5deg, -2deg); }
-}
-
-@keyframes neonGlow {
-    0% { color: #ff3399; text-shadow: 0 0 10px #ff3399, 0 0 20px #ff6699, 0 0 30px #ff3399; }
-    100% { color: #00ffcc; text-shadow: 0 0 10px #00ffcc, 0 0 20px #33ffcc, 0 0 30px #00ffcc; }
-}
-
-@keyframes colorWave {
-    0% { filter: hue-rotate(0deg); }
-    100% { filter: hue-rotate(360deg); }
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
 }
