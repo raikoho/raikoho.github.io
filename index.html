@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mystical Storage</title>
+    <title>Mysterious Site</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,83 +16,51 @@
         </ul>
     </nav>
 
-    <section id="swamp">
-        <h1>List:</h1>
-        <p>Within the <strong>mystical swamp</strong>, secrets are buried, and ancient knowledge slumbers. Explore deeper...</p>
+    <header>
+        <h1>Welcome to the Mysterious Site</h1>
+        <p>Uncover the secrets hidden within...</p>
+    </header>
 
-        
-        <table>
-            <tr>
-                <td>9</td>
-                <td>NINE</td>
-                <td>973</td>
-            </tr>
-            <tr>
-                <td>I AM</td>
-                <td>THAT I AM</td>
-                <td>I THAT AM</td>
-            </tr>
-            <tr>
-                <td colspan="3" style="text-align: center;">ZAZAZA ZAZAZA ZAZAZA</td>
-            </tr>
-        </table>
-        <p>More at: <a href="example.com">example.com/swamp</a></p>
-    </section>
+    <!-- Випадковий фон -->
+    <iframe id="background" title="Random Background"></iframe>
 
-    <section id="tree">
-        <h1>Tree</h1>
-        <p>The <strong>tree of life</strong> connects all that exists. Seek its roots for answers.</p>
-        <div class="mystical-table">
-            <div class="row">
-                <span>9</span>
-                <span>20</span>
-                <span>15</span>
-                <span>21</span>
-                <span>7</span>
-            </div>
-            <div class="row">
-                <span>2</span>
-                <span>8</span>
-                <span>6</span>
-                <span>7</span>
-                <span>8</span>
-            </div>
-            <div class="row">
-                <span>3+6 = 9</span>
-            </div>
-        </div>
-        <button>Learn More</button>
-    </section>
-
-    <section id="secret">
-        <h1>Secret</h1>
-        <p>A hidden code exists here: <strong>Blessed be that name be blessed.</strong></p>
-        <img src="example.gif" alt="Mystical Gif" class="responsive-img">
-        <p>Discover the secret: <a href="example.com/secret">example.com/secret</a></p>
-    </section>
-
-    <section id="about">
-        <h1>About</h1>
-        <p>This is <strong>THE GREAT WORK</strong>, status unfinished.</p>
-        <table>
-            <tr>
-                <th colspan="26">MAGIKAL ALPHABET</th>
-            </tr>
-            <tr>
-                <td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>H</td><td>I</td><td>J</td>
-                <td>K</td><td>L</td><td>M</td><td>N</td><td>O</td><td>P</td><td>Q</td><td>R</td><td>S</td><td>T</td>
-                <td>U</td><td>V</td><td>W</td><td>X</td><td>Y</td><td>Z</td>
-            </tr>
-            <tr>
-                <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
-                <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
-                <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td>
-            </tr>
-        </table>
+    <section>
+        <h2>Discover Something Unique</h2>
+        <p>On this site, nothing is what it seems. Dive deeper into the unknown, explore the unseen.</p>
     </section>
 
     <footer>
-        <p>© Mystical Storage 2024</p>
+        <p>&copy; 2024 The Mysterious Site. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Масив з посиланнями на фон-зображення
+        const backgroundImages = [
+            "https://example.com/image1.jpg",
+            "https://example.com/image2.jpg",
+            "https://example.com/image3.jpg",
+            "https://example.com/image4.jpg",
+            "https://example.com/image5.jpg",
+            "https://example.com/image6.jpg",
+            "https://example.com/image7.jpg",
+            "https://example.com/image8.jpg",
+            "https://example.com/image9.jpg",
+            "https://example.com/image10.jpg"
+        ];
+
+        // Вибір випадкового зображення
+        const randomImage = backgroundImages[Math.floor(Math.random() * backgroundImages.length)];
+
+        // Встановлення зображення у iframe
+        const iframe = document.getElementById("background");
+        iframe.src = randomImage;
+        iframe.style.position = "fixed";
+        iframe.style.top = 0;
+        iframe.style.left = 0;
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.style.zIndex = "-1";
+        iframe.style.border = "none";
+    </script>
 </body>
 </html>
