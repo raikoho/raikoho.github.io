@@ -30,6 +30,100 @@
             Hidden beneath the murky waters of the swamp lies a network of secrets. 
             Visit the <a href="example.com/swamp">Swamp section</a> to explore further.
         </p>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crazy Tables</title>
+    <style>
+        body {
+            background-color: black;
+            color: #FF3300;
+            font-family: monospace;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #111;
+            border: 2px solid #FF3300;
+        }
+        th, td {
+            border: 1px solid #FF3300;
+            text-align: center;
+            padding: 10px;
+            color: #FF3300;
+        }
+        th {
+            background: #222;
+        }
+        td.special {
+            background: #330000;
+        }
+        .highlight {
+            background: linear-gradient(45deg, #FF3300, #660000);
+            color: white;
+            font-weight: bold;
+        }
+        .crazy {
+            font-size: 14px;
+            color: #00FF33;
+        }
+        h1 {
+            color: #FF6600;
+            text-shadow: 2px 2px 8px #FF0000;
+            text-align: center;
+        }
+    </style>
+</head>
+    <h1>Crazy Tables of Madness</h1>
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th>D</th>
+            <th class="highlight">ME</th>
+        </tr>
+        <tr>
+            <td>1+1</td>
+            <td class="special">2+2</td>
+            <td>3+3</td>
+            <td>4+4</td>
+            <td class="highlight">9</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td class="highlight">ME</td>
+        </tr>
+    </table>
+
+    <h2>Calculated Madness</h2>
+    <table>
+        <tr>
+            <th>86400 ÷</th>
+            <th>8</th>
+            <th>=</th>
+            <th>10800</th>
+        </tr>
+        <tr>
+            <td>86400 ÷</td>
+            <td class="crazy">13</td>
+            <td>=</td>
+            <td>6646.15</td>
+        </tr>
+        <tr>
+            <td>86400 ×</td>
+            <td class="highlight">2</td>
+            <td>=</td>
+            <td>172800</td>
+        </tr>
+    </table>
         <img src="example.com/swamp-image.gif" alt="Swamp GIF" class="responsive-img">
         <button onclick="location.href='example.com/swamp';">Dive into the Swamp</button>
     </section>
