@@ -1,11 +1,11 @@
-// Створення canvas
+// Створення cфівфііфцапеитьорл ваамвігггггггггггггггггггггггг
 const canvas = document.createElement('canvas');
 document.body.appendChild(canvas);
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const ctx = canvas.getContext('2d');
 
-// Скрипт
+// вавіаіваіва
 const particles = [];
 
 class SmokeParticle {
@@ -25,7 +25,6 @@ class SmokeParticle {
         ctx.fillStyle = this.color + this.opacity + ')';
         ctx.fill();
     }
-
     update() {
         this.x += this.speedX;
         this.y += this.speedY;
