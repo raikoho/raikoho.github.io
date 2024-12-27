@@ -57,3 +57,35 @@ function generateRandomContent() {
 
 // Викликаємо функцію при завантаженні сторінки
 window.onload = generateRandomContent;
+
+
+
+//ANOTHER FUNCTIONALITY WITH LOAD ENCODING
+
+// Масив доступних секретних скриптів
+const secretScripts = [
+    'encoding/whythissifer.js',
+    'encoding/rrr.js'
+];
+
+// Функція для вибору випадкового секретного скрипта
+function getRandomSecretScript() {
+    const randomIndex = Math.floor(Math.random() * secretScripts.length);
+    return secretScripts[randomIndex];
+}
+
+// Завантаження та вставка випадкового скрипта в місце *********
+function loadRandomSecretScript() {
+    const secretScriptPath = getRandomSecretScript(); // Вибір випадкового скрипта
+    const scriptElement = document.createElement('script'); // Створення елемента скрипта
+    scriptElement.src = secretScriptPath; // Прив'язка шляху до скрипта
+    scriptElement.async = true; // Завантаження асинхронно, щоб не блокувати інші процеси
+    document.querySelector('section').innerHTML = `*********`; // Очищуємо старий вміст
+    document.querySelector('section').appendChild(scriptElement); // Додаємо новий скрипт у секцію
+}
+
+// Викликаємо функцію при кожному оновленні сторінки
+window.onload = () => {
+    generateRandomContent(); // Генерація контенту
+    loadRandomSecretScript(); // Завантаження секретного скрипта
+};
