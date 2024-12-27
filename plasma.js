@@ -6,29 +6,52 @@ canvas.height = window.innerHeight;
 const ctx = canvas.getContext('2d');
 
 // Скрипт
-let time = 0;
+const particles = [];
 
-function drawPlasma() {
-    const imageData = ctx.createImageData(canvas.width, canvas.height);
-
-    for (let y = 0; y < canvas.height; y++) {
-        for (let x = 0; x < canvas.width; x++) {
-            const index = (y * canvas.width + x) * 4;
-
-            const red = Math.sin(x * 0.05 + time) * 128 + 128;
-            const green = Math.sin(y * 0.05 + time) * 128 + 128;
-            const blue = Math.sin((x + y) * 0.02 + time) * 128 + 128;
-
-            imageData.data[index] = red;
-            imageData.data[index + 1] = green;
-            imageData.data[index + 2] = blue;
-            imageData.data[index + 3] = 255;
-        }
+class SmokeParticle {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.radius = Math.random() * 10 + 5;
+        this.opacity = 1;
+        this.speedX = Math.random() * 2 - 1;
+        this.speedY = Math.random() * -2 - 1;
+        this.color = 'rgba(128, 128, 128, ';
     }
 
-    ctx.putImageData(imageData, 0, 0);
-    time += 0.03;
-    requestAnimationFrame(drawPlasma);
+    draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = this.color + this.opacity + ')';
+        ctx.fill();
+    }
+
+    update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        this.opacity -= 0.01;
+        if (this.opacity <= 0) {
+            const index = particles.indexOf(this);
+            if (index > -1) particles.splice(index, 1);
+        }
+        this.draw();
+    }
 }
 
-drawPlasma();
+function createSmoke(x, y) {
+    for (let i = 0; i < 5; i++) {
+        particles.push(new SmokeParticle(x, y));
+    }
+}
+
+canvas.addEventListener('mousemove', (e) => {
+    createSmoke(e.clientX, e.clientY);
+});
+
+function animateSmoke() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach((particle) => particle.update());
+    requestAnimationFrame(animateSmoke);
+}
+
+animateSmoke();
