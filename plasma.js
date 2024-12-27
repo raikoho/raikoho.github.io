@@ -1,8 +1,11 @@
-const canvas = document.getElementById('plasmaCanvas');
+// Створення canvas
+const canvas = document.createElement('canvas');
+document.body.appendChild(canvas);
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const ctx = canvas.getContext('2d');
 
+// Скрипт
 let time = 0;
 
 function drawPlasma() {
