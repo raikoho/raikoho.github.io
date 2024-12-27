@@ -64,8 +64,8 @@ window.onload = generateRandomContent;
 
 // Масив доступних секретних скриптів
 const secretScripts = [
-    'encoding/whythissifer.js',
-    'encoding/rrr.js'
+    'navigation3xds/encoding/whythissifer.js',
+    'navigation3xds/encoding/rrr.js'
 ];
 
 // Функція для вибору випадкового секретного скрипта
