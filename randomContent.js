@@ -18,7 +18,7 @@ const paragraphs = [
 ];
 
 // Масиви для кольорів фону та тексту
-const backgrounds = ['#f0f0f0', '#cce7ff', '#fdfd96', '#e8f7e5'];
+// const backgrounds = ['#f0f0f0', '#cce7ff', '#fdfd96', '#e8f7e5'];
 const textColors = ['#333333', '#ff6347', '#4682b4', '#32cd32'];
 
 // Функція для рандомного вибору елемента з масиву
