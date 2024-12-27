@@ -5,52 +5,37 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const ctx = canvas.getContext('2d');
 
-// Скрипт
-const particles = [];
-const centerX = canvas.width / 2;
-const centerY = canvas.height / 2;
+// Стилі для canvas
+canvas.style.position = 'fixed'; // Це дозволить canvas бути поверх вмісту
+canvas.style.top = '0'; // Встановлюємо його до верхнього краю
+canvas.style.left = '0'; // Встановлюємо його до лівого краю
+canvas.style.zIndex = '-1'; // Встановлюємо його позаду всього контенту (як фон)
+canvas.style.pointerEvents = 'none'; // Щоб елементи не блокували взаємодію з контентом
 
-class BlackHoleParticle {
-    constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.speedX = (centerX - this.x) * 0.01;
-        this.speedY = (centerY - this.y) * 0.01;
-        this.radius = Math.random() * 3 + 1;
-        this.color = `hsl(${Math.random() * 360}, 50%, 50%)`;
-    }
+// Скрипт (приклад для одного ефекту, решта аналогічні)
+let time = 0;
 
-    draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = this.color;
-        ctx.fill();
-    }
+function drawPlasma() {
+    const imageData = ctx.createImageData(canvas.width, canvas.height);
 
-    update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
+    for (let y = 0; y < canvas.height; y++) {
+        for (let x = 0; x < canvas.width; x++) {
+            const index = (y * canvas.width + x) * 4;
 
-        if (Math.hypot(centerX - this.x, centerY - this.y) < 5) {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height;
+            const red = Math.sin(x * 0.05 + time) * 128 + 128;
+            const green = Math.sin(y * 0.05 + time) * 128 + 128;
+            const blue = Math.sin((x + y) * 0.02 + time) * 128 + 128;
+
+            imageData.data[index] = red;
+            imageData.data[index + 1] = green;
+            imageData.data[index + 2] = blue;
+            imageData.data[index + 3] = 255;
         }
-
-        this.draw();
     }
+
+    ctx.putImageData(imageData, 0, 0);
+    time += 0.03;
+    requestAnimationFrame(drawPlasma);
 }
 
-function createParticles() {
-    for (let i = 0; i < 100; i++) {
-        particles.push(new BlackHoleParticle());
-    }
-}
-
-function animateBlackHole() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach((particle) => particle.update());
-    requestAnimationFrame(animateBlackHole);
-}
-
-createParticles();
-animateBlackHole();
+drawPlasma();
