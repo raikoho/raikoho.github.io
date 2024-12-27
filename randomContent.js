@@ -30,7 +30,7 @@ function getRandomElement(arr) {
 function generateRandomContent() {
     const randomHeader = getRandomElement(headers);
     const randomParagraph = getRandomElement(paragraphs);
-    const randomBackground = getRandomElement(backgrounds);
+    // const randomBackground = getRandomElement(backgrounds);
     const randomTextColor = getRandomElement(textColors);
 
     // Вставка заголовка та тексту в HTML
@@ -38,7 +38,7 @@ function generateRandomContent() {
     document.getElementById('random-paragraph').textContent = randomParagraph;
 
     // Зміна кольору тексту і фону
-    document.body.style.backgroundColor = randomBackground;
+    // document.body.style.backgroundColor = randomBackground;
     document.getElementById('random-header').style.color = randomTextColor;
     document.getElementById('random-paragraph').style.color = randomTextColor;
 }
