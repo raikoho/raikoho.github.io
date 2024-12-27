@@ -9,7 +9,6 @@ function getRandomScript() {
     const randomIndex = Math.floor(Math.random() * scripts.length);
     return scripts[randomIndex];
 }
-
 // Завантаження випадкового скрипта
 function loadRandomScript() {
     const scriptPath = getRandomScript();
@@ -18,6 +17,5 @@ function loadRandomScript() {
     scriptElement.async = true;  // Запуск асинхронно, щоб не блокувати завантаження сторінки
     document.body.appendChild(scriptElement);
 }
-
 // Викликаємо функцію для завантаження випадкового скрипта при кожному оновленні сторінки
 loadRandomScript();
