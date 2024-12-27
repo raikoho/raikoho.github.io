@@ -1,7 +1,7 @@
 const NUMBER_OF_RAINDROPS = 500;
-const MAX_RAINDROP_LENGTH = 15;
-const MAX_RAINDROP_SPEED = 4;
-const RAINDROP_COLOR = '#00F';
+const MAX_RAINDROP_LENGTH = 45;
+const MAX_RAINDROP_SPEED = 10;
+const RAINDROP_COLOR = '#0AF';
 const raindrops = [];
 
 const canvas = document.createElement('canvas');
