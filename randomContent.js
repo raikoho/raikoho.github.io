@@ -43,24 +43,15 @@ function getRandomElement(arr) {
 
 // Генерація рандомного контенту
 function generateRandomContent() {
-    const randomContent = getRandomElement(content); // Вибір випадкового елементу з масиву
-    const randomTextColor = getRandomElement(textColors); // Вибір випадкового кольору тексту
+    const randomContent = getRandomElement(content);
+    const randomTextColor = getRandomElement(textColors);
 
-    // Вставка заголовка та тексту в HTML
-    document.getElementById('random-header').textContent = randomContent.header; // Для заголовка без форматування
-    document.getElementById('random-paragraph').innerHTML = randomContent.paragraph; // Для абзацу з форматуванням (нові рядки)
+    document.getElementById('random-header').textContent = randomContent.header;
+    document.getElementById('random-paragraph').innerHTML = randomContent.paragraph;
 
-    // Зміна кольору тексту
     document.getElementById('random-header').style.color = randomTextColor;
     document.getElementById('random-paragraph').style.color = randomTextColor;
 }
-
-// Викликаємо функцію при завантаженні сторінки
-window.onload = generateRandomContent;
-
-
-
-//ANOTHER FUNCTIONALITY WITH LOAD ENCODING
 
 // Масив доступних секретних скриптів
 const secretScripts = [
@@ -74,17 +65,20 @@ function getRandomSecretScript() {
     return secretScripts[randomIndex];
 }
 
-// Завантаження та вставка випадкового скрипта в місце *********
+// Завантаження та вставка випадкового скрипта в секцію
 function loadRandomSecretScript() {
-    const secretScriptPath = getRandomSecretScript(); // Вибір випадкового скрипта
-    const scriptElement = document.createElement('script'); // Створення елемента скрипта
-    scriptElement.src = secretScriptPath; // Прив'язка шляху до скрипта
-    scriptElement.async = true; // Завантаження асинхронно, щоб не блокувати інші процеси
-    document.querySelector('section').innerHTML = `*********`; // Очищуємо старий вміст
-    document.querySelector('section').appendChild(scriptElement); // Додаємо новий скрипт у секцію
+    const secretScriptPath = getRandomSecretScript();
+    const scriptElement = document.createElement('script');
+    scriptElement.src = secretScriptPath;
+    scriptElement.async = true;
+    
+    // Додаємо новий скрипт у секцію
+    const sectionElement = document.getElementById('secret-section');
+    sectionElement.innerHTML = ''; // очищаємо старий вміст
+    sectionElement.appendChild(scriptElement); // додаємо новий скрипт
 }
 
-// Викликаємо функцію при кожному оновленні сторінки
+// Викликаємо функцію при завантаженні сторінки
 window.onload = () => {
     generateRandomContent(); // Генерація контенту
     loadRandomSecretScript(); // Завантаження секретного скрипта
