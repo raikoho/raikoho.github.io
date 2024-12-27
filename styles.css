@@ -174,3 +174,18 @@ footer {
     }
 }
 
+/* Заголовок */
+#random-header {
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Текст */
+#random-paragraph {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+}
