@@ -96,6 +96,21 @@ section h2 {
     margin-bottom: 10px;
 }
 
+.hidden-message {
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    color: #ff9900; /* Bright orange */
+    margin-top: 20px;
+    animation: pulse 1.5s infinite;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
 footer {
     text-align: center;
     padding: 20px;
