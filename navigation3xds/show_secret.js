@@ -1,7 +1,7 @@
 // Список доступних файлів, з яких вибиратиметься випадковий
 const scripts = [
-    'secrets/secret1.js',
-    'secrets/secret4.js'
+    'encoding/whythissifer.js',
+    'encoding/rrr.js'
 ];
 
 // Функція для вибору випадкового скрипта
