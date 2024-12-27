@@ -16,11 +16,11 @@ function drawPlasma() {
             const red = Math.sin(x * 0.05 + time) * 128 + 128;
             const green = Math.sin(y * 0.05 + time) * 128 + 128;
             const blue = Math.sin((x + y) * 0.02 + time) * 128 + 128;
-
             imageData.data[index] = red;
+            
             imageData.data[index + 1] = green;
             imageData.data[index + 2] = blue;
-            imageData.data[index + 3] = 255; // Прозорість
+            imageData.data[index + 3] = 255; 
         }
     }
 
