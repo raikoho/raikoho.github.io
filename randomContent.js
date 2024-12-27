@@ -51,3 +51,4 @@ function generateRandomContent() {
 
 // Викликаємо функцію при завантаженні сторінки
 window.onload = generateRandomContent;
+console.log(paragraphs);
