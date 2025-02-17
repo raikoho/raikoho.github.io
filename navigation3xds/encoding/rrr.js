@@ -1,4 +1,4 @@
 // secretsdfewrdsf.js
 const mysteryText = document.createElement('div');
-mysteryText.textContent = 'Секрет 2: Вітаємо! Це загадка: що буде, якщо помножити 2 на 3?';
+mysteryText.textContent = '0KHQsNC50YIg0LLQuNC60L7RgNC40YHRgtC+0LLRg9GUINGA0LDQvdC00L7QvNC90YMg0LPQtdC90LXRgNCw0YbRltGOINC00LXQutGW0LvRjNC60L7RhSDRgdGC0L7RgNGW0L3QvtC6LCDRj9C60ZYg0LzQvtC20YPRgtGMINC/0YDQuNCy0LXRgdGC0Lgg0LTQviDRltC90YjQuNGFINGB0YLQvtGA0ZbQvdC+0LosINGP0LrRliDQvdC10LzQvtC20LvQuNCy0L4g0LfQvdCw0LnRgtC4LiDQndCw0L/RgNC40LrQu9Cw0LQsINCy0Lgg0LzQvtC20LXRgtC1INCy0ZbQtNCy0ZbQtNCw0YLQuCDRhtC1INC/0L7RgdC40LvQsNC90L3Rjywg0YnQvtCxINC/0LXRgNC10LPQu9GP0L3Rg9GC0Lgg0LHRltC70YzRiNC1Lg==';
 document.body.appendChild(mysteryText);
