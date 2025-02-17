@@ -3,146 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - The Enigma of Bohdan Misonh</title>
+    <title>Cybersecurity Site</title>
     <style>
         body {
-            background-color: #0e0e0e;
-            color: #f4f4f4;
+            background-color: #1e1e1e;
+            color: #00ff00;
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
         }
-
-        header {
-            text-align: center;
-            padding: 30px;
-            background: linear-gradient(135deg, #ff007f, #ff8c00, #f0f);
-            color: #1a1a1a;
-            font-size: 2.5rem;
-            border-radius: 25px;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-            transform: skew(-5deg);
-            animation: colorshift 8s infinite;
+        h1, h2 {
+            color: #00ff00;
         }
-
-        @keyframes colorshift {
-            0% { background-color: #ff007f; }
-            25% { background-color: #ff8c00; }
-            50% { background-color: #ffea00; }
-            75% { background-color: #00ffea; }
-            100% { background-color: #ff00ff; }
-        }
-
-        .menu {
-            display: flex;
-            justify-content: center;
-            background: radial-gradient(circle, #00ffea, #ff00ff);
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 15px;
-        }
-
-        .menu a {
-            color: #1a1a1a;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-            transform: rotate(15deg);
-            margin: 0 20px;
-        }
-
-        .menu a:hover {
-            transform: rotate(-15deg) scale(1.3);
-            color: #fff;
-            text-shadow: 0 0 5px #ffea00, 0 0 10px #ff00ff;
-        }
-
-        .section {
+        .content {
             padding: 20px;
-            margin: 20px;
-            border-radius: 25px;
-            background: linear-gradient(135deg, #005500, #330066);
-            color: #f4f4f4;
-            transform: rotate(5deg);
-            animation: fadeIn 2s ease;
+            line-height: 1.6;
         }
-
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        .highlight {
-            color: #ffcc00;
-            font-weight: bold;
-            text-transform: uppercase;
-            animation: bounce 1.5s infinite alternate;
-        }
-
-        @keyframes bounce {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0); }
-        }
-
-        footer {
-            background-color: #1a1a1a;
-            color: #ffcc00;
-            text-align: center;
-            padding: 20px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-        }
-
-        footer a {
-            color: #ffcc00;
+        .button-back {
+            background-color: #333;
+            color: #00ff00;
+            padding: 10px 20px;
+            border: 2px solid #00ff00;
             text-decoration: none;
+            font-size: 18px;
+            text-align: center;
+            display: block;
+            margin: 20px auto;
+            transition: background-color 0.3s ease;
+        }
+        .button-back:hover {
+            background-color: #00ff00;
+            color: #1e1e1e;
+        }
+        .hidden-content {
+            color: #ff5500;
             font-weight: bold;
         }
-
-        footer a:hover {
-            text-decoration: underline;
+        .images {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .images img {
+            width: 50%;
+            height: auto;
+            margin: 10px;
+            border: 2px solid #00ff00;
+        }
+        .about {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #333;
+        }
+        .about h2 {
+            color: #ff5500;
         }
     </style>
 </head>
 <body>
+    <div class="content">
+        <h1>Welcome to the Cybersecurity Site</h1>
+        <p>Explore the depths of cybersecurity, penetration testing, and the latest in threat intelligence. The site adapts to your actions, providing tailored content through dynamic algorithms.</p>
 
-<header>
-    <h1>The Enigma of Bohdan Misonh</h1>
-    <p class="highlight">A Digital Alchemist at the Edge of Reality</p>
-</header>
+        <a href="/" class="button-back">Back to Homepage</a>
 
-<div class="menu">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</div>
+        <div class="images">
+            <img src="https://via.placeholder.com/500x300" alt="Cybersecurity Image 1">
+            <img src="https://via.placeholder.com/500x300" alt="Cybersecurity Image 2">
+        </div>
 
-<div class="section" id="about">
-    <h2>Who Am I?</h2>
-    <p>I am a digital wanderer, balancing on the fine line between reality and the digital realm. My passion is more than a profession; it is my unyielding thirst for uncovering secrets, solving puzzles, and exploring the world of cybersecurity.</p>
-    <p>By day, I battle invisible foes, creating tools to combat the growing threats in cyberspace, including writing YARA rules and Snort signatures to detect malware. By night, I dive into the endless sea of code, shaping digital tools to defend against the unseen dangers of the modern age.</p>
-    <p>Through this journey, I aim to make technology not only functional but beautiful. I strive to erase the boundary between reality and the digital traces that shape our lives.</p>
-</div>
+        <div class="about">
+            <h2>About the Site</h2>
+            <p>This site is more than just a resource. It’s a living, adaptive organism that works using complex algorithms and mechanisms that are constantly evolving, developing, and interacting with the user. Every request, every interaction generates new data, which is sent to the central processing system where it is encrypted, analyzed, and modified according to your actions. Here's a deeper look at how the process works:</p>
 
-<div class="section" id="projects">
-    <h2>My Projects</h2>
-    <p>On my <a href="https://github.com/BohdanMisonh" target="_blank" class="highlight">GitHub</a>, you will find a treasure trove of cybersecurity projects, each designed to tackle specific challenges in this ever-evolving landscape.</p>
-    <p>From creating sophisticated YARA rules to designing conceptual solutions for real-world cybersecurity issues, my repository is a reflection of my dedication to technical excellence and my unique approach to problem-solving.</p>
-</div>
+            <h3>1. Request Analysis through SHADIS (Secretly-Generated Algorithm of Dynamic Identification Sorting)</h3>
+            <p>The working principle: Every request submitted by the user undergoes initial processing through SHADIS, which evaluates it based on frequency characteristics and outputs the most probable requests. This allows the site to anticipate your next steps before you take them.</p>
 
-<div class="section" id="contact">
-    <h2>Get in Touch</h2>
-    <p>Have a question? Want to collaborate? Feel free to reach out! Let’s push the boundaries of what’s possible together.</p>
-</div>
+            <h3>2. Request Encoding via GENESYS</h3>
+            <p>The working principle: Each request is also encoded through the GENESYS system – an intelligent algorithm for encoding content based on syntactic and semantic vectors. This process dynamically changes the representation based on how you interact with the content on the site.</p>
 
-<footer>
-    <p>Made with passion by <a href="https://github.com/BohdanMisonh" target="_blank">Bohdan Misonh</a> - 2025</p>
-</footer>
+            <h3>3. Hidden Directories and Interaction with SPECTER</h3>
+            <p>SPECTER is a mechanism that generates hidden directories and paths based on your actions on the site. These are not just ordinary URLs but encrypted paths that lead to non-standard content, accessible only after certain conditions are met.</p>
 
+            <h3>4. Adaptive Fragments via ECLIPSE-4</h3>
+            <p>ECLIPSE-4 is a cryptographic generator used to create random content fragments. The algorithm uses chaotic principles and mathematical models to generate unique pieces that change based on your actions.</p>
+
+            <h3>5. Puzzles and Subsystems</h3>
+            <p>To unlock certain parts of the site, users must perform specific actions involving logical puzzles or cryptographic tests. Each such test is part of a larger subsystem that unlocks gradually, only when certain conditions are met.</p>
+        </div>
+    </div>
 </body>
 </html>
