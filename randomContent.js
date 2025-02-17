@@ -3,72 +3,70 @@
 // Масиви заголовків і текстів для рандомного вибору
 const content = [
     {
-        header: "[THE CODE YOU WERE NEVER MEANT TO SEE]",
+        header: "<span style='color: red; font-weight: bold; text-decoration: underline;'>[THE CODE YOU WERE NEVER MEANT TO SEE]</span>",
         paragraph: `
-
-        <span style="color: red;">111def decrypt_reality(ciphertext, key):</span>
-    <br><span style="color: red;">for i in range(len(ciphertext)):</span>
-        <br>plaintext[i] = ciphertext[i] ^ key[i % len(key)]
-    return plaintext
-    `
+        <pre style="background: #222; color: #0f0; padding: 10px; border-radius: 5px;">
+        <code>
+        def decrypt_reality(ciphertext, key):
+            for i in range(len(ciphertext)):
+                plaintext[i] = ciphertext[i] ^ key[i % len(key)]
+            return plaintext
+        </code>
+        </pre>
+        `
     },
     {
-        header: "Dark Packets",
+        header: "<span style='color: darkblue; font-weight: bold;'>Dark Packets</span>",
         paragraph: `
-
-        I sat <br> in a dark room with <div style="display:none">all ports open</div> and only the dim monitor glowing with code. I thought about the black market <br>for vulnerabilities and <script>alert("XSS DETECTED")</script> watched <br>unauthorized packets fly through Wireshark.
-        <br>I decided to scan the network. 
-        I opened the <a href="nmap_scan_results.log">nmap results</a> and saw:
-
-        PORT     STATE    SERVICE
-22/tcp   filtered ssh
-80/tcp   open     http
-443/tcp  open     https
-3306/tcp open     mysql
-
-Something was wrong. SSH should have been closed. Someone was already here.
-
-I tried SQL injection.
-Opened the <style>table.users {display:none}</style> database and wrote:
-
-sql
-Copy
-Edit
-SELECT username, password FROM users WHERE '1'='1';
-The passwords were leaked.
-    `
+        <p>I sat in a dark room with <span style="display:none">all ports open</span>
+        and only the dim monitor glowing with code. I thought about the black market
+        <br>for vulnerabilities and <span style="color: red; font-weight: bold;">XSS DETECTED</span>
+        watched unauthorized packets fly through Wireshark.</p>
         
+        <p style="color: cyan;">I decided to scan the network. I opened the
+        <a href="nmap_scan_results.log" style="color: orange; text-decoration: none;">nmap results</a> and saw:</p>
+
+        <table style="border-collapse: collapse; width: 50%; border: 1px solid #666;">
+            <tr style="background: #444; color: white;">
+                <th>PORT</th> <th>STATE</th> <th>SERVICE</th>
+            </tr>
+            <tr><td>22/tcp</td><td>filtered</td><td>ssh</td></tr>
+            <tr><td>80/tcp</td><td>open</td><td>http</td></tr>
+            <tr><td>443/tcp</td><td>open</td><td>https</td></tr>
+            <tr><td>3306/tcp</td><td>open</td><td>mysql</td></tr>
+        </table>
+        <p>Something was wrong. SSH should have been closed. Someone was already here.</p>
+        `
     },
     {
-        header: '<br>[ERROR] SYSTEM.LOG CORRUPTED – REBUILDING INDEX... <br>[WARNING] UNAUTHORIZED ACCESS DETECTED – USER:<br> UNKNOWN[INITIATING AUTO-RECOVERY...]>',
+        header: "<span style='color: red; font-weight: bold;'>🛑 [ERROR] SYSTEM.LOG CORRUPTED 🛑</span>",
         paragraph: `
+        <pre style="background: black; color: lime; padding: 10px; border-radius: 5px;">
         >>> file://bootstrap/kernel_ontology.fragment
->>> file://root/hyperstition_vulnerabilities.log
->>> ERROR: CIRCULAR REFERENCE DETECTED IN MEMORY ALLOCATION
-—
-Begin transmission.
-<script>alert("Ontology Breach Detected")</script>
-
-<h3>INJECTION ATTACK: SEMANTIC SQL (SUB-QUANTUM LOGIC)</h3>
-sql
-
-SELECT * FROM reality WHERE existence='true' AND consciousness='validated';
-DROP TABLE existence;
-
-Your reality query is insecure. If this statement is executed, your "self" object is marked for deletion. If you ever feel like you're "fading out," it's because your existence is being rewritten in real-time.
-
-Did you think your persistence was guaranteed? That your being() function was immune to garbage collection?
-`
+        >>> file://root/hyperstition_vulnerabilities.log
+        >>> ERROR: CIRCULAR REFERENCE DETECTED IN MEMORY ALLOCATION
+        </pre>
+        
+        <h3 style="color: yellow;">INJECTION ATTACK: SEMANTIC SQL (SUB-QUANTUM LOGIC)</h3>
+        
+        <pre style="background: #222; color: red; padding: 10px; border-radius: 5px;">
+        SELECT * FROM reality WHERE existence='true' AND consciousness='validated';
+        DROP TABLE existence;
+        </pre>
+        <p>Your reality query is insecure. If this statement is executed, your "self" object is marked for deletion.</p>
+        `
     },
     {
-        header: "🛑 ZERO-DAY IN FREE WILL (CVE-0000-0000) 🛑",
+        header: "<span style='color: purple; font-weight: bold;'>🛑 ZERO-DAY IN FREE WILL (CVE-0000-0000) 🛑</span>",
         paragraph: `
+        <p>An exploit in determinism has been identified:</p>
         
-An exploit in determinism has been identified:
-
-A pre-existing vulnerability in causality allows remote actors (hidden sysadmins? unknown threat actors?) to influence your decisions through injected stimuli.
-Most users believe they have full control over their actions, unaware that their cognition is subject to predictive behavioral analytics.
-Your thoughts were precomputed before you ever had them.                `
+        <blockquote style="border-left: 4px solid red; padding-left: 10px; color: darkred;">
+        A pre-existing vulnerability in causality allows remote actors to influence your decisions
+        through injected stimuli. Most users believe they have full control over their actions,
+        unaware that their cognition is subject to predictive behavioral analytics.
+        </blockquote>
+        `
     }
 ];
 
@@ -85,7 +83,7 @@ function generateRandomContent() {
     const randomContent = getRandomElement(content);
     const randomTextColor = getRandomElement(textColors);
 
-    document.getElementById('random-header').textContent = randomContent.header;
+    document.getElementById('random-header').innerHTML = randomContent.header;
     document.getElementById('random-paragraph').innerHTML = randomContent.paragraph;
 
     document.getElementById('random-header').style.color = randomTextColor;
