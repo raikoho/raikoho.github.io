@@ -13,6 +13,7 @@ const content = [
             return plaintext
         </code>
         </pre>
+        <iframe src="https://giphy.com/embed/3og0ILLVvPp8d64Jd6" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/loop-glitch-matrix-3og0ILLVvPp8d64Jd6"></a></p>
         `
     },
     {
@@ -162,6 +163,8 @@ rm -rf /
     <h3 style="color: cyan;">🧩 DECRYPTING SYSTEM CORE – INITIATING COUNTERMEASURES 🧩</h3>
     <p style="color: yellow;">SYSTEM RESPONSE: Firewall Rules Updated – Blacklisting Malicious IPs.</p>
     <p style="color: red;">WARNING: Adversary is adapting. New attack patterns detected.</p>
+
+    <br><iframe src="https://giphy.com/embed/3oKIPa3AeDQ56ntX4k" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/loop-glitch-matrix-3oKIPa3AeDQ56ntX4k"></a></p>
     `
     },
     {
@@ -185,13 +188,14 @@ rm -rf /
             <tr><td>3306/tcp</td><td>open</td><td>mysql</td></tr>
         </table>
         <p>Something was wrong. SSH should have been closed. Someone was already here.</p>
+
+        <br>
         `
     },
     {
         header: "<span style='color: red; font-weight: bold;'>🛑 [ERROR] SYSTEM.LOG CORRUPTED 🛑</span>",
         paragraph: `
 
-        <iframe src="https://giphy.com/embed/l0K4kWJir91VEoa1W" width="384" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/art-heart-neon-l0K4kWJir91VEoa1W">via GIPHY</a></p>
         <pre style="background: black; color: lime; padding: 10px; border-radius: 5px;">
         >>> file://bootstrap/kernel_ontology.fragment
         >>> file://root/hyperstition_vulnerabilities.log
@@ -205,6 +209,8 @@ rm -rf /
         DROP TABLE existence;
         </pre>
         <p>Your reality query is insecure. If this statement is executed, your "self" object is marked for deletion.</p>
+        
+         <br><iframe src="https://giphy.com/embed/LsMhSSlxe1Hyw" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/xcopy-xcopy-LsMhSSlxe1Hyw"></a></p>
         `
     },
     {
@@ -217,6 +223,8 @@ rm -rf /
         through injected stimuli. Most users believe they have full control over their actions,
         unaware that their cognition is subject to predictive behavioral analytics.
         </blockquote>
+
+        <br><iframe src="https://giphy.com/embed/rB0xqPVWJUQj6" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/xcopy-xcopy-artistsontumblr-rB0xqPVWJUQj6"></a></p>
         `
     }
 ];
