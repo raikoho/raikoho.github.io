@@ -3,36 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>asdasfsdgdgdsgdsg Hub</title>
+    <title>Bohdan Misonh</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Cybersecurity Hub</h1>
+        <h1>Bohdan Misonh</h1>
         <nav>
             <ul>
                 <li><a href="#about-me">About Me</a></li>
-                <li><a href="#about-site">About the Site</a></li>
-                <li><a href="#algorithms">Algorithms</a></li>
-                <li><a href="#puzzles">Puzzles</a></li>
+                <li><a href="#about-site">Github</a></li>
+                <li><a href="#algorithms">About Site</a></li>
+                <li><a href="#puzzles">How does the site works</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="about-me">
         <h2>About Me</h2>
-        <p>I am passionate about cybersecurity, algorithms, and cryptography. This website is my project to experiment with interactive security mechanisms, cryptographic methods, and personalized content.</p>
+        <p>I am a person who lives on the edge of reality and the digital world, crossing them at every step. My passion is not just a profession, it is my constant thirst for secrets and modern coding and technology. People face new security challenges every day, so I create tools to fight invisible enemies, for example, developing YARA rules or Snort for malware detection. By creating new rules and programs, I believe that I protect humanity.
+My goal is to make technology beautiful and completely erase the line between reality and digital traces.</p>
     </section>
 
     <section id="about-site">
-        <h2>About the Site</h2>
-        <p>This site integrates SHADIS, GENESYS, SPECTER, and ECLIPSE-4 to provide an adaptive and secure environment. The system also includes encrypted pathways, logic-based challenges, and interactive fragments.</p>
-        <button class="hack-btn">Unlock Hidden Features</button>
+        <h2>My Github</h2>
+        <p>My GitHub is an open laboratory where I publish my projects covering various aspects of cybersecurity. There you will find not just tools, but also conceptual solutions to complex problems that I face in the real world. Each repository is a reflection of my efforts and thinking, reflecting my approach to technical excellence.</p>
+        <button class="hack-btn">Go to my Github</button>
     </section>
 
     <section id="algorithms">
-        <h2>Algorithms & Security</h2>
-        <p>Explore different algorithms used for encryption, dynamic content generation, and hidden access control.</p>
+        <h2>My website is more than just a resource</h2>
+        <p>It is a living, adaptive organism that uses complex algorithms for analysis, encryption, and user interaction.</p>
+        <section>
+<h2>1. Query analysis via SHADIS</h2>
+<p><strong>Working principle:</strong> SHADIS evaluates each query, predicts your next actions and generates the most relevant content.</p>
+<p><strong>Algorithm:</strong></p>
+<ul>
+<li>The user enters a query.</li>
+<li>SHADIS analyzes the query, creating a probabilistic model.</li>
+<li>The query is sent to the server for processing.</li>
+</ul>
+</section>
+
+<section>
+<h2>2. Encoding via GENESYS</h2>
+<p><strong>How it works:</strong> GENESYS changes content according to user behavior.</p>
+<p><strong>Encoding example:</strong></p>
+<div class="code-block">
+<code>
+def genesys_encoding(user_query, user_profile):
+context = analyze_context(user_query)
+encoding = semantic_analysis(context, user_profile)
+return encoding
+</code>
+</div>
+<p><strong>Output:</strong></p>
+<div class="code-block">
+<code>
+{ 'encoded_query': 'YARA_rule_search_v2', 'priority': 0.75 }
+</code>
+</div>
+</section>
+
+<section>
+<h2>3. Hidden directories via SPECTRE</h2>
+<p><strong>Principle of operation:</strong> Generates hidden URLs that are accessible only after certain conditions are met.</p>
+<p><strong>Encryption example (AES):</strong></p>
+<div class="code-block">
+<code>
+from Crypto.Cipher import AES
+import base64
+
+key = b'Sixteen byte key'
+cipher = AES.new(key, AES.MODE_EAX)
+data = 'secret_directory_access'
+nonce = cipher.nonce
+ciphertext, tag = cipher.encrypt_and_digest(data.encode())
+
+encoded = base64.b64encode(nonce + tag + ciphertext).decode('utf-8')
+print(f'Encrypted Data: {encoded}')
+</code>
+</div>
+</section>
+
+<section>
+<h2>4. Adaptive Fragments via ECLIPSE-4</h2>
+<p><strong>How it Works:</strong> Uses chaos theory to dynamically generate personalized content.</p>
+<p><strong>Generation Example:</strong></p>
+<div class="code-block">
+<code>
+import random
+
+def generate_random_fragment(user_profile):
+random.seed(user_profile['interaction_count'])
+return ''.join(random.choices('abcdefghijklmnopqrstuvwxyz', k=16))
+
+fragment = generate_random_fragment({'interaction_count': 5})
+print(f"Random Fragment: {fragment}")
+</code>
+</div>
+</section>
+
+<section>
+<h2>5. Riddles and subsystems</h2>
+<p>To gain access to the closed sections of the site, you need to solve a cryptographic riddle.</p>
+<p><strong>Example:</strong></p>
+<div class="code-block">
+<code>
+SHA256('YaraSecurity2025') = ?
+</code>
+</div>
+<button class="btn">Try to solve</button>
+</section>
     </section>
 
     <section id="puzzles">
