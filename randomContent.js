@@ -16,6 +16,73 @@ const content = [
         <iframe src="https://giphy.com/embed/3og0ILLVvPp8d64Jd6" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/loop-glitch-matrix-3og0ILLVvPp8d64Jd6"></a></p>
         `
     },
+//-----------------------------------------------------------------------------------------
+{
+    "header": "⚠️ [ALERT] SYSTEM ANOMALY DETECTED – UNEXPECTED MEMORY LEAK ⚠️",
+    "paragraph": `
+
+    <h3 style="color: red; text-align: center;">🚨 SECURITY BREACH – TRANSMISSION AT RISK 🚨</h3>
+
+    <table border="1" style="width: 100%; border-collapse: collapse; text-align: center; font-family: monospace; color: #ff4500;">
+        <tr>
+            <th>🔢 PACKET ID</th>
+            <th>🔎 ANOMALY TYPE</th>
+            <th>⚙️ ACTION REQUIRED</th>
+            <th>⚠️ SEVERITY</th>
+        </tr>
+        <tr>
+            <td>AXF-129</td>
+            <td>Checksum Failure</td>
+            <td><code>hash_verify()</code></td>
+            <td style="background-color: red; color: white;">CRITICAL</td>
+        </tr>
+        <tr>
+            <td>B3D-402</td>
+            <td>Undefined Protocol Header</td>
+            <td><code>parse_header()</code></td>
+            <td style="background-color: orange; color: black;">HIGH</td>
+        </tr>
+        <tr>
+            <td>GHT-777</td>
+            <td>Outbound Link – Ghost Node</td>
+            <td><code>isolate_traffic()</code></td>
+            <td style="background-color: red; color: white;">HIGH</td>
+        </tr>
+        <tr>
+            <td>XJQ-911</td>
+            <td>Memory Buffer Overflow</td>
+            <td><code>kill_process()</code></td>
+            <td style="background-color: red; color: white;">CRITICAL</td>
+        </tr>
+        <tr>
+            <td>Z9L-024</td>
+            <td>Unauthorized Data Exfiltration</td>
+            <td><code>monitor_logs()</code></td>
+            <td style="background-color: orange; color: black;">HIGH</td>
+        </tr>
+    </table>
+
+    <h3 style="color: lime;">🟢 SYSTEM LOGS – PAYLOAD TRACEBACK INITIATED 🟢</h3>
+    <pre style="background-color: black; color: lime; padding: 10px;">
+[2025-02-17 04:12:30] ALERT: Unknown Process Executed in Kernel Space
+[2025-02-17 04:13:02] PACKET TRACE: Unusual Header Anomaly – XOR Obfuscation Detected
+[2025-02-17 04:14:47] REMOTE CONNECTION ESTABLISHED: Suspicious Traffic from 203.0.113.99
+[2025-02-17 04:15:22] MEMORY OVERFLOW DETECTED: Stack corruption in process PID 4823
+[2025-02-17 04:16:59] SYSTEM RESPONSE: Isolating Process... ERROR: Segmentation Fault.
+    </pre>
+
+    <h3 style="color: cyan;">🔐 COUNTERMEASURE DEPLOYMENT – SYSTEM STABILIZATION INITIATED 🔐</h3>
+    <p style="color: yellow;">SYSTEM RESPONSE: Traffic rerouted. Anomaly containment in progress.</p>
+    <p style="color: red;">WARNING: Malicious entity detected. Persistence mechanism unknown.</p>
+
+    <h3 style="color: gray; text-align: center;">💀 END TRANSMISSION – UNAUTHORIZED ACCESS TERMINATED 💀</h3>
+    
+    <iframe src="https://giphy.com/embed/12W5Sg2koWYnwA" width="480" height="360" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/future-careers-uniblog-12W5Sg2koWYnwA">via GIPHY</a></p>
+    `
+},
+//-----------------------------------------------------------------------------------------
+
+    
     {
         header: '<h3 style="color: red; text-align: center;">⚠️ UNAUTHORIZED SYSTEM ACCESS DETECTED ⚠️</h3>',
         paragraph: `
