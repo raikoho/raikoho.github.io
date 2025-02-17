@@ -6,9 +6,9 @@ const content = [
         header: "[THE CODE YOU WERE NEVER MEANT TO SEE]",
         paragraph: `
 
-        <span style="color: red;">def decrypt_reality(ciphertext, key):</span>
-    <span style="color: red;">for i in range(len(ciphertext)):</span>
-        plaintext[i] = ciphertext[i] ^ key[i % len(key)]
+        <span style="color: red;">111def decrypt_reality(ciphertext, key):</span>
+    <br><span style="color: red;">for i in range(len(ciphertext)):</span>
+        <br>plaintext[i] = ciphertext[i] ^ key[i % len(key)]
     return plaintext
     `
     },
