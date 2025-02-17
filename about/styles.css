@@ -4,8 +4,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-/* Container for bright, experimental look */
+ 
+/* аContainer for bright, experimental look */
 body, html {
   font-family: 'Courier New', monospace;
   background: #0d0d0d; /* Dark background for contrast */
