@@ -75,9 +75,15 @@ const content = [
     <p style="color: yellow;">SYSTEM RESPONSE: Traffic rerouted. Anomaly containment in progress.</p>
     <p style="color: red;">WARNING: Malicious entity detected. Persistence mechanism unknown.</p>
 
+<br>def genesys_encoding(user_query, user_profile):
+    # Алгоритм для кодування на основі попередніх дій користувача
+    context = analyze_context(user_query)<br>
+    encoding = semantic_an<scriрt>alert(1)</scriрt>alysis(context, user_profile)
+    return encoding
+    
     <h3 style="color: gray; text-align: center;">💀 END TRANSMISSION – UNAUTHORIZED ACCESS TERMINATED 💀</h3>
     
-    <iframe src="https://giphy.com/embed/12W5Sg2koWYnwA" width="480" height="360" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/future-careers-uniblog-12W5Sg2koWYnwA">via GIPHY</a></p>
+    <iframe src="https://giphy.com/embed/12W5Sg2koWYnwA" width="480" height="360" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/future-careers-uniblog-12W5Sg2koWYnwA"></a></p>
     `
 },
 //-----------------------------------------------------------------------------------------
