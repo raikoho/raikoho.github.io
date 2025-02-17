@@ -52,6 +52,11 @@ section {
     box-shadow: 0px 0px 10px #0f0;
 }
 
+#algorithms {
+    background: #300345;
+    box-shadow: 0px 0px 10px #eb0514;
+}
+
 h2 {
     color: #0f0;
 }
