@@ -3,85 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cybersecurity Site</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Cybersecurity Hub</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Cybersecurity Site</h1>
+        <h1>Cybersecurity Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#about-site">About the Site</a></li>
+                <li><a href="#algorithms">Algorithms</a></li>
+                <li><a href="#puzzles">Puzzles</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="about-me">
+    <section id="about-me">
         <h2>About Me</h2>
-        <p>I have created this website with a focus on cybersecurity, interactive algorithms, and personalized content generation. The website uses SHADIS for query analysis, GENESYS for content encoding, SPECTER for generating hidden directories, and ECLIPSE-4 for adaptive fragment creation. My goal is to offer a dynamic and secure browsing experience, while also pushing the boundaries of digital interaction.</p>
+        <p>I am passionate about cybersecurity, algorithms, and cryptography. This website is my project to experiment with interactive security mechanisms, cryptographic methods, and personalized content.</p>
     </section>
 
-    <section class="algorithm">
-        <h2>1. SHADIS Query Analysis</h2>
-        <p>SHADIS (Secret-Generated Algorithm for Dynamic Identification Sorting) processes each query by evaluating it based on frequency characteristics, predicting subsequent user actions.</p>
-        <pre><code class="python">
-def analyze_query(user_query):
-    # Algorithm to analyze the query
-    analysis = shadis_algorithm(user_query)
-    return analysis
-        </code></pre>
+    <section id="about-site">
+        <h2>About the Site</h2>
+        <p>This site integrates SHADIS, GENESYS, SPECTER, and ECLIPSE-4 to provide an adaptive and secure environment. The system also includes encrypted pathways, logic-based challenges, and interactive fragments.</p>
+        <button class="hack-btn">Unlock Hidden Features</button>
     </section>
 
-    <section class="algorithm">
-        <h2>2. GENESYS Query Encoding</h2>
-        <p>GENESYS (Generative Encoding System for Semantic Yield) encodes each query dynamically, modifying content display based on user interaction.</p>
-        <pre><code class="python">
-def genesys_encoding(user_query, user_profile):
-    context = analyze_context(user_query)
-    encoding = semantic_analysis(context, user_profile)
-    return encoding
-        </code></pre>
+    <section id="algorithms">
+        <h2>Algorithms & Security</h2>
+        <p>Explore different algorithms used for encryption, dynamic content generation, and hidden access control.</p>
     </section>
 
-    <section class="algorithm">
-        <h2>3. Hidden Directories via SPECTER</h2>
-        <p>SPECTER generates encrypted paths leading to non-standard content that requires specific conditions to be unlocked.</p>
-        <pre><code class="python">
-from Crypto.Cipher import AES
-import base64
-
-key = b'Sixteen byte key'
-cipher = AES.new(key, AES.MODE_EAX)
-
-data = 'secret_directory_access'
-nonce = cipher.nonce
-ciphertext, tag = cipher.encrypt_and_digest(data.encode())
-
-encoded = base64.b64encode(nonce + tag + ciphertext).decode('utf-8')
-print(f'Encrypted Data: {encoded}')
-        </code></pre>
-    </section>
-
-    <section class="algorithm">
-        <h2>4. ECLIPSE-4 Adaptive Fragments</h2>
-        <p>ECLIPSE-4 uses chaotic principles to generate random content fragments that adapt in real-time based on user interactions.</p>
-        <pre><code class="python">
-import random
-
-def generate_random_fragment(user_profile):
-    random.seed(user_profile['interaction_count'])
-    return ''.join(random.choices('abcdefghijklmnopqrstuvwxyz', k=16))
-
-fragment = generate_random_fragment({'interaction_count': 5})
-print(f"Random Fragment: {fragment}")
-        </code></pre>
-    </section>
-
-    <section class="algorithm">
-        <h2>5. Puzzles and Subsystems</h2>
-        <p>To unlock certain sections, users must solve logical or cryptographic puzzles.</p>
+    <section id="puzzles">
+        <h2>Cybersecurity Puzzles</h2>
+        <p>To access advanced content, solve cryptographic challenges.</p>
         <pre><code class="bash">
 SHA256('YaraSecurity2025') = ? 
         </code></pre>
     </section>
 
     <footer>
-        <p>&copy; 2025 My Cybersecurity Site</p>
+        <p>&copy; 2025 Cybersecurity Hub | Secure. Intelligent. Adaptive.</p>
     </footer>
 </body>
 </html>
