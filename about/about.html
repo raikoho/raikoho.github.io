@@ -50,7 +50,7 @@ My goal is to make technology beautiful and completely erase the line between re
 <p><strong>How it works:</strong> GENESYS changes content according to user behavior.</p>
 <p><strong>Encoding example:</strong></p>
 <div class="code-block">
-<code>
+<code class="bash">
 def genesys_encoding(user_query, user_profile):
 context = analyze_context(user_query)
 encoding = semantic_analysis(context, user_profile)
@@ -59,9 +59,9 @@ return encoding
 </div>
 <p><strong>Output:</strong></p>
 <div class="code-block">
-<code>
+<preRed><code class="bash">
 { 'encoded_query': 'YARA_rule_search_v2', 'priority': 0.75 }
-</code>
+</code></preRed>
 </div>
 </section>
 
@@ -70,7 +70,7 @@ return encoding
 <p><strong>Principle of operation:</strong> Generates hidden URLs that are accessible only after certain conditions are met.</p>
 <p><strong>Encryption example (AES):</strong></p>
 <div class="code-block">
-<code>
+<preRed><code class="bash">
 from Crypto.Cipher import AES
 import base64
 
@@ -82,7 +82,7 @@ ciphertext, tag = cipher.encrypt_and_digest(data.encode())
 
 encoded = base64.b64encode(nonce + tag + ciphertext).decode('utf-8')
 print(f'Encrypted Data: {encoded}')
-</code>
+</code></preRed>
 </div>
 </section>
 
@@ -91,7 +91,7 @@ print(f'Encrypted Data: {encoded}')
 <p><strong>How it Works:</strong> Uses chaos theory to dynamically generate personalized content.</p>
 <p><strong>Generation Example:</strong></p>
 <div class="code-block">
-<code>
+<code class="bash">
 import random
 
 def generate_random_fragment(user_profile):
@@ -109,11 +109,11 @@ print(f"Random Fragment: {fragment}")
 <p>To gain access to the closed sections of the site, you need to solve a cryptographic riddle.</p>
 <p><strong>Example:</strong></p>
 <div class="code-block">
-<code>
+<pre><code class="bash">
 SHA256('YaraSecurity2025') = ?
-</code>
+</code></pre>
 </div>
-<button class="btn">Try to solve</button>
+<button class="hack-btn2">Try to solve</button>
 </section>
     </section>
 
@@ -126,7 +126,7 @@ SHA256('YaraSecurity2025') = ?
     </section>
 
     <footer>
-        <p>&copy; 2025 Cybersecurity Hub | Secure. Intelligent. Adaptive.</p>
+        <p>&copy; 2025 Bohdan Misonh</p>
     </footer>
 </body>
 </html>
