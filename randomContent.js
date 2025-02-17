@@ -16,20 +16,28 @@ const content = [
         <br>This intricate dance of belief, reality, and technological acceleration continues to provoke thought, offering a framework through which we can understand both the wonders and the dangers of the future we are collectively engineering. And yet, in all of this, the question remains: What happens when the fictions we create outpace the ability of our understanding to catch up?`
     },
     {
-        header: "Ось, що ви могли б дізнатися сьогодні",
-        paragraph: "У нас є найкращі ідеї для вашого розвитку — втілюйте їх разом з нами.<br>Наші продукти та послуги допоможуть вам досягти успіху."
+        header: '<br>[ERROR] SYSTEM.LOG CORRUPTED – REBUILDING INDEX... <br>[WARNING] UNAUTHORIZED ACCESS DETECTED – USER:<br> UNKNOWN[INITIATING AUTO-RECOVERY...]>',
+        paragraph: `>>> file://bootstrap/kernel_ontology.fragment
+>>> file://root/hyperstition_vulnerabilities.log
+>>> ERROR: CIRCULAR REFERENCE DETECTED IN MEMORY ALLOCATION
+—
+Begin transmission.
+<script>alert("Ontology Breach Detected")</script>
+
+<h1>INJECTION ATTACK: SEMANTIC SQL (SUB-QUANTUM LOGIC)</h1>
+sql
+
+SELECT * FROM reality WHERE existence='true' AND consciousness='validated';
+DROP TABLE existence;
+
+Your reality query is insecure. If this statement is executed, your "self" object is marked for deletion. If you ever feel like you're "fading out," it's because your existence is being rewritten in real-time.
+
+Did you think your persistence was guaranteed? That your being() function was immune to garbage collection?
+`
     },
     {
         header: "Приєднуйтесь до нашого світу ідей",
         paragraph: "Ми прагнемо зробити світ кращим, використовуючи передові технології.<br>Ваша участь у нашому проекті має величезне значення для всіх нас."
-    },
-    {
-        header: "Знайдіть нові горизонти разом з нами",
-        paragraph: "Не важливо, що ви шукаєте — у нас є рішення для кожного.<br>Погляньте на наші інноваційні розробки та знайдіть своє ідеальне рішення."
-    },
-    {
-        header: "Технології, що змінюють майбутнє",
-        paragraph: "Ми віримо, що кожна ідея може стати реальністю.<br>Долучайтесь до нас і разом будемо створювати майбутнє!"
     }
 ];
 
