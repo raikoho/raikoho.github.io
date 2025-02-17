@@ -3,93 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Site</title>
-    <style>
-        body {
-            background-color: #1e1e1e;
-            color: #00ff00;
-            font-family: 'Courier New', Courier, monospace;
-            margin: 0;
-            padding: 0;
-        }
-        h1, h2 {
-            color: #00ff00;
-        }
-        .content {
-            padding: 20px;
-            line-height: 1.6;
-        }
-        .button-back {
-            background-color: #333;
-            color: #00ff00;
-            padding: 10px 20px;
-            border: 2px solid #00ff00;
-            text-decoration: none;
-            font-size: 18px;
-            text-align: center;
-            display: block;
-            margin: 20px auto;
-            transition: background-color 0.3s ease;
-        }
-        .button-back:hover {
-            background-color: #00ff00;
-            color: #1e1e1e;
-        }
-        .hidden-content {
-            color: #ff5500;
-            font-weight: bold;
-        }
-        .images {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .images img {
-            width: 50%;
-            height: auto;
-            margin: 10px;
-            border: 2px solid #00ff00;
-        }
-        .about {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #333;
-        }
-        .about h2 {
-            color: #ff5500;
-        }
-    </style>
+    <title>My Cybersecurity Site</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="content">
-        <h1>Welcome to the Cybersecurity Site</h1>
-        <p>Explore the depths of cybersecurity, penetration testing, and the latest in threat intelligence. The site adapts to your actions, providing tailored content through dynamic algorithms.</p>
+    <header>
+        <h1>Welcome to My Cybersecurity Site</h1>
+    </header>
 
-        <a href="/" class="button-back">Back to Homepage</a>
+    <section class="about-me">
+        <h2>About Me</h2>
+        <p>I have created this website with a focus on cybersecurity, interactive algorithms, and personalized content generation. The website uses SHADIS for query analysis, GENESYS for content encoding, SPECTER for generating hidden directories, and ECLIPSE-4 for adaptive fragment creation. My goal is to offer a dynamic and secure browsing experience, while also pushing the boundaries of digital interaction.</p>
+    </section>
 
-        <div class="images">
-            <img src="https://via.placeholder.com/500x300" alt="Cybersecurity Image 1">
-            <img src="https://via.placeholder.com/500x300" alt="Cybersecurity Image 2">
-        </div>
+    <section class="algorithm">
+        <h2>1. SHADIS Query Analysis</h2>
+        <p>SHADIS (Secret-Generated Algorithm for Dynamic Identification Sorting) processes each query by evaluating it based on frequency characteristics, predicting subsequent user actions.</p>
+        <pre><code class="python">
+def analyze_query(user_query):
+    # Algorithm to analyze the query
+    analysis = shadis_algorithm(user_query)
+    return analysis
+        </code></pre>
+    </section>
 
-        <div class="about">
-            <h2>About the Site</h2>
-            <p>This site is more than just a resource. It’s a living, adaptive organism that works using complex algorithms and mechanisms that are constantly evolving, developing, and interacting with the user. Every request, every interaction generates new data, which is sent to the central processing system where it is encrypted, analyzed, and modified according to your actions. Here's a deeper look at how the process works:</p>
+    <section class="algorithm">
+        <h2>2. GENESYS Query Encoding</h2>
+        <p>GENESYS (Generative Encoding System for Semantic Yield) encodes each query dynamically, modifying content display based on user interaction.</p>
+        <pre><code class="python">
+def genesys_encoding(user_query, user_profile):
+    context = analyze_context(user_query)
+    encoding = semantic_analysis(context, user_profile)
+    return encoding
+        </code></pre>
+    </section>
 
-            <h3>1. Request Analysis through SHADIS (Secretly-Generated Algorithm of Dynamic Identification Sorting)</h3>
-            <p>The working principle: Every request submitted by the user undergoes initial processing through SHADIS, which evaluates it based on frequency characteristics and outputs the most probable requests. This allows the site to anticipate your next steps before you take them.</p>
+    <section class="algorithm">
+        <h2>3. Hidden Directories via SPECTER</h2>
+        <p>SPECTER generates encrypted paths leading to non-standard content that requires specific conditions to be unlocked.</p>
+        <pre><code class="python">
+from Crypto.Cipher import AES
+import base64
 
-            <h3>2. Request Encoding via GENESYS</h3>
-            <p>The working principle: Each request is also encoded through the GENESYS system – an intelligent algorithm for encoding content based on syntactic and semantic vectors. This process dynamically changes the representation based on how you interact with the content on the site.</p>
+key = b'Sixteen byte key'
+cipher = AES.new(key, AES.MODE_EAX)
 
-            <h3>3. Hidden Directories and Interaction with SPECTER</h3>
-            <p>SPECTER is a mechanism that generates hidden directories and paths based on your actions on the site. These are not just ordinary URLs but encrypted paths that lead to non-standard content, accessible only after certain conditions are met.</p>
+data = 'secret_directory_access'
+nonce = cipher.nonce
+ciphertext, tag = cipher.encrypt_and_digest(data.encode())
 
-            <h3>4. Adaptive Fragments via ECLIPSE-4</h3>
-            <p>ECLIPSE-4 is a cryptographic generator used to create random content fragments. The algorithm uses chaotic principles and mathematical models to generate unique pieces that change based on your actions.</p>
+encoded = base64.b64encode(nonce + tag + ciphertext).decode('utf-8')
+print(f'Encrypted Data: {encoded}')
+        </code></pre>
+    </section>
 
-            <h3>5. Puzzles and Subsystems</h3>
-            <p>To unlock certain parts of the site, users must perform specific actions involving logical puzzles or cryptographic tests. Each such test is part of a larger subsystem that unlocks gradually, only when certain conditions are met.</p>
-        </div>
-    </div>
+    <section class="algorithm">
+        <h2>4. ECLIPSE-4 Adaptive Fragments</h2>
+        <p>ECLIPSE-4 uses chaotic principles to generate random content fragments that adapt in real-time based on user interactions.</p>
+        <pre><code class="python">
+import random
+
+def generate_random_fragment(user_profile):
+    random.seed(user_profile['interaction_count'])
+    return ''.join(random.choices('abcdefghijklmnopqrstuvwxyz', k=16))
+
+fragment = generate_random_fragment({'interaction_count': 5})
+print(f"Random Fragment: {fragment}")
+        </code></pre>
+    </section>
+
+    <section class="algorithm">
+        <h2>5. Puzzles and Subsystems</h2>
+        <p>To unlock certain sections, users must solve logical or cryptographic puzzles.</p>
+        <pre><code class="bash">
+SHA256('YaraSecurity2025') = ? 
+        </code></pre>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Cybersecurity Site</p>
+    </footer>
 </body>
 </html>
