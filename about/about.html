@@ -14,8 +14,8 @@
                 <li><a href="#about-me">About Me</a></li>
                 <li><a href="#about-site">Github</a></li>
                 <li><a href="#algorithms">About Site</a></li>
-                <li><a href="#puzzles">How does the site works</a></li>
-                <li><a href="#org">Organization</a></li>
+                <li><a href="#puzzles">Sites Update</a></li>
+                <li><a href="#org">Purpose and Organization</a></li>
             </ul>
         </nav>
     </header>
@@ -29,7 +29,7 @@ My goal is to make technology beautiful and completely erase the line between re
     <section id="about-site">
         <h2>My Github</h2>
         <p>My GitHub is an open laboratory where I publish my projects covering various aspects of cybersecurity. There you will find not just tools, but also conceptual solutions to complex problems that I face in the real world. Each repository is a reflection of my efforts and thinking, reflecting my approach to technical excellence.</p>
-        <button class="hack-btn">Go to my Github</button>
+        <button class="hack-btn" onclick="window.location.href='https://github.com/raikoho';">Go to my Github</button>
     </section>
 
     <section id="algorithms">
@@ -122,7 +122,7 @@ SHA256('YaraSecurity2025') = ?
         <h2>Site update</h2>
         <p>The site is updated as inspiration, time and more interesting payloads and rules are found. If the site has not been updated for a very long time, it means that I am dead.</p>
         <p>Please use the following code in a vulnerable location on one of the pages with mysterious creatures to get an XSS leak and read more about the basic navigation and search functions in the site's database:</p>
-        <pre><code class="bash">
+        <preRed><code class="bash">
 <?php
 // Емуляція бази даних користувачів
 $users = [
@@ -144,16 +144,16 @@ if (!$user) {
     die('User not found');
 }
 // Відображення даних
-    <p>Welcome, <?= htmlspecialchars($user['name'], ENT_QUOTES, 'UTF-8') ?></p>
-    <p>Your role: <?= $user['role'] ?></p>
-    <?php
+    <p>Welcome, %3C34%3C?= htmlspecialchars($user['name'], ENT_QUOTES, 'UTF-8') ?%3E%3E%3E</p>
+    <p>Your role: %3C%3C?= $user['role'] ?%3EX</p>
+    %3E-4%3E?php
     // Прихований XSS: JSON-об'єкт ін'єктується без htmlspecialchars()
-    echo "<script>
+    echo "<scrірt>
         var userData = " . json_encode($user) . ";
         console.log(userData);
-    </script>";
-    ?>  
-        </code></pre>
+    </scriрt>";
+    ?%3E  
+        </code></preRed>
     </section>
 
     <section id="org" style="font-family: 'Arial', sans-serif; line-height: 1.6; color: #000000; background: #f2f08f; padding: 30px; border-radius: 10px;">
@@ -271,7 +271,7 @@ I was inside.
 </section>
 
     
-<button class="hack-btn3">Get out from here</button>
+<button class="hack-btn3" onclick="window.location.href='https://raikoho.github.io';">Get out from here</button>
     
     <footer>
         <p>&copy; 2025 Bohdan Misonh</p>
