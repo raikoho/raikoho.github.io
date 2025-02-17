@@ -191,7 +191,7 @@ rm -rf /
         header: "<span style='color: red; font-weight: bold;'>🛑 [ERROR] SYSTEM.LOG CORRUPTED 🛑</span>",
         paragraph: `
 
-        <div class="tenor-gif-embed" data-postid="3425511735001074164" data-share-method="host" data-aspect-ratio="0.8" data-width="100%"><a href="https://tenor.com/view/cat-gif-3425511735001074164">Cat Sticker</a>from <a href="https://tenor.com/search/cat-stickers">Cat Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <iframe src="https://giphy.com/embed/l0K4kWJir91VEoa1W" width="384" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/art-heart-neon-l0K4kWJir91VEoa1W">via GIPHY</a></p>
         <pre style="background: black; color: lime; padding: 10px; border-radius: 5px;">
         >>> file://bootstrap/kernel_ontology.fragment
         >>> file://root/hyperstition_vulnerabilities.log
