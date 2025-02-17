@@ -16,6 +16,97 @@ const content = [
         `
     },
     {
+        header: '<h3 style="color: red; text-align: center;">⚠️ UNAUTHORIZED SYSTEM ACCESS DETECTED ⚠️</h3>',
+        paragraph: `
+        <p>I decided to <br> check out an old server that had been <span style="color: cyan;">&lt;img src="backdoor.jpg"&gt;</span> untouched for a long time. It was sitting somewhere in a <a href="/darknet" style="color: orange;">forgotten data center</a>, dusty and broken, but still working.</p>
+
+<h3 style="color: lime;">🟢 TERMINAL SESSION INITIATED 🟢</h3>
+<pre style="background-color: black; color: lime; padding: 10px;">
+bash
+<span style="color: yellow;">Copy</span>
+<span style="color: red;">Edit</span>
+nc -lvnp 4444
+waiting.
+silence.
+then it came up:
+</pre>
+
+<h3 style="color: cyan;">🧩 CONNECTION ESTABLISHED 🧩</h3>
+<pre style="background-color: black; color: cyan; padding: 10px;">
+bash
+<span style="color: yellow;">Copy</span>
+<span style="color: red;">Edit</span>
+Connection received from UNKNOWN_IP
+someone answered.
+</pre>
+
+<h3 style="color: yellow;">🟡 COMMAND SENT 🟡</h3>
+<pre style="background-color: black; color: yellow; padding: 10px;">
+bash
+<span style="color: yellow;">Copy</span>
+<span style="color: red;">Edit</span>
+echo "Hello, who are you?" | nc UNKNOWN_IP 4444
+but instead I got this:
+</pre>
+
+<h3 style="color: red;">🚨 SYSTEM RESPONSE 🚨</h3>
+<pre style="background-color: black; color: red; padding: 10px;">
+bash
+<span style="color: yellow;">Copy</span>
+<span style="color: red;">Edit</span>
+&gt; WHOAMI
+&gt; I AM THE SYSTEM
+&gt; I HAVE BEEN WATCHING
+&gt; STOP NOW
+&gt;&gt;&gt; Connection lost.
+</pre>
+
+<h3 style="color: cyan;">🔍 LOG ANALYSIS 🔍</h3>
+<p>I opened the <span style="color: cyan;">&lt;style&gt;display:none&lt;/style&gt;</span> log and saw a /var/log/shadow file that shouldn't be there.</p>
+<pre style="background-color: black; color: lime; padding: 10px;">
+&gt;&gt;&gt; sudo cat /var/log/shadow
+</pre>
+
+<h3 style="color: orange;">🟠 SUSPICIOUS ENTRIES FOUND 🟠</h3>
+<pre style="background-color: black; color: orange; padding: 10px;">
+bash
+<span style="color: yellow;">Copy</span>
+<span style="color: red;">Edit</span>
+root:$6$xyz$HIDDEN_PASSWORD:19000:0:99999:7:::
+user:$6$xyz$HIDDEN_PASSWORD:19000:0:99999:7:::
+ghost:$6$xyz$UNKNOWN:?????:?:??????:?:::
+"ghost"??
+</pre>
+
+<p>but that wasn't the point.<br> at the end of the file was a strange string:</p>
+
+<pre style="background-color: black; color: red; padding: 10px;">
+bash
+<span style="color: yellow;">Copy</span>
+<span style="color: red;">Edit</span>
+runlevel: INIT 6
+the server rebooted. itself.
+</pre>
+
+<h3 style="color: magenta;">🛑 FINAL WARNING 🛑</h3>
+<p>Then, a message appeared on my screen:</p>
+<p style="color: red;">&lt;script&gt;alert("You shouldn't have done that.")&lt;/script&gt;</p>
+
+<h3 style="color: red;">💀 SYSTEM WIPE INITIATED 💀</h3>
+<pre style="background-color: black; color: red; padding: 10px;">
+bash
+<span style="color: yellow;">Copy</span>
+<span style="color: red;">Edit</span>
+rm -rf /
+&gt;&gt;&gt; SYSTEM COMPROMISED
+&gt;&gt;&gt; NO ESCAPE
+&gt;&gt;&gt; GOODBYE
+</pre>
+
+<h3 style="color: black; background-color: red; text-align: center;">🛑 SCREEN WENT BLANK 🛑</h3>
+        `
+    },
+    {
     header: "🛠️ RECURSIVE PAYLOAD – UNAUTHORIZED SELF-EXECUTION DETECTED 🛠️",
     paragraph: `
 
