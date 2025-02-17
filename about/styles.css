@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #0a0a0a;
+    color: #33ff33;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header & Navigation */
+header {
+    background: #111;
+    color: #0f0;
+    text-align: center;
+    padding: 1.2em;
+    border-bottom: 2px solid #33ff33;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #33ff33;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    border: 2px solid #33ff33;
+    background: rgba(51, 255, 51, 0.2);
+}
+
+/* Sections */
+section {
+    margin: 20px auto;
+    padding: 15px;
+    width: 80%;
+    background: #111;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #0f0;
+}
+
+h2 {
+    color: #0f0;
+}
+
+/* Cyber Button */
+.hack-btn {
+    background: #222;
+    color: #0f0;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: 2px solid #33ff33;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.hack-btn:hover {
+    background: #0f0;
+    color: #000;
+    box-shadow: 0px 0px 10px #33ff33;
+}
+
+/* Code Snippets */
+pre {
+    background: #000;
+    color: #0f0;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #111;
+    border-top: 2px solid #33ff33;
+    margin-top: 20px;
+}
