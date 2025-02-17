@@ -35,6 +35,7 @@ My goal is to make technology beautiful and completely erase the line between re
     <section id="algorithms">
         <h2>My website is more than just a resource</h2>
         <p>It is a living, adaptive organism that uses complex algorithms for analysis, encryption, and user interaction.</p>
+        <p>This is a complete and well-structured repository of data and payloads that are conveniently retrieved using algorithmic search and decryption methods.</p>
         <section>
 <h2>1. Query analysis via SHADIS</h2>
 <p><strong>Working principle:</strong> SHADIS evaluates each query, predicts your next actions and generates the most relevant content.</p>
@@ -123,36 +124,36 @@ SHA256('YaraSecurity2025') = ?
         <p>The site is updated as inspiration, time and more interesting payloads and rules are found. If the site has not been updated for a very long time, it means that I am dead.</p>
         <p>Please use the following code in a vulnerable location on one of the pages with mysterious creatures to get an XSS leak and read more about the basic navigation and search functions in the site's database:</p>
         <preRed><code class="bash">
-<?php
-// Емуляція бази даних користувачів
-$users = [
-    ['id' => 1, 'name' => 'Alice <script>alert(1)</script>', 'role' => 'admin'],
-    ['id' => 2, 'name' => 'Bob', 'role' => 'user']
-];
+<p><?php </p>
+<p>// Емуляція бази даних користувачів </p>
+<p>$users = [ </p>
+   <p> ['id' => 1, 'name' => 'Alice <script>alert(1)</script>', 'role' => 'admin'], </p>
+   <p> ['id' => 2, 'name' => 'Bob', 'role' => 'user'] </p>
+<p>]; </p>
 
-// Отримання ідентифікатора з URL
-$userId = $_GET['id'] ?? 1;
+<p>// Отримання ідентифікатора з URL </p>
+<p>$userId = $_GET['id'] ?? 1; </p>
 
-// Фільтрація введення
-$userId = intval($userId); // Захист від SQL-ін'єкцій, але XSS ігнорується
+<p>// Фільтрація введення </p>
+<p>$userId = intval($userId); // Захист від SQL-ін'єкцій, але XSS ігнорується </p>
 
-// Пошук користувача в базі
-$user = array_filter($users, fn($u) => $u['id'] == $userId);
-$user = reset($user);
-// Захист від відсутнього користувача
-if (!$user) {
-    die('User not found');
-}
-// Відображення даних
+<p>// Пошук користувача в базі </p>
+<p>$user = array_filter($users, fn($u) => $u['id'] == $userId); </p>
+<p>$user = reset($user); </p>
+<p>// Захист від відсутнього користувача </p>
+<p>if (!$user) { </p>
+<p>    die('User not found'); </p>
+<p>} </p>
+<p>// Відображення даних </p>
     <p>Welcome, %3C34%3C?= htmlspecialchars($user['name'], ENT_QUOTES, 'UTF-8') ?%3E%3E%3E</p>
-    <p>Your role: %3C%3C?= $user['role'] ?%3EX</p>
-    %3E-4%3E?php
-    // Прихований XSS: JSON-об'єкт ін'єктується без htmlspecialchars()
-    echo "<scrірt>
-        var userData = " . json_encode($user) . ";
-        console.log(userData);
-    </scriрt>";
-    ?%3E  
+    <p>Your role: %3C%3C?= $user['role'] ?%3EX</p> 
+   <p> %3E-4%3E?php </p>
+   <p> // Прихований XSS: JSON-об'єкт ін'єктується без htmlspecialchars() </p>
+  <p>  echo "<scrірt> </p>
+     <p>   var userData = " . json_encode($user) . "; </p>
+   <p>     console.log(userData); </p>
+  <p>  </scriрt>"; </p>
+  <p>  ?%3E  </p>
         </code></preRed>
     </section>
 
