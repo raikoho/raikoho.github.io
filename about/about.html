@@ -4,83 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - The Enigma of Bohdan Misonh</title>
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/raikoho/raikoho.github.io/refs/heads/main/about/styles.css"> <!-- Link to the separate CSS file -->
     <style>
         body {
-            background-color: #101010; /* Dark background */
-            color: #ffcc00; /* Bright yellow */
+            background-color: #0e0e0e;
+            color: #f4f4f4;
             font-family: 'Courier New', Courier, monospace;
-            overflow: hidden; /* Prevent scrollbars */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
-        h1, h2 {
-            color: #00ffcc; /* Bright turquoise */
+
+        header {
             text-align: center;
-            text-shadow: 2px 2px 5px black; /* Shadow for depth */
-            animation: swing 1.5s infinite alternate;
+            padding: 30px;
+            background: linear-gradient(135deg, #ff007f, #ff8c00, #f0f);
+            color: #1a1a1a;
+            font-size: 2.5rem;
+            border-radius: 25px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            transform: skew(-5deg);
+            animation: colorshift 8s infinite;
         }
-        @keyframes swing {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(5deg); }
+
+        @keyframes colorshift {
+            0% { background-color: #ff007f; }
+            25% { background-color: #ff8c00; }
+            50% { background-color: #ffea00; }
+            75% { background-color: #00ffea; }
+            100% { background-color: #ff00ff; }
         }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            background: radial-gradient(circle, #00ffea, #ff00ff);
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+        }
+
+        .menu a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            transform: rotate(15deg);
+            margin: 0 20px;
+        }
+
+        .menu a:hover {
+            transform: rotate(-15deg) scale(1.3);
+            color: #fff;
+            text-shadow: 0 0 5px #ffea00, 0 0 10px #ff00ff;
+        }
+
         .section {
             padding: 20px;
-            margin: 10px;
-            border: 3px solid red; /* Solid border for emphasis */
-            animation: blink 1s infinite; /* Blinking effect */
+            margin: 20px;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #005500, #330066);
+            color: #f4f4f4;
+            transform: rotate(5deg);
+            animation: fadeIn 2s ease;
         }
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
-        .mysterious {
-            color: #ff00ff; /* Bright magenta */
-            font-size: 1.2em;
+
+        .highlight {
+            color: #ffcc00;
             font-weight: bold;
             text-transform: uppercase;
-            animation: wobble 1.5s infinite alternate; /* Wobble animation */
+            animation: bounce 1.5s infinite alternate;
         }
-        @keyframes wobble {
-            0% { transform: rotate(0deg); }
-            50% { transform: rotate(10deg); }
-            100% { transform: rotate(-10deg); }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
         }
-        .insert {
-            background-color: rgba(0, 255, 255, 0.3); /* Semi-transparent cyan */
-            border-radius: 5px;
-            padding: 5px;
-            animation: shake 0.5s infinite; /* Shake animation */
+
+        footer {
+            background-color: #1a1a1a;
+            color: #ffcc00;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
         }
-        @keyframes shake {
-            0%, 100% { transform: translate(0); }
-            25% { transform: translate(-3px, 3px); }
-            50% { transform: translate(3px, -3px); }
-            75% { transform: translate(-3px, -3px); }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="section">
-        <h1>The Enigma of Bohdan Misonh</h1>
-        <h2 class="mysterious">A Journey through the Unseen!</h2>
-        <p>In the depths of the digital realm, where shadows intertwine with the flickering light of ones and zeros, we find <span class="insert">Bohdan Misonh</span>, a computer programmer and ethical hacker of unparalleled brilliance! His mind, a labyrinth of creativity and madness, dances between lines of code and chaotic thought.</p>
 
-        <p>What is Bohdan, you ask? He is a cipher, a puzzle, an enigma wrapped in a riddle, spinning in a quantum whirlwind of <span class="insert">exquisite absurdities</span>! With fingers that weave spells through keyboards, he conjures up algorithms that sing songs of rebellion and liberation!</p>
+<header>
+    <h1>The Enigma of Bohdan Misonh</h1>
+    <p class="highlight">A Digital Alchemist at the Edge of Reality</p>
+</header>
 
-        <p>His journey began on a stormy night, lit only by the glow of the monitor. The air was thick with <span class="insert">suspense</span> as he first gazed into the depths of the cyber abyss. "What lies beyond?" he pondered, diving headfirst into the digital sea, swimming through a torrent of data and secrets.</p>
+<div class="menu">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</div>
 
-        <p>As a master of his craft, Bohdan speaks in tongues only known to the initiated, crafting scripts that dance like fireflies in the dark! He thrives on <span class="insert">chaotic energy</span>, pulling inspiration from the void, transforming nonsense into <span class="insert">brilliant chaos</span>.</p>
+<div class="section" id="about">
+    <h2>Who Am I?</h2>
+    <p>I am a digital wanderer, balancing on the fine line between reality and the digital realm. My passion is more than a profession; it is my unyielding thirst for uncovering secrets, solving puzzles, and exploring the world of cybersecurity.</p>
+    <p>By day, I battle invisible foes, creating tools to combat the growing threats in cyberspace, including writing YARA rules and Snort signatures to detect malware. By night, I dive into the endless sea of code, shaping digital tools to defend against the unseen dangers of the modern age.</p>
+    <p>Through this journey, I aim to make technology not only functional but beautiful. I strive to erase the boundary between reality and the digital traces that shape our lives.</p>
+</div>
 
-        <p>In his quest for knowledge, he battles <span class="insert">fictitious entities</span>, fighting against the tides of mediocrity. He seeks to <span class="insert">hack the very fabric of reality</span>, twisting it into shapes unknown, turning the mundane into the magnificent!</p>
+<div class="section" id="projects">
+    <h2>My Projects</h2>
+    <p>On my <a href="https://github.com/BohdanMisonh" target="_blank" class="highlight">GitHub</a>, you will find a treasure trove of cybersecurity projects, each designed to tackle specific challenges in this ever-evolving landscape.</p>
+    <p>From creating sophisticated YARA rules to designing conceptual solutions for real-world cybersecurity issues, my repository is a reflection of my dedication to technical excellence and my unique approach to problem-solving.</p>
+</div>
 
-        <h2 class="mysterious">A Glimpse into the Mind of Bohdan:</h2>
-        <p>His thoughts are like a cascade of vibrant colors—noisy, vibrant, and utterly bewildering! Each line of code he writes is a brushstroke on the canvas of the digital universe.</p>
-        
-        <p>What does he want? The answer is as elusive as a whisper in the wind. Perhaps it's the thrill of the chase, or maybe it's to unlock the mysteries hidden within the circuits of our existence. A true hacker in every sense!</p>
+<div class="section" id="contact">
+    <h2>Get in Touch</h2>
+    <p>Have a question? Want to collaborate? Feel free to reach out! Let’s push the boundaries of what’s possible together.</p>
+</div>
 
-        <p>Remember, dear traveler, to embrace the absurd! For in the chaos lies the key to unlocking the true potential of the digital realm!</p>
+<footer>
+    <p>Made with passion by <a href="https://github.com/BohdanMisonh" target="_blank">Bohdan Misonh</a> - 2025</p>
+</footer>
 
-        <h2 class="mysterious">Dive Deeper:</h2>
-        <p>this is my storage project, in which I have hidden all the treasures of the world, but I am super lazy to organize.!</p>
-    </div>
 </body>
 </html>
