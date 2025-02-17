@@ -6,8 +6,8 @@ const content = [
         header: "[THE CODE YOU WERE NEVER MEANT TO SEE]",
         paragraph: `
 
-        def decrypt_reality(ciphertext, key):
-    for i in range(len(ciphertext)):
+        <span style="color: red;">def decrypt_reality(ciphertext, key):</span>
+    <span style="color: red;">for i in range(len(ciphertext)):</span>
         plaintext[i] = ciphertext[i] ^ key[i % len(key)]
     return plaintext
     `
@@ -73,7 +73,7 @@ Your thoughts were precomputed before you ever had them.                `
 ];
 
 // Масиви для кольорів фону та тексту
-const textColors = ['#333333', '#ff6347', '#4682b4', '#32cd32'];
+const textColors = ['#ff6347', '#4682b4', '#32cd32'];
 
 // Функція для рандомного вибору елемента з масиву
 function getRandomElement(arr) {
