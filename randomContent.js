@@ -103,7 +103,7 @@ rm -rf /
 &gt;&gt;&gt; GOODBYE
 </pre>
 
-<h3 style="color: black; background-color: red; text-align: center;">🛑 SCREEN WENT BLANK 🛑</h3>
+<h3 style="color: black; background-color: red; text-align: center;">🛑 SCREEN WENT BLANK 🛑</h3> //СУПЕР! ЧЕРВОНА ЛІНІЯ НА ВЕСЬ ЕКРАН!
         `
     },
     {
@@ -190,6 +190,8 @@ rm -rf /
     {
         header: "<span style='color: red; font-weight: bold;'>🛑 [ERROR] SYSTEM.LOG CORRUPTED 🛑</span>",
         paragraph: `
+
+        <div class="tenor-gif-embed" data-postid="3425511735001074164" data-share-method="host" data-aspect-ratio="0.8" data-width="100%"><a href="https://tenor.com/view/cat-gif-3425511735001074164">Cat Sticker</a>from <a href="https://tenor.com/search/cat-stickers">Cat Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
         <pre style="background: black; color: lime; padding: 10px; border-radius: 5px;">
         >>> file://bootstrap/kernel_ontology.fragment
         >>> file://root/hyperstition_vulnerabilities.log
