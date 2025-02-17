@@ -89,7 +89,7 @@ h2 {
 }
 
 .hack-btn3 {
-    background: #9c4444;
+    background: #222;
     color: #0f0;
     text-align: center;
     padding: 10px 20px;
@@ -97,6 +97,8 @@ h2 {
     border: 2px solid #33ff33;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
 }
 
 .hack-btn3:hover {
