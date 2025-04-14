@@ -18,8 +18,8 @@ const content = [
     },
 //-----------------------------------------------------------------------------------------
 {
-    "header": "⚠️ [ALERT] SYSTEM ANOMALY DETECTED – UNEXPECTED MEMORY LEAK ⚠️",
-    "paragraph": `
+    header: "⚠️ [ALERT] SYSTEM ANOMALY DETECTED – UNEXPECTED MEMORY LEAK ⚠️",
+    paragraph: `
 
     <h3 style="color: red; text-align: center;">🚨 SECURITY BREACH – TRANSMISSION AT RISK 🚨</h3>
 
