@@ -17,6 +17,19 @@ body {
     background-repeat: no-repeat; /* Запобігає повторенню фону */
 }
 
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    padding: 1rem;
+    box-sizing: border-box;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
 nav {
     position: fixed;
     top: 0;
@@ -188,4 +201,14 @@ footer {
     text-align: center;
     margin-top: 20px;
     color: #555;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
 }
