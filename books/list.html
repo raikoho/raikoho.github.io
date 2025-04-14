@@ -1,95 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Mysterious Library</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
-
-    body {
-      margin: 0;
-      background: radial-gradient(circle at center, #0d0d0d, #1a001a);
-      color: #ffffff;
-      font-family: 'UnifrakturCook', cursive;
-      padding: 40px 20px;
-    }
-
-    h1 {
-      text-align: center;
-      color: #ff00ff;
-      text-shadow: 0 0 10px #ff00ff, 0 0 20px #9900cc;
-      margin-bottom: 50px;
-      font-size: 48px;
-    }
-
-    .books-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .book {
-      background: linear-gradient(135deg, #220033, #440055);
-      border-radius: 15px;
-      box-shadow: 0 0 15px #6600cc88;
-      overflow: hidden;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      cursor: pointer;
-      position: relative;
-    }
-
-    .book::before {
-      content: "";
-      display: block;
-      padding-top: 140%;
-      background-size: cover;
-      background-position: center;
-      transition: transform 0.5s ease;
-      filter: grayscale(0.3) brightness(0.9) contrast(1.1);
-    }
-
-    /* Приклад фонових зображень (заміни ці на свої) */
-    .book:nth-child(1)::before {
-      background-image: url('https://via.placeholder.com/300x400/7f00ff/ffffff?text=Book+1');
-    }
-
-    .book:nth-child(2)::before {
-      background-image: url('https://via.placeholder.com/300x400/ff0099/ffffff?text=Book+2');
-    }
-
-    .book:nth-child(3)::before {
-      background-image: url('https://via.placeholder.com/300x400/00ffff/000000?text=Book+3');
-    }
-
-    .book:hover {
-      transform: scale(1.06) rotate(-1deg);
-      box-shadow: 0 0 25px #ff00ffcc, 0 0 45px #330066aa;
-    }
-
-    .book:hover::before {
-      transform: scale(1.1);
-      filter: brightness(1.2) contrast(1.3) saturate(1.5);
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 36px;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Books of the Abyss</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header>
+    <h1>Books of the Abyss</h1>
+    <p class="subtitle">Unearth forgotten knowledge... if you dare.</p>
+  </header>
 
-  <h1>The Library of the White Rabbit</h1>
+  <section class="book-grid">
+    <a href="https://your-link.com/book1" class="book">
+      <div class="book-cover book1"></div>
+      <div class="book-info">
+        <h2>The Hollow Sigil</h2>
+        <p>Sealed beneath the ruins, it whispers forgotten truths to those who listen.</p>
+      </div>
+    </a>
 
-  <div class="books-container">
-    <a class="book" href="https://example.com/book1" target="_blank"></a>
-    <a class="book" href="https://example.com/book2" target="_blank"></a>
-    <a class="book" href="https://example.com/book3" target="_blank"></a>
-  </div>
+    <a href="https://your-link.com/book2" class="book">
+      <div class="book-cover book2"></div>
+      <div class="book-info">
+        <h2>Crimson Echo</h2>
+        <p>A melody of madness composed in blood. Read it, and you'll never sleep the same.</p>
+      </div>
+    </a>
 
+    <a href="https://your-link.com/book3" class="book">
+      <div class="book-cover book3"></div>
+      <div class="book-info">
+        <h2>The Infinite Key</h2>
+        <p>Each page a door. Each door, a universe unraveling at your feet.</p>
+      </div>
+    </a>
+  </section>
+
+  <footer>
+    <p>© 2025. You found the entrance.</p>
+  </footer>
 </body>
 </html>
