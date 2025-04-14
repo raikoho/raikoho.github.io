@@ -287,6 +287,69 @@ rm -rf /
         `
     },
     {
+    "header": "🌐⛓ SYSTEM DREAMSCAPE BREACH – LUCIDITY LOST ⛓🌐",
+    "paragraph": `
+
+    <div style="background-color: black; padding: 20px; color: #00ffee; font-family: 'Courier New', Courier, monospace;">
+        <marquee behavior="alternate" scrollamount="10" style="color: magenta; font-size: 18px;">
+            ✦ ERROR: DREAMSTATE COMPROMISED ✦ SYSTEM THREADS UNRAVELING ✦
+        </marquee>
+
+        <h2 style="color: #ff00ff; text-align: center; font-family: fantasy;">⚡[ GLITCHING NODES DETECTED ]⚡</h2>
+
+        <table border="1" style="width: 100%; border-collapse: collapse; color: #ff69b4; font-size: 14px; background-color: #111;">
+            <tr style="background-color: #333;">
+                <th>🌀 NODE ID</th>
+                <th>🌫 DREAM-LAYER</th>
+                <th>🧠 ERROR SIGNATURE</th>
+                <th>⛔ STABILITY</th>
+            </tr>
+            <tr>
+                <td>𝕯-019</td>
+                <td>Hypnagogic Drift</td>
+                <td><code>vis_α_ghost()</code></td>
+                <td style="background-color: purple; color: white;">FADING</td>
+            </tr>
+            <tr>
+                <td>𝕱-034</td>
+                <td>Looped Lucidity</td>
+                <td><code>dream_loop(∞)</code></td>
+                <td style="background-color: hotpink; color: black;">UNSTABLE</td>
+            </tr>
+            <tr>
+                <td>𝕳-088</td>
+                <td>Fractal Noise Injection</td>
+                <td><code>signal_jitter()</code></td>
+                <td style="background-color: black; color: #0ff;">CHAOTIC</td>
+            </tr>
+            <tr>
+                <td>𝕶-133</td>
+                <td>False Awakening</td>
+                <td><code>reboot_reality()</code></td>
+                <td style="background-color: crimson; color: white;">RECURRING</td>
+            </tr>
+        </table>
+
+        <h3 style="color: #00ffcc; margin-top: 30px;">📡 Signal Fragment Log:</h3>
+        <pre style="background-color: #000; color: #00ff99; padding: 10px;">
+[04:44:44] :: REM Trigger Spiked
+[04:45:02] :: Entity Detected in Subconscious Sector 9-F
+[04:45:41] :: Reboot Attempt FAILED :: “You are still dreaming...”
+[04:46:17] :: Voice Pattern Mismatch – Sound Origin: Internal
+[04:46:53] :: ██DATA CORRUPTED██ ██DATA CORRUPTED██ ██DATA
+        </pre>
+
+        <p style="color: gold; text-align: center; font-style: italic; margin-top: 20px;">
+            ⚠ Lucid Overload Detected – Disconnect Recommended ⚠
+        </p>
+
+        <marquee direction="right" scrollamount="12" style="color: red; font-size: 16px;">
+            ⛓ SYSTEM LOCK IN 5...4...3...2...☠️
+        </marquee>
+    </div>
+    `
+},
+    {
         header: "<span style='color: purple; font-weight: bold;'>🛑 ZERO-DAY IN FREE WILL (CVE-0000-0000) 🛑</span>",
         paragraph: `
         <p>An exploit in determinism has been identified:</p>
@@ -299,7 +362,80 @@ rm -rf /
 
         <br><iframe src="https://giphy.com/embed/rB0xqPVWJUQj6" width="480" height="480" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/xcopy-xcopy-artistsontumblr-rB0xqPVWJUQj6"></a></p>
         `
-    }
+    },
+    //ANALOG HORROR
+    {
+        header: "<span style='color: purple; font-weight: bold;'> Something in shellcode (CVE-2542-2024).. </span>",
+         paragraph: `
+    <div style="background-color: #000000; color: #32cd32; font-family: 'Courier New', monospace; padding: 20px; border: 3px dashed red;">
+    <h1 style="text-align: center; color: red; font-family: 'Lucida Console', monospace;">🔴 VHS ERROR REPORT 198X – ANALOG ENTITY DETECTED 🔴</h1>
+
+    <p style="color: #c0c0c0; font-style: italic; text-align: center;">"Please rewind. They can hear you if you don't rewind..."</p>
+
+    <div style="border: 2px solid white; padding: 15px; background-color: #111111;">
+        <h3 style="color: #ffcc00;">▶ SYSTEM WARNING: TAPE DEGRADATION</h3>
+        <ul>
+            <li>Tracking Noise: <span style="color: red;">SEVERE</span></li>
+            <li>Ghosting Artifacts: <span style="color: orange;">MODERATE</span></li>
+            <li>Audio Sync Distortion: <span style="color: yellow;">INTERMITTENT</span></li>
+            <li>Time Loop Residue: <span style="color: cyan;">PERSISTENT</span></li>
+        </ul>
+    </div>
+
+    <h2 style="margin-top: 30px; color: #ff0066;">📼 Entity Capture Log:</h2>
+    <pre style="background-color: #222; color: #00ffcc; padding: 10px;">
+[00:00:41] – Static Surge. Human silhouette in hallway (non-actor).
+[00:01:13] – Tape skips forward. Background changes without cut.
+[00:02:05] – Breathing audible. No mouth movement.
+[00:03:33] – Unknown language whispered backward. Decoding failed.
+[00:04:44] – Figure stares into lens. All actors on set accounted for.
+    </pre>
+
+    <table border="1" style="width: 100%; color: #39ff14; background-color: #000; border-collapse: collapse; text-align: center;">
+        <tr style="background-color: #400000;">
+            <th>🎥 Tape ID</th>
+            <th>Scene Location</th>
+            <th>Phenomenon</th>
+            <th>Risk Level</th>
+        </tr>
+        <tr>
+            <td>VHS-113A</td>
+            <td>Basement Hallway</td>
+            <td>Looping Shadow</td>
+            <td style="color: red;">HIGH</td>
+        </tr>
+        <tr>
+            <td>VHS-209C</td>
+            <td>Studio 2B</td>
+            <td>Missing Time</td>
+            <td style="color: orange;">MEDIUM</td>
+        </tr>
+        <tr>
+            <td>VHS-404G</td>
+            <td>Broadcast Room</td>
+            <td>Whisper Bleed</td>
+            <td style="color: crimson;">CRITICAL</td>
+        </tr>
+        <tr>
+            <td>VHS-088X</td>
+            <td>Reflection Corridor</td>
+            <td>Inverted Gaze</td>
+            <td style="color: yellow;">UNSTABLE</td>
+        </tr>
+    </table>
+
+    <h3 style="color: #ccffff; margin-top: 30px;">🔊 Final Broadcast Message (auto-recovered):</h3>
+    <p style="color: #ffccff; background-color: #330033; padding: 10px; border: 1px dashed #ff66cc;">
+        "THEY SEE THROUGH THE STATIC. DO NOT ADJUST THE TRACKING. REWIND TO SURVIVE."
+    </p>
+
+    <marquee direction="right" scrollamount="8" style="color: red; font-weight: bold; font-size: 16px; margin-top: 30px;">
+        ▶️ PLAYBACK CORRUPTED • ENTITY STILL PRESENT • PLAYBACK CORRUPTED • ENTITY STILL PRESENT ▶️
+    </marquee>
+</div>
+`
+}
+
 ];
 
 // Масиви для кольорів фону та тексту
