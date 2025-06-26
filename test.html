@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Obsession Chamber</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Share Tech Mono', monospace;
+            background: radial-gradient(ellipse at center, #0d0d0d 0%, #000000 100%);
+            color: #00ffae;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 20px;
+            background: #111;
+            border-bottom: 2px dashed #00ffae;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            text-shadow: 0 0 15px #00ffae;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #eee;
+        }
+
+        nav {
+            background: #000;
+            padding: 15px 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #00ffae;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #00ffae;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff0080;
+            text-shadow: 0 0 5px #ff0080;
+        }
+
+        section {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        #random-header {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #ff007f;
+        }
+
+        #random-paragraph {
+            font-size: 1.3rem;
+            color: #ccc;
+            line-height: 1.7;
+        }
+
+        #secret-section {
+            font-size: 1.1rem;
+            margin-top: 40px;
+            padding: 20px;
+            border: 1px dashed #ff007f;
+            color: #ff007f;
+        }
+
+        footer {
+            background-color: #111;
+            color: #777;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 1px solid #00ffae;
+        }
+
+        .obsessed-glow {
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #00ffae;
+            }
+            to {
+                text-shadow: 0 0 20px #ff00d4, 0 0 30px #ff00d4;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul li {
+                margin: 0 8px;
+            }
+
+            #random-header {
+                font-size: 2rem;
+            }
+
+            #random-paragraph {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="https://raikoho.github.io/">Swamp</a></li>
+            <li><a href="https://raikoho.github.io/books/list.html">My Books</a></li>
+            <li><a href="https://raikoho.github.io/secret/secret.html">Secret</a></li>
+            <li><a href="https://raikoho.github.io/about/about.html">About Me</a></li>
+            <li><a href="https://raikoho.github.io/random/random.html">Random</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1 class="obsessed-glow">WELCOME, AGENT OF CHAOS</h1>
+        <p>Your presence has disrupted the matrix of normality.</p>
+    </header>
+
+    <section>
+        <script src="randomEffect3.js"></script>
+        <script src="randomContent.js"></script>
+
+        <h1 id="random-header">Awaiting Transmission...</h1>
+        <p id="random-paragraph">Fetching encrypted inspiration from hyperspace...</p>
+    </section>
+
+    <section id="secret-section">
+        The Hidden Chamber is not ready yet. Or is it watching *you*?
+    </section>
+
+    <footer>
+        <p>&copy; 2025 The Obsession Chamber. All rights abused. Seriously. Stay weird.</p>
+    </footer>
+</body>
+</html>
