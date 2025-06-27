@@ -69,6 +69,71 @@
             text-shadow: 0 0 5px #ff0080;
         }
 
+        /* Dropdown container */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown hidden list */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #000;
+    border: 1px solid #00ffae;
+    list-style: none;
+    padding: 10px 0;
+    margin-top: 10px;
+    min-width: 180px;
+    z-index: 9999;
+}
+
+/* Items inside dropdown */
+.dropdown-menu li {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #00ffae;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background: #111;
+    color: #ff0080;
+    text-shadow: 0 0 5px #ff0080;
+}
+
+/* Show menu on hover (desktop) */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Mobile: allow tapping to toggle menu (optional JS or CSS hover fallback) */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        background: none;
+        border: none;
+        padding: 0;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu li a {
+        padding: 10px;
+        border-bottom: 1px dashed #00ffae;
+    }
+}
+
+
         section {
             padding: 50px 20px;
             max-width: 1000px;
@@ -143,7 +208,16 @@
         <ul>
             <li><a href="https://raikoho.github.io/index.html">Swamp</a></li>
             <li><a href="https://raikoho.github.io/books/list.html">My Books</a></li>
-            <li><a href="https://raikoho.github.io/secret/secret.html">Secret</a></li>
+            <li class="dropdown">
+                <a href="https://raikoho.github.io/secret/secret.html">Secret ▾</a>
+                <ul class="dropdown-menu">
+                <li><a href="https://raikoho.github.io/secret/entry1.html">Initiation</a></li>
+                <li><a href="https://raikoho.github.io/secret/entry2.html">Surveillance Logs</a></li>
+                <li><a href="https://raikoho.github.io/secret/entry3.html">Payloads</a></li>
+                <li><a href="https://raikoho.github.io/secret/entry4.html">The Vault</a></li>
+                <li><a href="https://raikoho.github.io/secret/entry5.html">???</a></li>
+            </ul>
+            </li>
             <li><a href="https://raikoho.github.io/about/about.html">About Me</a></li>
             <li><a href="https://raikoho.github.io/random/random.html">Random</a></li>
         </ul>
