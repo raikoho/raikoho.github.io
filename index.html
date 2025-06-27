@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacker Terminal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Obsession Chamber</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,9 +14,27 @@
 
         body {
             font-family: 'Share Tech Mono', monospace;
-            background-color: #000;
-            color: #0f0;
+            background: radial-gradient(ellipse at center, #0d0d0d 0%, #000000 100%);
+            color: #00ffae;
             overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 20px;
+            background: #111;
+            border-bottom: 2px dashed #00ffae;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            text-shadow: 0 0 15px #00ffae;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #eee;
         }
 
         nav {
@@ -25,7 +43,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 2px solid #0f0;
+            border-bottom: 2px solid #00ffae;
         }
 
         nav ul {
@@ -41,7 +59,7 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #0f0;
+            color: #00ffae;
             font-weight: bold;
             transition: all 0.3s ease;
         }
@@ -51,115 +69,98 @@
             text-shadow: 0 0 5px #ff0080;
         }
 
-        .dropdown {
-            position: relative;
-        }
+        /* Dropdown container */
+.dropdown {
+    position: relative;
+}
 
-        .dropdown-menu {
-            display: none;
-            top: 100%;
-            position: absolute;
-            background: #000;
-            border: 1px solid #0f0;
-            list-style: none;
-            padding: 10px 0;
-            margin-top: 10px;
-            min-width: 180px;
-            z-index: 9999;
-        }
+/* Dropdown hidden list */
+.dropdown-menu {
+    display: none;
+    top: 100%;
+    position: absolute;
+    background: #000;
+    border: 1px solid #00ffae;
+    list-style: none;
+    padding: 10px 0;
+    margin-top: 10px;
+    min-width: 180px;
+    z-index: 9999;
+}
 
-        .dropdown-menu li {
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
+/* Items inside dropdown */
+.dropdown-menu li {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
 
-        .dropdown-menu li a {
-            display: block;
-            padding: 10px 20px;
-            color: #0f0;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #00ffae;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
 
-        .dropdown-menu li a:hover {
-            background: #111;
-            color: #ff0080;
-            text-shadow: 0 0 5px #ff0080;
-        }
+.dropdown-menu li a:hover {
+    background: #111;
+    color: #ff0080;
+    text-shadow: 0 0 5px #ff0080;
+}
 
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
+/* Show menu on hover (desktop) */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
 
-        @media (max-width: 768px) {
-            .dropdown-menu {
-                position: static;
-                background: none;
-                border: none;
-                padding: 0;
-            }
+/* Mobile: allow tapping to toggle menu (optional JS or CSS hover fallback) */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        top: 100%;
+        background: none;
+        border: none;
+        padding: 0;
+    }
 
-            .dropdown:hover .dropdown-menu {
-                display: block;
-            }
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
 
-            .dropdown-menu li a {
-                padding: 10px;
-                border-bottom: 1px dashed #0f0;
-            }
-        }
+    .dropdown-menu li a {
+        padding: 10px;
+        border-bottom: 1px dashed #00ffae;
+    }
+}
 
-        header {
-            padding: 40px 20px 20px;
-            text-align: center;
-            background: #111;
-            border-bottom: 2px dashed #0f0;
-        }
 
-        header h1 {
-            font-size: 3rem;
-            text-shadow: 0 0 15px #0f0;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            color: #eee;
-        }
-
-        main {
-            padding: 30px;
-            max-width: 1200px;
+        section {
+            padding: 50px 20px;
+            max-width: 1000px;
             margin: auto;
+            text-align: center;
         }
 
-        .code-section {
-            background-color: #111;
+        #random-header {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #ff007f;
+        }
+
+        #random-paragraph {
+            font-size: 1.3rem;
+            color: #ccc;
+            line-height: 1.7;
+        }
+
+        #secret-section {
+            font-size: 1.1rem;
+            margin-top: 40px;
             padding: 20px;
-            margin-bottom: 30px;
-            border: 1px solid #0f0;
-            box-shadow: 0 0 10px #0f0;
-        }
-
-        .code-section h2 {
-            color: #00ffff;
-            margin-bottom: 10px;
-        }
-
-        .code-block {
-            background: #000;
-            color: #0f0;
-            padding: 15px;
-            overflow-x: auto;
-            border: 1px solid #0f0;
-            font-size: 0.9rem;
-        }
-
-        .info {
-            margin-bottom: 20px;
-            line-height: 1.6;
+            border: 1px dashed #ff007f;
+            color: #ff007f;
         }
 
         footer {
@@ -169,92 +170,97 @@
             text-align: center;
             padding: 20px;
             margin-top: 40px;
-            border-top: 1px solid #0f0;
+            border-top: 1px solid #00ffae;
+        }
+
+        .obsessed-glow {
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #00ffae;
+            }
+            to {
+                text-shadow: 0 0 20px #ff00d4, 0 0 30px #ff00d4;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul li {
+                margin: 0 8px;
+            }
+
+            #random-header {
+                font-size: 2rem;
+            }
+
+            #random-paragraph {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#tools">Tools</a></li>
+            <li><a href="https://raikoho.github.io/index.html">Swamp</a></li>
+            <li><a href="https://raikoho.github.io/books/list.html">My Books</a></li>
             <li class="dropdown">
-                <a href="#scripts">Scripts ▾</a>
+                <a href="https://raikoho.github.io/secret/secret.html">Secret ▾</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#python">Python</a></li>
-                    <li><a href="#bash">Bash</a></li>
-                    <li><a href="#powershell">PowerShell</a></li>
-                </ul>
+                <li><a href="https://raikoho.github.io/secret/entry1.html">Initiation</a></li>
+                <li><a href="https://raikoho.github.io/secret/entry2.html">Surveillance Logs</a></li>
+                <li><a href="https://raikoho.github.io/secret/entry3.html">Payloads</a></li>
+                <li><a href="https://raikoho.github.io/secret/entry4.html">The Vault</a></li>
+                <li><a href="https://raikoho.github.io/secret/entry5.html">???</a></li>
+            </ul>
             </li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://raikoho.github.io/about/about.html">About Me</a></li>
+            <li><a href="https://raikoho.github.io/random/random.html">Random</a></li>
         </ul>
     </nav>
 
     <header>
-        <h1>TERMINAL OF KNOWLEDGE</h1>
-        <p>Dive into code and dominate the digital realm.</p>
+        <h1 class="obsessed-glow">WELCOME, AGENT OF CHAOS</h1>
+        <p>Your presence has disrupted the matrix of normality.</p>
     </header>
 
-    <main>
-        <div class="info">
-            <p>Welcome to your virtual terminal. This is a space where code becomes art and efficiency rules all. Here you'll find useful scripts, command-line tools, automation samples, and debugging tricks to level up your sysadmin or support skills.</p>
-        </div>
+    <section>
+        <script src="randomEffect3.js"></script>
+        <script src="randomContent.js"></script>
 
-        <div class="code-section" id="python">
-            <h2>Python Script: Backup Verifier</h2>
-            <div class="code-block">
-<pre><code>import os
-from datetime import datetime
+        <h1 id="random-header">Awaiting Transmission...</h1>
+        <p id="random-paragraph">Fetching encrypted inspiration from hyperspace...</p>
+    </section>
 
-source_dir = '/mnt/nas'
-backup_dir = '/mnt/san'
-
-def verify_backups():
-    for root, _, files in os.walk(source_dir):
-        for file in files:
-            src_file = os.path.join(root, file)
-            rel_path = os.path.relpath(src_file, source_dir)
-            backup_file = os.path.join(backup_dir, rel_path)
-
-            if not os.path.exists(backup_file):
-                print(f"Missing in backup: {rel_path}")
-            else:
-                src_size = os.path.getsize(src_file)
-                backup_size = os.path.getsize(backup_file)
-                if src_size != backup_size:
-                    print(f"Size mismatch: {rel_path}")
-
-verify_backups()</code></pre>
-            </div>
-        </div>
-
-        <div class="code-section" id="bash">
-            <h2>Bash: Disk Usage Monitor</h2>
-            <div class="code-block">
-<pre><code>#!/bin/bash
-THRESHOLD=90
-
-while read line; do
-  usage=$(echo $line | awk '{print $5}' | sed 's/%//')
-  partition=$(echo $line | awk '{print $6}')
-  if [ "$usage" -ge "$THRESHOLD" ]; then
-    echo "Warning: $partition usage is at ${usage}%"
-  fi
-done < <(df -h | grep '^/dev/')</code></pre>
-            </div>
-        </div>
-
-        <div class="code-section" id="powershell">
-            <h2>PowerShell: List Installed Apps</h2>
-            <div class="code-block">
-<pre><code>Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* |
-Select-Object DisplayName, DisplayVersion, Publisher | Format-Table -AutoSize</code></pre>
-            </div>
-        </div>
-    </main>
+    <section id="secret-section">
+        The Hidden Chamber is not ready yet. Or is it watching *you*?
+    </section>
 
     <footer>
-        <p>&copy; 2025 Terminal of Knowledge. Code with power.</p>
+        <p>&copy; 2025 The Obsession Chamber. All rights abused. Seriously. Stay weird.</p>
     </footer>
+
+    
+    <script>
+    // Dropdown open/close on click (mobile support)
+    document.querySelectorAll('.dropdown > a').forEach(link => {
+        link.addEventListener('click', function (e) {
+            if (window.innerWidth < 768) {
+                e.preventDefault();
+                const menu = this.nextElementSibling;
+                if (menu && menu.classList.contains('dropdown-menu')) {
+                    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+                }
+            }
+        });
+    });
+    </script>
+ 
 </body>
 </html>
