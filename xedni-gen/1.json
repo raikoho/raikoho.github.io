@@ -1,4 +1,4 @@
 {
-  "header": "Заголовок",
-  "paragraph": "HTML-код контенту"
+  "header": "<span style='color: red; font-weight: bold; text-decoration: underline;'>[THE CODE YOU WERE NEVER MEANT TO SEE]</span>",
+  "paragraph": "<pre style=\"background: #222; color: #0f0; padding: 10px; border-radius: 5px;\"><code>def decrypt_reality(ciphertext, key):\n    for i in range(len(ciphertext)):\n        plaintext[i] = ciphertext[i] ^ key[i % len(key)]\n    return plaintext</code></pre>"
 }
