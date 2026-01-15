@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE_ARCHITECT_VOID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* ОСНОВНІ СТИЛІ ТА МЕНЮ (як ти просив) */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Share Tech Mono', monospace;
+            background: #001a2d; /* Темно-синій як колір креслення */
+            color: #4db8ff;
+            overflow-x: hidden;
+            background-image: 
+                linear-gradient(rgba(77, 184, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(77, 184, 255, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px; /* Сітка креслення */
+        }
+
+        nav {
+            background: rgba(0, 10, 20, 0.9);
+            padding: 15px 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #4db8ff;
+            backdrop-filter: blur(5px);
+        }
+        nav ul { display: flex; justify-content: center; flex-wrap: wrap; list-style: none; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { text-decoration: none; color: #4db8ff; font-weight: bold; transition: all 0.3s ease; }
+        nav ul li a:hover { color: #fff; text-shadow: 0 0 10px #4db8ff; }
+        .dropdown { position: relative; }
+        .dropdown-menu { display: none; position: absolute; top: 100%; background: #000; border: 1px solid #4db8ff; list-style: none; padding: 10px 0; min-width: 180px; z-index: 9999; }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu li a { display: block; padding: 10px 20px; color: #4db8ff; }
+
+        /* УНІКАЛЬНИЙ КОНТЕНТ СТОРІНКИ */
+        .blueprint-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #4db8ff;
+            position: relative;
+        }
+
+        header {
+            text-align: left;
+            padding: 40px;
+            border-bottom: 4px double #4db8ff;
+            background: rgba(0, 30, 50, 0.5);
+        }
+
+        header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.5rem, 5vw, 3.5rem);
+            color: #fff;
+            text-shadow: 3px 3px 0px #4db8ff;
+            margin-bottom: 10px;
+        }
+
+        .blueprint-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            border-bottom: 1px solid #4db8ff;
+            padding: 10px 0;
+            margin-bottom: 30px;
+        }
+
+        .schematic-view {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .text-block {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        /* Адаптивність для сітки */
+        @media (max-width: 850px) {
+            .schematic-view { grid-template-columns: 1fr; }
+            .blueprint-container { margin: 10px; }
+        }
+
+        .blueprint-image {
+            border: 1px solid #4db8ff;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            position: relative;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .compass-rose {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #4db8ff;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px; right: 10px;
+            animation: rotate 10s linear infinite;
+        }
+        .compass-rose::before {
+            content: '';
+            position: absolute;
+            width: 100%; height: 1px; background: #4db8ff; top: 50%;
+        }
+
+        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        .callout {
+            border-left: 5px solid #fff;
+            padding: 20px;
+            background: rgba(77, 184, 255, 0.1);
+            margin: 30px 0;
+            font-style: italic;
+        }
+
+        footer {
+            margin-top: 60px;
+            border-top: 1px solid #4db8ff;
+            padding: 20px;
+            text-align: right;
+            font-size: 0.7rem;
+        }
+
+        /* Штамп у кутку */
+        .approval-stamp {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            border: 3px solid #ff4d4d;
+            color: #ff4d4d;
+            padding: 10px;
+            transform: rotate(-15deg);
+            font-weight: bold;
+            text-transform: uppercase;
+            opacity: 0.7;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="https://raikoho.github.io/index.html">Swamp</a></li>
+            <li><a href="https://raikoho.github.io/books/list.html">My Books</a></li>
+            <li class="dropdown">
+                <a href="#">Secret ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Job</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Random</a></li>
+        </ul>
+    </nav>
+
+    <div class="blueprint-container">
+        <header>
+            <h1>ARCHITECTURAL_SILENCE.v4</h1>
+            <p>Дослідження негативного простору в міських екосистемах</p>
+        </header>
+
+        <div class="blueprint-meta">
+            <span>SCALE: 1:GHOST</span>
+            <span>SHEET NO: 003/B</span>
+            <span>STATUS: CLASSIFIED</span>
+        </div>
+
+        <div class="schematic-view">
+            <div class="text-block">
+                <p>
+                    Ви коли-небудь помічали порожні коридори в торгових центрах о другій годині ночі? Або площі, які спроектовані так, щоб на них ніхто не затримувався? Це не просто прорахунки архітекторів. Це <b>зони примусового вакууму</b>.
+                </p>
+                <div class="callout">
+                    "Тиша — це не відсутність звуку. Це звук, який навчився ховатися за бетоном."
+                </div>
+                <p>
+                    Об'єкти, які ми будуємо, мають власну пам'ять. Кожна цегла поглинає частину шуму наших думок. У містах існують точки, де геометрія будівель підібрана так, що ваші спогади починають "відлунювати" від фасадів. Ми називаємо це <i>акустичним дзеркалом реальності</i>. Якщо ви постоїте в такій точці достатньо довго, ви почуєте телефонну розмову, яку ще не здійснили.
+                </p>
+            </div>
+
+            <div class="blueprint-image">
+                <div class="compass-rose"></div>
+                <div style="text-align: center; border: 1px dashed #4db8ff; padding: 20px;">
+                    [ СХЕМА РОЗПОДІЛУ ТИШІ ]<br>
+                    <span style="font-size: 3rem;">◰ ◱ ◲ ◳</span><br>
+                    ERROR: VISUAL_FEED_OFFLINE
+                </div>
+            </div>
+        </div>
+
+        <div class="text-block" style="margin-top: 40px;">
+            <p>
+                Мій колега, інженер-акустик, колись сказав, що найбільш гучне місце на планеті — це бібліотека, якщо вміти слухати потенційну енергію слів. Так само і з архітектурою. Порожній кінозал — це гігантський резонатор для страхів. Коли ми проектуємо "нормальні" будівлі, ми насправді будуємо клітки для звукових хвиль, які людське вухо не здатне сприйняти, але мозок інтерпретує як тривогу.
+            </p>
+        </div>
+
+        <div class="approval-stamp">APPROVED FOR DREAMS</div>
+
+        <footer>
+            <p>© 2026 THE OBSESSION CHAMBER // SECURE_ARCHIVE_UNIT</p>
+        </footer>
+    </div>
+
+    <script>
+        // Додамо ефект "руху сітки" при скролі
+        window.addEventListener('scroll', () => {
+            const offset = window.pageYOffset;
+            document.body.style.backgroundPosition = `0px ${offset * 0.5}px`;
+        });
+    </script>
+</body>
+</html>
