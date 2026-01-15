@@ -1,21 +1,31 @@
-const TOTAL_PAGES = 2;
+const TOTAL_PAGES = 500;
 const COLORS = ['#ff6347', '#4682b4', '#32cd32'];
 
 function rand(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
+    return arr[Math.floor(Math.random() * arr.length)];
 }
 
 async function generateRandomContent() {
-  const i = Math.floor(Math.random() * TOTAL_PAGES) + 1;
-  const res = await fetch(`xedni-gen/${i}.json`);
-  const data = await res.json();
+    try {
+        const i = Math.floor(Math.random() * TOTAL_PAGES) + 1;
+        const res = await fetch(`data/${i}.json`);
+        if (!res.ok) throw new Error('JSON not found');
 
-  randomHeader.innerHTML = data.header;
-  randomParagraph.innerHTML = data.paragraph;
+        const data = await res.json();
 
-  const c = rand(COLORS);
-  randomHeader.style.color = c;
-  randomParagraph.style.color = c;
+        const headerEl = document.getElementById('random-header');
+        const paragraphEl = document.getElementById('random-paragraph');
+
+        headerEl.innerHTML = data.header;
+        paragraphEl.innerHTML = data.paragraph;
+
+        const c = rand(COLORS);
+        headerEl.style.color = c;
+        paragraphEl.style.color = c;
+
+    } catch (e) {
+        console.error(e);
+    }
 }
 
-window.onload = generateRandomContent;
+window.addEventListener('load', generateRandomContent);
