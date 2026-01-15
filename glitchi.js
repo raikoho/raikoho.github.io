@@ -1,4 +1,4 @@
-const NUMBER_OF_PARTICLES = 150;
+const NUMBER_OF_PARTICLES = 400; // Збільшено
 const PARTICLE_COLOR = '#00ffae';
 const particles = [];
 
@@ -24,19 +24,21 @@ const createParticle = () => ({
 });
 
 const draw = () => {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => {
-        p.x += p.speedX + (Math.random() - 0.5) * 2; // додаємо мікро-глітч
-        p.y += p.speedY;
-        
-        if(p.x < 0) p.x = canvas.width;
-        if(p.x > canvas.width) p.x = 0;
-        if(p.y < 0) p.y = canvas.height;
-        if(p.y > canvas.height) p.y = 0;
+    // Ефект "шлейфу": замість clearRect використовуємо напівпрозорий фон
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.2)'; 
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+    particles.forEach(p => {
+        p.x += p.speedX + (Math.random() - 0.5) * 4; // Більше тремтіння
+        p.y += p.speedY;
+
+        // Додаємо неонне світіння
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = PARTICLE_COLOR;
         ctx.fillStyle = PARTICLE_COLOR;
-        ctx.globalAlpha = p.opacity;
-        ctx.fillRect(p.x, p.y, p.size, p.size);
+        
+        ctx.globalAlpha = Math.random() > 0.9 ? 1 : p.opacity; // Деякі пікселі спалахують
+        ctx.fillRect(p.x, p.y, p.size * 2, p.size * 2); // Більший розмір
     });
     requestAnimationFrame(draw);
 };
