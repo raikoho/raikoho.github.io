@@ -1,4 +1,4 @@
-// Випадковий вибір фону in index
+// Випадковий вибір фону 
 const effects = ['textrain.js', 'rain.js', 'snow.js', 'snowWind.js', 'bloomstars.js', 'glitchi.js', 'scanline.js'];
 const randomEffect = effects[Math.floor(Math.random() * effects.length)];
 const script = document.createElement('script');
