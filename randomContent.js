@@ -8,7 +8,7 @@ function rand(arr) {
 async function generateRandomContent() {
     try {
         const i = Math.floor(Math.random() * TOTAL_PAGES) + 1;
-        const res = await fetch(`data/${i}.json`);
+        const res = await fetch(`xedni-gen/${i}.json`);
         if (!res.ok) throw new Error('JSON not found');
 
         const data = await res.json();
