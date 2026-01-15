@@ -22,7 +22,7 @@ const createParticle = () => ({
     speedY: (Math.random() - 0.5) * 0.5,
     opacity: Math.random()
 });
-
+t
 const draw = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     particles.forEach(p => {
