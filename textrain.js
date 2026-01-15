@@ -26,4 +26,3 @@ const createRainDrop = () => {
 };
 
 setInterval(createRainDrop, 100);
-ww
