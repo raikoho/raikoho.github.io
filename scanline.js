@@ -20,7 +20,7 @@ const drawGlitch = () => {
         ctx.fillRect(0, Math.random() * canvas.height, canvas.width, Math.random() * 5);
     }
 
-    // Тонка скануюча лінія
+    //
     glitchY += 2;
     if (glitchY > canvas.height) glitchY = 0;
     
