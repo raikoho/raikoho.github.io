@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE_SANDWICH_SINGULARITY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Montserrat:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #e0e5ec;
+            --shadow: #a3b1c6;
+            --light: #ffffff;
+            --accent: #6d5dfc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; cursor: crosshair; }
+
+        body {
+            background-color: var(--bg);
+            font-family: 'Montserrat', sans-serif;
+            color: #444;
+            overflow-x: hidden;
+            perspective: 1000px;
+        }
+
+        /* Плаваючі об'єкти на фоні */
+        .floating-blob {
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #6d5dfc, #e0e5ec);
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.5;
+            animation: move 20s infinite alternate;
+        }
+
+        @keyframes move {
+            from { transform: translate(-10%, -10%) rotate(0deg); }
+            to { transform: translate(110vw, 110vh) rotate(360deg); }
+        }
+
+        .main-wrapper {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        /* Неоморфічна карта */
+        .card {
+            background: var(--bg);
+            border-radius: 50px;
+            box-shadow: 20px 20px 60px var(--shadow), -20px -20px 60px var(--light);
+            padding: 60px;
+            position: relative;
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .card:hover {
+            transform: rotateX(5deg) rotateY(-5deg);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: 3.5rem;
+            color: var(--accent);
+            text-align: right;
+            line-height: 0.8;
+            margin-bottom: 40px;
+            letter-spacing: -2px;
+        }
+
+        .theory-section {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            letter-spacing: 5px;
+            color: var(--shadow);
+            border-left: 1px solid var(--shadow);
+            padding-left: 10px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            font-weight: 300;
+            text-align: justify;
+        }
+
+        b { color: var(--accent); font-weight: 600; }
+
+        /* Інтерактивний елемент */
+        .sandwich-constructor {
+            margin: 60px 0;
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: inset 6px 6px 12px var(--shadow), inset -6px -6px 12px var(--light);
+            text-align: center;
+        }
+
+        .layer {
+            height: 20px;
+            margin: 5px auto;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.6rem;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .bread { width: 80%; background: #d2b48c; }
+        .cheese { width: 75%; background: #ffd700; color: #8b4513; }
+        .ham { width: 70%; background: #ff69b4; }
+
+        .layer:hover {
+            width: 95%;
+            filter: brightness(1.2);
+            letter-spacing: 10px;
+        }
+
+        /* Блок "Божевільної логіки" */
+        .manifesto {
+            background: #444;
+            color: #eee;
+            padding: 40px;
+            border-radius: 0 50px 0 50px;
+            font-style: italic;
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .manifesto::before {
+            content: "“";
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 100px;
+            color: var(--accent);
+            opacity: 0.3;
+        }
+
+        .footer-note {
+            margin-top: 100px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.6rem;
+            text-align: center;
+            opacity: 0.4;
+        }
+
+        /* Ефект "скла" */
+        .glass-tag {
+            display: inline-block;
+            padding: 5px 15px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="floating-blob"></div>
+
+<div class="main-wrapper">
+    <div class="glass-tag">FRAGMENT #42 // CULINARY_CORE</div>
+    
+    <div class="card">
+        <h1>BREAD<br>SPACE<br>TIME</h1>
+        
+        <div class="theory-section">
+            <div class="vertical-text">entropy of breakfast</div>
+            <div>
+                <p>
+                    Ми звикли думати, що <b>бутерброд</b> — це просто їжа. Але математично це два паралельні всесвіти (хліб), що утримують між собою хаотичну матерію (ковбасу). 
+                    Згідно з моїми останніми обчисленнями, якщо масло намазати ідеально рівномірно на атомному рівні, бутерброд ніколи не впаде маслом донизу. 
+                    Він просто зависне в повітрі, ігноруючи гравітацію через <b>гастрономічний парадокс</b>.
+                </p>
+            </div>
+        </div>
+
+        <div class="sandwich-constructor">
+            <div class="layer bread">Upper Reality</div>
+            <div class="layer cheese">Golden Layer of Wisdom</div>
+            <div class="layer ham">The Pink Dimension</div>
+            <div class="layer bread">Base Foundation</div>
+            <p style="font-size: 0.7rem; margin-top: 15px; opacity: 0.6;">(Наведіть, щоб розширити шари реальності)</p>
+        </div>
+
+        <p>
+            Чому ми ніколи не бачимо, як бутерброд зникає? Бо він має **високу енергетичну стабільність**. Коли ви кусаєте його, ви поглинаєте не калорії, 
+            а записану інформацію про те, як хліб ріс під сонцем. Це форма прямого зчитування даних з природи. Якщо ви їсте занадто швидко, ви отримуєте 
+            "помилку буфера", яку люди помилково називають печією.
+        </p>
+
+        <div class="manifesto">
+            "Якщо ви покладете бутерброд на підлогу, а інший такий самий бутерброд — на іншому кінці планети, Земля фактично перетвориться на гігантський сендвіч на кілька секунд. Це єдиний спосіб врятувати економіку, але уряд боїться занадто великої кількості крихт в океані."
+        </div>
+    </div>
+
+    <div class="footer-note">
+        PROCESSED BY THE OBSESSION CHAMBER // SUBJECT: SANDWICH // NO REMORSE
+    </div>
+</div>
+
+<script>
+    // Додамо трохи інтерактиву: стеження фонової плями за мишкою (м'яке)
+    const blob = document.querySelector('.floating-blob');
+    document.addEventListener('mousemove', (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+        blob.style.left = (x - 150) + 'px';
+        blob.style.top = (y - 150) + 'px';
+    });
+</script>
+
+</body>
+</html>
