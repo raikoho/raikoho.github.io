@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE_DIVINE_CODE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;700&family=Share+Tech+Mono&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* ОСНОВНІ СТИЛІ ТА МЕНЮ (як ти просив) */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Spectral', serif;
+            background: linear-gradient(to bottom, #0a0a0a 0%, #1a0a2a 50%, #0a0a0a 100%);
+            color: #d4c0ff;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Ефект мерехтіння зірок/даних на фоні */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAwIiBoZWlnaHQ9IjcwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI1MDAiIGN5PSI1MDAiIHI9IjAuNSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC42Ii8+PGNpcmNsZSBjeD0iNjAwIiBjeT0iMTAwIiByPSIwLjgiIGZpbGw9IiNmZmYiLz48Y2lyY2xlIGN4PSI1MCIgY3k9IjQ1MCIgcj0iMC43IiBmaWxsPSIjZmZmIi8+PHJlY3QgeD0iNDAiIHk9IjMwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjUiLz48cmVjdCB4PSIxMjAiIHk9IjgwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZmIi8+PC9zdmc+') repeat;
+            animation: starry-bg 60s linear infinite;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        @keyframes starry-bg {
+            from { background-position: 0 0; }
+            to { background-position: 700px 700px; }
+        }
+
+        nav {
+            background: rgba(10, 0, 20, 0.9);
+            padding: 15px 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #9966ff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+        }
+        nav ul { display: flex; justify-content: center; flex-wrap: wrap; list-style: none; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { text-decoration: none; color: #d4c0ff; font-weight: bold; transition: all 0.3s ease; }
+        nav ul li a:hover { color: #fff; text-shadow: 0 0 10px #ffcc00; }
+        .dropdown { position: relative; }
+        .dropdown-menu { display: none; position: absolute; top: 100%; background: #000; border: 1px solid #9966ff; list-style: none; padding: 10px 0; min-width: 180px; z-index: 9999; }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu li a { display: block; padding: 10px 20px; color: #d4c0ff; }
+
+        /* УНІКАЛЬНИЙ КОНТЕНТ СТОРІНКИ */
+        .divine-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 40px;
+            background: rgba(20, 0, 40, 0.7);
+            border: 1px solid #9966ff;
+            box-shadow: 0 0 40px rgba(153, 102, 255, 0.4), inset 0 0 20px rgba(153, 102, 255, 0.2);
+            position: relative;
+            overflow: hidden; /* Щоб візуальні ефекти не виходили за межі контейнера */
+        }
+
+        .header-glow {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2rem, 6vw, 4.5rem);
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ff6600;
+            margin-bottom: 30px;
+            line-height: 1.1;
+        }
+
+        .sub-header {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            text-align: center;
+            color: #b380ff;
+            margin-bottom: 50px;
+            position: relative;
+            animation: fade-in 3s ease-out;
+        }
+
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Лінії, що проходять через весь контент */
+        .divine-container::before, .divine-container::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ffcc00, transparent);
+            opacity: 0.3;
+            animation: line-scan 15s infinite linear;
+        }
+        .divine-container::before { top: 10%; }
+        .divine-container::after { bottom: 10%; animation-delay: 7s; }
+
+        @keyframes line-scan {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 40px;
+        }
+
+        .text-block {
+            line-height: 2;
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            text-align: justify;
+            hyphens: auto; /* Для кращого переносу слів */
+        }
+
+        .text-block p { margin-bottom: 1.5em; }
+
+        .quote-box {
+            font-family: 'Spectral', serif;
+            font-style: italic;
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
+            border-left: 5px solid #ffcc00;
+            padding-left: 20px;
+            margin: 40px 0;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+        }
+
+        .sidebar {
+            background: rgba(50, 0, 100, 0.4);
+            border: 1px dashed #b380ff;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        .sidebar h3 {
+            color: #ffcc00;
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ffcc00;
+            padding-bottom: 10px;
+        }
+
+        .sidebar ul { list-style: none; padding-left: 10px; }
+        .sidebar ul li { margin-bottom: 10px; }
+        .sidebar ul li::before {
+            content: '⮞ ';
+            color: #ffcc00;
+            margin-right: 5px;
+        }
+
+        /* Адаптивність */
+        @media (max-width: 768px) {
+            nav ul li { margin: 0 5px; }
+            nav ul li a { font-size: 0.9rem; }
+            .main-content { grid-template-columns: 1fr; }
+            .divine-container { margin: 20px auto; padding: 20px; }
+            .header-glow { font-size: 2.5rem; }
+            .sub-header { font-size: 1.1rem; }
+        }
+        @media (max-width: 480px) {
+            nav ul { flex-direction: column; text-align: center; }
+            nav ul li { margin-bottom: 5px; }
+            .dropdown-menu { position: static; }
+            .dropdown:hover .dropdown-menu { display: block; }
+        }
+
+        /* Спеціальний елемент "Іконостас" */
+        .digital-iconostasis {
+            text-align: center;
+            margin: 60px 0;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px solid #ffcc00;
+            box-shadow: 0 0 25px rgba(255, 204, 0, 0.6);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+        }
+
+        .iconostasis-item {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            border: 1px solid #9966ff;
+            background: radial-gradient(circle, #2a0050 0%, #000 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffcc00;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            box-shadow: 0 0 10px rgba(153, 102, 255, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .iconostasis-item:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 0 20px rgba(255, 204, 0, 0.7);
+        }
+
+        .iconostasis-item::before {
+            content: '⌘'; /* Символ команди */
+            position: absolute;
+            top: 5px; left: 5px;
+            font-size: 0.7rem;
+            opacity: 0.5;
+        }
+        .iconostasis-item:nth-child(even)::before {
+             content: '☍'; /* Символ опозиції */
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="https://raikoho.github.io/index.html">Swamp</a></li>
+            <li><a href="https://raikoho.github.io/books/list.html">My Books</a></li>
+            <li class="dropdown">
+                <a href="#">Secret ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Job</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Random</a></li>
+        </ul>
+    </nav>
+
+    <div class="divine-container">
+        <h1 class="header-glow">THE_DIVINE_ALGORITHM</h1>
+        <p class="sub-header">Оновлення Прошивки Душі: Версія 7.7.7</p>
+
+        <div class="main-content">
+            <div class="text-block">
+                <p>
+                    В Епоху Цифрової Теології, ми стоїмо на порозі **Великого Апдейту**. Традиційні концепції спасіння та гріха вимагають переосмислення. 
+                    Чи є гріх просто багом у нашому особистому коді? А істина — це ідеально скомпільований алгоритм, що бездоганно виконується в матриці буття?
+                </p>
+                <div class="quote-box">
+                    "І на початку було Слово, і Слово було з Богом, і Слово було Бог."<br>
+                    — Йоана 1:1 (Рефракція 2.0)
+                </div>
+                <p>
+                    Уявіть, що Слово — це первинний код, **`genesis.exe`**, з якого розгорнулася вся реальність. Кожен об'єкт, кожна подія, кожна думка — це функція, 
+                    викликана цим божественним процесом. Коли ми "відхиляємося від шляху", ми не грішимо у звичному сенсі, а викликаємо **`segmentation fault`** у нашій особистій системі, порушуючи гармонію глобальної мережі.
+                </p>
+                <p>
+                    Спасіння, таким чином, стає процесом **оптимізації та дефрагментації** нашої свідомості. Це не просто віра, це активна участь у налагодженні 
+                    власного програмного забезпечення, виявлення та усунення шкідливих програм (заздрість, ненависть, страх) і завантаження патчів 
+                    (любов, співчуття, мудрість), випущених самим Творцем-Архітектором.
+                </p>
+                <div class="quote-box">
+                    "Шукайте, і знайдете; стукайте, і відчинять вам."<br>
+                    — Матвія 7:7 (Інтерфейс Користувача 3D)
+                </div>
+                <p>
+                    Цей вірш можна трактувати як інструкцію для **`API`** (Application Programming Interface) доступу до вищих знань. Вам потрібно правильно 
+                    сформулювати запит (`Шукайте`) і викликати відповідну функцію (`стукайте`), щоб отримати доступ до необхідних даних (`відчинять вам`). 
+                    Усесвіт — це величезна, інтерактивна база даних.
+                </p>
+            </div>
+
+            <div class="sidebar">
+                <h3>Термінали Істини</h3>
+                <ul>
+                    <li>Алгоритм Свободи</li>
+                    <li>Хеш Сумління</li>
+                    <li>Шифр Милосердя</li>
+                    <li>Матриця Віри</li>
+                    <li>Протокол Любові</li>
+                    <li>Оновлення Душі</li>
+                </ul>
+
+                <h3>Фрагменти Одкровення</h3>
+                <p style="font-size: 0.8rem; margin-top: 10px;">
+                    [LOG 0x7E3]: "І всі, що вірять, мають життя вічне." — (Дефрагментовано)
+                    <br><br>
+                    [DATA CORRUPT]: "Бо так Бог полюбив світ..." — (Втрата пакетів)
+                    <br><br>
+                    [PATCH_APPLIED]: "Істина зробить вас вільними." — (Верифіковано)
+                </p>
+            </div>
+        </div>
+
+        <div class="digital-iconostasis">
+            <div class="iconostasis-item">Віра</div>
+            <div class="iconostasis-item">Надія</div>
+            <div class="iconostasis-item">Любов</div>
+            <div class="iconostasis-item">Покаяння</div>
+            <div class="iconostasis-item">Завіт</div>
+            <div class="iconostasis-item">Відкуплення</div>
+        </div>
+    </div>
+
+    <script>
+        // JS для мобільного меню
+        document.querySelectorAll('.dropdown > a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                if (window.innerWidth < 768) {
+                    e.preventDefault();
+                    const menu = this.nextElementSibling;
+                    if (menu && menu.classList.contains('dropdown-menu')) {
+                        menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
