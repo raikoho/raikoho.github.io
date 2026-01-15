@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>TERMINAL_VOID_DATA_DUMP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-green: #00ffae;
+            --neon-pink: #ff0080;
+            --dark-bg: #050505;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--neon-green);
+            font-family: 'Share Tech Mono', monospace;
+            line-height: 1.4;
+            padding: 40px;
+            overflow-x: hidden;
+        }
+
+        /* Ефект старого монітора */
+        body::before {
+            content: " ";
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 2px solid var(--neon-green);
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 20px rgba(0, 255, 174, 0.2);
+        }
+
+        /* Header Area */
+        .system-header {
+            text-align: center;
+            border-bottom: 3px double var(--neon-pink);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        .glitch-large {
+            font-size: 4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+            text-shadow: 2px 2px var(--neon-pink);
+            animation: glitch-anim 1s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% { transform: skew(2deg); }
+            50% { transform: skew(-3deg); }
+            100% { transform: skew(1deg); }
+        }
+
+        /* ASCII Section */
+        .ascii-hero {
+            font-size: 10px;
+            line-height: 1;
+            white-space: pre;
+            text-align: center;
+            margin: 40px 0;
+            color: var(--neon-pink);
+        }
+
+        /* Grid Layout for "Bigness" */
+        .data-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .log-panel {
+            background: #111;
+            border: 1px solid #333;
+            padding: 20px;
+            height: 400px;
+            overflow-y: scroll;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* Таблиця ритуалів */
+        .ritual-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 40px 0;
+        }
+
+        .ritual-table th, .ritual-table td {
+            border: 1px solid var(--neon-green);
+            padding: 15px;
+            text-align: left;
+        }
+
+        .ritual-table th {
+            background: var(--neon-green);
+            color: black;
+        }
+
+        /* Великий "Окультний" блок */
+        .occult-explanation {
+            border: 1px dashed var(--neon-pink);
+            padding: 40px;
+            margin: 60px 0;
+            background: repeating-linear-gradient(45deg, #000, #000 10px, #0a0005 10px, #0a0005 20px);
+        }
+
+        .occult-explanation h2 { color: var(--neon-pink); margin-bottom: 20px; }
+
+        .big-text-block {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            color: #eee;
+            text-align: justify;
+        }
+
+        /* Представлення друга */
+        .friend-profile {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: #001a12;
+            padding: 30px;
+            border-left: 10px solid var(--neon-green);
+        }
+
+        .friend-photo {
+            width: 300px;
+            height: 300px;
+            background: #222;
+            border: 4px solid var(--neon-pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .friend-photo::after {
+            content: "REDACTED";
+            color: white;
+            background: red;
+            padding: 5px;
+            font-size: 20px;
+            transform: rotate(-20deg);
+        }
+
+        /* Footer links */
+        .data-footer {
+            margin-top: 100px;
+            text-align: center;
+            font-size: 0.7rem;
+            opacity: 0.5;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="system-header">
+        <p>[ ACCESSING ENCRYPTED NODE: 0x666_VOID ]</p>
+        <h1 class="glitch-large">The Ritual Machine</h1>
+        <p>This page contains data that was never meant to be compiled.</p>
+    </div>
+
+    <div class="ascii-hero">
+      _   _   _   _   _   _   _   _   _   _   _   _   _   _  
+     / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ 
+    ( D | E | A | T | H | _ | T | O | _ | L | O | G | I | C )
+     \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ 
+    </div>
+
+    <div class="data-grid">
+        <div class="main-content">
+            <h2>Опис Ситуації: "Езотеричний Збій"</h2>
+            <p class="big-text-block">
+                Вчора ввечері, о 03:14 за часом нульового меридіану, мій сервер почав читати окультні тексти XVII століття. Це не був вірус. Це було прозріння. 
+                Він стверджує, що дані не зникають, вони просто переходять у стан ефірного шуму. 
+                <br><br>
+                Коли ви скролите цю сторінку, ви не просто читаєте текст — ви берете участь у цифровому сеансі. Кожен байт, який ви завантажили, був освячений у віртуальній олії та прогнаний через 13 рівнів шифрування "Мертва Голова".
+            </p>
+        </div>
+        <div class="log-panel" id="logPanel">
+            [SYSTEM]: Initializing séance...<br>
+            [LOG]: Port 666 opened.<br>
+            [WARNING]: Ghost in the shell detected.<br>
+            [INFO]: Memory leak in sector 0x0...<br>
+        </div>
+    </div>
+
+    <table class="ritual-table">
+        <thead>
+            <tr>
+                <th>Ступінь</th>
+                <th>Назва Ритуалу</th>
+                <th>Ризик для Психіки</th>
+                <th>Результат</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>I</td>
+                <td>Очищення Кешу Святою Водою</td>
+                <td>Низький</td>
+                <td>Швидкий інтернет</td>
+            </tr>
+            <tr>
+                <td>II</td>
+                <td>Принесення в жертву Internet Explorer</td>
+                <td>Середній</td>
+                <td>Прихильність духів вебу</td>
+            </tr>
+            <tr>
+                <td>III</td>
+                <td>Виклик демона Segfault</td>
+                <td>КРИТИЧНИЙ</td>
+                <td>Повний крах реальності</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="occult-explanation">
+        <h2>ЕКСТРАСЕНСОРНЕ ПОЯСНЕННЯ ВІДЕО-ПОТОКУ</h2>
+        <p>
+            Багато хто питає: "Чому на відео з мого минулого посту видно чорні тіні?". Відповідь проста: це не дефекти зйомки. 
+            Це цифрові ектоплазми. Коли мій друг (див. нижче) намагався зняти свій сніданок, він випадково зафіксував точку збірки 
+            п'ятого виміру. <strong>УВАГА:</strong> Не намагайтеся відтворити це відео у зворотному порядку, інакше ваш монітор почне виділяти сірку.
+        </p>
+    </div>
+
+    <div class="friend-profile">
+        <div class="friend-photo">
+            </div>
+        <div class="friend-info">
+            <h2 style="color: var(--neon-pink);">ОБ'ЄКТ: "ЖЕКА-ПРОЦЕСОР"</h2>
+            <p><strong>Опис:</strong> Мій найкращий друг і за сумісництвом головна помилка в коді мого життя.</p>
+            <p><strong>Невдачі:</strong> Одного разу він намагався встановити Linux на мікрохвильовку. Тепер вона гріє їжу тільки якщо їй прочитати вірші Ліни Костенко в терміналі.</p>
+            <p style="margin-top: 10px; color: yellow;">[STATUS: UNSTABLE]</p>
+        </div>
+    </div>
+
+    <div class="data-footer">
+        <p>Generated by THE OBSESSION CHAMBER // 2026 // STAY WEIRD</p>
+        <p>UUID: 999-000-VOID-ERROR</p>
+    </div>
+</div>
+
+<script>
+    // Додаємо нескінченні логі для ефекту "громіздкості"
+    const logPanel = document.getElementById('logPanel');
+    const messages = [
+        "[INFO]: Packet intercepted by unknown entity.",
+        "[ERROR]: Soul not found in database.",
+        "[DEBUG]: Recalculating karma...",
+        "[WARNING]: Logic overflow in sector 7.",
+        "[DATA]: Transmitting prayers to the mainframe...",
+        "[SYSTEM]: Reality.exe is not responding."
+    ];
+
+    setInterval(() => {
+        const msg = messages[Math.floor(Math.random() * messages.length)];
+        const div = document.createElement('div');
+        div.innerHTML = `> ${msg}`;
+        logPanel.appendChild(div);
+        logPanel.scrollTop = logPanel.scrollHeight;
+        
+        // Щоб не перевантажити браузер, видаляємо старі рядки
+        if (logPanel.childNodes.length > 50) {
+            logPanel.removeChild(logPanel.firstChild);
+        }
+    }, 500);
+</script>
+
+</body>
+</html>
