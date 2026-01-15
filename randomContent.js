@@ -1,4 +1,4 @@
-const TOTAL_PAGES = 2;
+const TOTAL_PAGES = 6;
 const COLORS = ['#ff6347', '#4682b4', '#32cd32'];
 
 function rand(arr) {
