@@ -29,3 +29,14 @@ async function generateRandomContent() {
 }
 
 window.addEventListener('load', generateRandomContent);
+
+
+
+paragraphEl.innerHTML = data.paragraph;
+
+const img = paragraphEl.querySelector('img');
+
+if (img) {
+    img.onerror = () => console.log('❌ image failed');
+    img.onload = () => console.log('✅ image loaded');
+}
